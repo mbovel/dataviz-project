@@ -2,7 +2,7 @@
 	<ul class="width-limited">
 		{% for item in site.data.navigation %}
 		<li>
-			<a href="{{ item.link }}" {% if page.url== item.link %} class="current"{% endif %}>
+			<a href="{{ item.link | absolute_url }}" {% if page.url== item.link %} class="current"{% endif %}>
 				{{ item.name }}
 			</a>
 		</li>
