@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title }}</title>
+	<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+{% include navigation.html %}
+
+<header class="title-row">
+	<h1>{{ site.title }}</h1>
+</header>
+
+<main class="width-limited">
+	{{ content }}
+</main>
+
+<footer class="width-limited">
+	<p>Meet <a href="./team">the authors here</a>. The project was created for the <a
+			href="http://edu.epfl.ch/coursebook/en/data-visualization-COM-480">Data
+		Visualization</a> course at EPFL.</p>
+</footer>
+
+</body>
+</html>
