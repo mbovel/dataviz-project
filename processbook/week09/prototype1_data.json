@@ -1,0 +1,7881 @@
+{
+	"nodes": [
+		{
+			"id": "reuters.com"
+		},
+		{
+			"id": "msn.com"
+		},
+		{
+			"id": "iheart.com"
+		},
+		{
+			"id": "dailymail.co.uk"
+		},
+		{
+			"id": "english.wafa.ps"
+		},
+		{
+			"id": "yahoo.com"
+		},
+		{
+			"id": "wafa.ps"
+		},
+		{
+			"id": "sfgate.com"
+		},
+		{
+			"id": "chron.com"
+		},
+		{
+			"id": "fasopresse.net"
+		},
+		{
+			"id": "business-standard.com"
+		},
+		{
+			"id": "indiatimes.com"
+		},
+		{
+			"id": "foxnews.com"
+		},
+		{
+			"id": "washingtonpost.com"
+		},
+		{
+			"id": "sputniknews.com"
+		},
+		{
+			"id": "ziarelive.ro"
+		},
+		{
+			"id": "time.mk"
+		},
+		{
+			"id": "allafrica.com"
+		},
+		{
+			"id": "greenwichtime.com"
+		},
+		{
+			"id": "nzherald.co.nz"
+		},
+		{
+			"id": "thehour.com"
+		},
+		{
+			"id": "nt.am"
+		},
+		{
+			"id": "ctpost.com"
+		},
+		{
+			"id": "newstimes.com"
+		},
+		{
+			"id": "wfmz.com"
+		},
+		{
+			"id": "nbcnews.com"
+		},
+		{
+			"id": "stamfordadvocate.com"
+		},
+		{
+			"id": "tucson.com"
+		},
+		{
+			"id": "nhregister.com"
+		},
+		{
+			"id": "ksl.com"
+		},
+		{
+			"id": "dw.com"
+		},
+		{
+			"id": "tampabay.com"
+		},
+		{
+			"id": "registercitizen.com"
+		},
+		{
+			"id": "wacotrib.com"
+		},
+		{
+			"id": "chieftain.com"
+		},
+		{
+			"id": "gwdtoday.com"
+		},
+		{
+			"id": "middletownpress.com"
+		},
+		{
+			"id": "dawn.com"
+		},
+		{
+			"id": "beaumontenterprise.com"
+		},
+		{
+			"id": "zazoom.it"
+		},
+		{
+			"id": "greensboro.com"
+		},
+		{
+			"id": "businessinsider.com"
+		},
+		{
+			"id": "tribunnews.com"
+		},
+		{
+			"id": "palestinemonitor.org"
+		},
+		{
+			"id": "cbslocal.com"
+		},
+		{
+			"id": "xinhuanet.com"
+		},
+		{
+			"id": "mysanantonio.com"
+		},
+		{
+			"id": "seattlepi.com"
+		},
+		{
+			"id": "thenews.com.pk"
+		},
+		{
+			"id": "startribune.com"
+		},
+		{
+			"id": "couriermail.com.au"
+		},
+		{
+			"id": "lmtonline.com"
+		},
+		{
+			"id": "france24.com"
+		},
+		{
+			"id": "mynorthwest.com"
+		},
+		{
+			"id": "channelnewsasia.com"
+		},
+		{
+			"id": "cbc.ca"
+		},
+		{
+			"id": "nytimes.com"
+		},
+		{
+			"id": "ghanaweb.com"
+		},
+		{
+			"id": "wsoctv.com"
+		},
+		{
+			"id": "fredericksburg.com"
+		}
+	],
+	"links": [
+		{
+			"source": "msn.com",
+			"target": "reuters.com",
+			"value": "5958"
+		},
+		{
+			"source": "reuters.com",
+			"target": "yahoo.com",
+			"value": "5773"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "wafa.ps",
+			"value": "3794"
+		},
+		{
+			"source": "msn.com",
+			"target": "yahoo.com",
+			"value": "3067"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "reuters.com",
+			"value": "2445"
+		},
+		{
+			"source": "chron.com",
+			"target": "sfgate.com",
+			"value": "2398"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "reuters.com",
+			"value": "2374"
+		},
+		{
+			"source": "iheart.com",
+			"target": "yahoo.com",
+			"value": "1712"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "thehour.com",
+			"value": "1616"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "greenwichtime.com",
+			"value": "1502"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "thehour.com",
+			"value": "1488"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "thehour.com",
+			"value": "1483"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "wacotrib.com",
+			"value": "1379"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "stamfordadvocate.com",
+			"value": "1367"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "newstimes.com",
+			"value": "1364"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "newstimes.com",
+			"value": "1358"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "thehour.com",
+			"value": "1357"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "wacotrib.com",
+			"value": "1330"
+		},
+		{
+			"source": "tucson.com",
+			"target": "wacotrib.com",
+			"value": "1300"
+		},
+		{
+			"source": "ksl.com",
+			"target": "tucson.com",
+			"value": "1238"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "yahoo.com",
+			"value": "1232"
+		},
+		{
+			"source": "wfmz.com",
+			"target": "yahoo.com",
+			"value": "1223"
+		},
+		{
+			"source": "chron.com",
+			"target": "greenwichtime.com",
+			"value": "1205"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "stamfordadvocate.com",
+			"value": "1195"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "stamfordadvocate.com",
+			"value": "1180"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "yahoo.com",
+			"value": "1169"
+		},
+		{
+			"source": "chron.com",
+			"target": "washingtonpost.com",
+			"value": "1169"
+		},
+		{
+			"source": "chron.com",
+			"target": "ctpost.com",
+			"value": "1164"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "wfmz.com",
+			"value": "1156"
+		},
+		{
+			"source": "chron.com",
+			"target": "thehour.com",
+			"value": "1152"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "wfmz.com",
+			"value": "1147"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "palestinemonitor.org",
+			"value": "1138"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "washingtonpost.com",
+			"value": "1136"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "tucson.com",
+			"value": "1114"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "indiatimes.com",
+			"value": "1112"
+		},
+		{
+			"source": "chron.com",
+			"target": "newstimes.com",
+			"value": "1110"
+		},
+		{
+			"source": "chron.com",
+			"target": "greensboro.com",
+			"value": "1094"
+		},
+		{
+			"source": "chron.com",
+			"target": "wacotrib.com",
+			"value": "1094"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "sfgate.com",
+			"value": "1093"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "tucson.com",
+			"value": "1091"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "sfgate.com",
+			"value": "1091"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "ksl.com",
+			"value": "1086"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "thehour.com",
+			"value": "1084"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "registercitizen.com",
+			"value": "1075"
+		},
+		{
+			"source": "chron.com",
+			"target": "nhregister.com",
+			"value": "1067"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "yahoo.com",
+			"value": "1063"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "wfmz.com",
+			"value": "1062"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "nhregister.com",
+			"value": "1055"
+		},
+		{
+			"source": "wacotrib.com",
+			"target": "wfmz.com",
+			"value": "1047"
+		},
+		{
+			"source": "chron.com",
+			"target": "stamfordadvocate.com",
+			"value": "1046"
+		},
+		{
+			"source": "france24.com",
+			"target": "yahoo.com",
+			"value": "1043"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "registercitizen.com",
+			"value": "1036"
+		},
+		{
+			"source": "ksl.com",
+			"target": "wacotrib.com",
+			"value": "1035"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "thehour.com",
+			"value": "1033"
+		},
+		{
+			"source": "tucson.com",
+			"target": "yahoo.com",
+			"value": "1032"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "greensboro.com",
+			"value": "1031"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "nhregister.com",
+			"value": "1031"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "registercitizen.com",
+			"value": "1028"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "ksl.com",
+			"value": "1023"
+		},
+		{
+			"source": "washingtonpost.com",
+			"target": "wfmz.com",
+			"value": "1023"
+		},
+		{
+			"source": "ksl.com",
+			"target": "yahoo.com",
+			"value": "1021"
+		},
+		{
+			"source": "wacotrib.com",
+			"target": "washingtonpost.com",
+			"value": "1020"
+		},
+		{
+			"source": "ksl.com",
+			"target": "wfmz.com",
+			"value": "1020"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "registercitizen.com",
+			"value": "1016"
+		},
+		{
+			"source": "wfmz.com",
+			"target": "wsoctv.com",
+			"value": "1012"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "thehour.com",
+			"value": "1007"
+		},
+		{
+			"source": "tucson.com",
+			"target": "wfmz.com",
+			"value": "999"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "nhregister.com",
+			"value": "997"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "washingtonpost.com",
+			"value": "997"
+		},
+		{
+			"source": "washingtonpost.com",
+			"target": "yahoo.com",
+			"value": "993"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "registercitizen.com",
+			"value": "985"
+		},
+		{
+			"source": "chron.com",
+			"target": "yahoo.com",
+			"value": "983"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "middletownpress.com",
+			"value": "983"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "yahoo.com",
+			"value": "972"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "nzherald.co.nz",
+			"value": "966"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "chron.com",
+			"value": "965"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "middletownpress.com",
+			"value": "961"
+		},
+		{
+			"source": "chron.com",
+			"target": "registercitizen.com",
+			"value": "961"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "sfgate.com",
+			"value": "960"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "tucson.com",
+			"value": "960"
+		},
+		{
+			"source": "chron.com",
+			"target": "wfmz.com",
+			"value": "959"
+		},
+		{
+			"source": "chron.com",
+			"target": "nzherald.co.nz",
+			"value": "947"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "wacotrib.com",
+			"value": "943"
+		},
+		{
+			"source": "ksl.com",
+			"target": "washingtonpost.com",
+			"value": "940"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "washingtonpost.com",
+			"value": "936"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "stamfordadvocate.com",
+			"value": "929"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "nhregister.com",
+			"value": "929"
+		},
+		{
+			"source": "chron.com",
+			"target": "seattlepi.com",
+			"value": "926"
+		},
+		{
+			"source": "tucson.com",
+			"target": "washingtonpost.com",
+			"value": "923"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "iheart.com",
+			"value": "918"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "yahoo.com",
+			"value": "918"
+		},
+		{
+			"source": "wacotrib.com",
+			"target": "yahoo.com",
+			"value": "913"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "nzherald.co.nz",
+			"value": "909"
+		},
+		{
+			"source": "chron.com",
+			"target": "mysanantonio.com",
+			"value": "909"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "tucson.com",
+			"value": "906"
+		},
+		{
+			"source": "msn.com",
+			"target": "wfmz.com",
+			"value": "901"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "fredericksburg.com",
+			"value": "899"
+		},
+		{
+			"source": "chron.com",
+			"target": "middletownpress.com",
+			"value": "897"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "stamfordadvocate.com",
+			"value": "896"
+		},
+		{
+			"source": "iheart.com",
+			"target": "wfmz.com",
+			"value": "894"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "thehour.com",
+			"value": "893"
+		},
+		{
+			"source": "chron.com",
+			"target": "startribune.com",
+			"value": "892"
+		},
+		{
+			"source": "chron.com",
+			"target": "tucson.com",
+			"value": "879"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "wacotrib.com",
+			"value": "878"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "tampabay.com",
+			"value": "872"
+		},
+		{
+			"source": "chron.com",
+			"target": "wsoctv.com",
+			"value": "870"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "sfgate.com",
+			"value": "867"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "yahoo.com",
+			"value": "867"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "stamfordadvocate.com",
+			"value": "865"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "yahoo.com",
+			"value": "864"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "sfgate.com",
+			"value": "860"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "startribune.com",
+			"value": "858"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "wfmz.com",
+			"value": "856"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "sfgate.com",
+			"value": "851"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "washingtonpost.com",
+			"value": "846"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "reuters.com",
+			"value": "840"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "yahoo.com",
+			"value": "829"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "reuters.com",
+			"value": "829"
+		},
+		{
+			"source": "ksl.com",
+			"target": "nzherald.co.nz",
+			"value": "825"
+		},
+		{
+			"source": "chron.com",
+			"target": "mynorthwest.com",
+			"value": "823"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "msn.com",
+			"value": "816"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "msn.com",
+			"value": "814"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "wsoctv.com",
+			"value": "812"
+		},
+		{
+			"source": "chron.com",
+			"target": "ksl.com",
+			"value": "810"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "stamfordadvocate.com",
+			"value": "810"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "yahoo.com",
+			"value": "807"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "sfgate.com",
+			"value": "805"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "tucson.com",
+			"value": "805"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "newstimes.com",
+			"value": "804"
+		},
+		{
+			"source": "startribune.com",
+			"target": "washingtonpost.com",
+			"value": "797"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "reuters.com",
+			"value": "793"
+		},
+		{
+			"source": "wsoctv.com",
+			"target": "yahoo.com",
+			"value": "792"
+		},
+		{
+			"source": "startribune.com",
+			"target": "wacotrib.com",
+			"value": "776"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "wacotrib.com",
+			"value": "760"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "reuters.com",
+			"value": "756"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "sfgate.com",
+			"value": "755"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "wsoctv.com",
+			"value": "755"
+		},
+		{
+			"source": "ksl.com",
+			"target": "tampabay.com",
+			"value": "752"
+		},
+		{
+			"source": "chron.com",
+			"target": "lmtonline.com",
+			"value": "752"
+		},
+		{
+			"source": "thehour.com",
+			"target": "yahoo.com",
+			"value": "750"
+		},
+		{
+			"source": "wacotrib.com",
+			"target": "wsoctv.com",
+			"value": "748"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "wfmz.com",
+			"value": "747"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "chron.com",
+			"value": "744"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "washingtonpost.com",
+			"value": "743"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "seattlepi.com",
+			"value": "742"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "tucson.com",
+			"value": "741"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "yahoo.com",
+			"value": "740"
+		},
+		{
+			"source": "startribune.com",
+			"target": "wfmz.com",
+			"value": "739"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "startribune.com",
+			"value": "739"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "sfgate.com",
+			"value": "733"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "yahoo.com",
+			"value": "721"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "yahoo.com",
+			"value": "719"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "wfmz.com",
+			"value": "716"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "wacotrib.com",
+			"value": "714"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "seattlepi.com",
+			"value": "712"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "seattlepi.com",
+			"value": "709"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "sfgate.com",
+			"value": "705"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "iheart.com",
+			"value": "704"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "ksl.com",
+			"value": "703"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "yahoo.com",
+			"value": "700"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "wacotrib.com",
+			"value": "698"
+		},
+		{
+			"source": "ksl.com",
+			"target": "sfgate.com",
+			"value": "693"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "stamfordadvocate.com",
+			"value": "691"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "washingtonpost.com",
+			"value": "686"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "greensboro.com",
+			"value": "685"
+		},
+		{
+			"source": "thehour.com",
+			"target": "washingtonpost.com",
+			"value": "684"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "yahoo.com",
+			"value": "682"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "sfgate.com",
+			"value": "679"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "seattlepi.com",
+			"value": "679"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "wacotrib.com",
+			"value": "675"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "greensboro.com",
+			"value": "672"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "washingtonpost.com",
+			"value": "672"
+		},
+		{
+			"source": "msn.com",
+			"target": "nbcnews.com",
+			"value": "671"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "wsoctv.com",
+			"value": "671"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "thehour.com",
+			"value": "671"
+		},
+		{
+			"source": "ksl.com",
+			"target": "mynorthwest.com",
+			"value": "670"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "thehour.com",
+			"value": "667"
+		},
+		{
+			"source": "thehour.com",
+			"target": "wfmz.com",
+			"value": "666"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "washingtonpost.com",
+			"value": "665"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "wsoctv.com",
+			"value": "664"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "tampabay.com",
+			"value": "664"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "foxnews.com",
+			"value": "660"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "wfmz.com",
+			"value": "657"
+		},
+		{
+			"source": "startribune.com",
+			"target": "tucson.com",
+			"value": "657"
+		},
+		{
+			"source": "washingtonpost.com",
+			"target": "wsoctv.com",
+			"value": "656"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "yahoo.com",
+			"value": "655"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "wfmz.com",
+			"value": "655"
+		},
+		{
+			"source": "startribune.com",
+			"target": "yahoo.com",
+			"value": "651"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "yahoo.com",
+			"value": "651"
+		},
+		{
+			"source": "msn.com",
+			"target": "washingtonpost.com",
+			"value": "651"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "yahoo.com",
+			"value": "648"
+		},
+		{
+			"source": "ksl.com",
+			"target": "startribune.com",
+			"value": "647"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "yahoo.com",
+			"value": "647"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "washingtonpost.com",
+			"value": "645"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "wfmz.com",
+			"value": "645"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "wacotrib.com",
+			"value": "644"
+		},
+		{
+			"source": "chron.com",
+			"target": "tampabay.com",
+			"value": "642"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "wacotrib.com",
+			"value": "639"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "wfmz.com",
+			"value": "638"
+		},
+		{
+			"source": "thehour.com",
+			"target": "wacotrib.com",
+			"value": "637"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "reuters.com",
+			"value": "636"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "thehour.com",
+			"value": "634"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "newstimes.com",
+			"value": "633"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "greenwichtime.com",
+			"value": "633"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "greensboro.com",
+			"value": "633"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "wacotrib.com",
+			"value": "632"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "wfmz.com",
+			"value": "631"
+		},
+		{
+			"source": "chron.com",
+			"target": "msn.com",
+			"value": "628"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "msn.com",
+			"value": "626"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "tucson.com",
+			"value": "624"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "newstimes.com",
+			"value": "622"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "startribune.com",
+			"value": "620"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "nzherald.co.nz",
+			"value": "620"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "yahoo.com",
+			"value": "620"
+		},
+		{
+			"source": "msn.com",
+			"target": "sfgate.com",
+			"value": "619"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "yahoo.com",
+			"value": "616"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "greenwichtime.com",
+			"value": "614"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "sfgate.com",
+			"value": "613"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "newstimes.com",
+			"value": "612"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "sfgate.com",
+			"value": "611"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "stamfordadvocate.com",
+			"value": "609"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "msn.com",
+			"value": "607"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "seattlepi.com",
+			"value": "606"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "wacotrib.com",
+			"value": "605"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "ctpost.com",
+			"value": "605"
+		},
+		{
+			"source": "msn.com",
+			"target": "tampabay.com",
+			"value": "604"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "registercitizen.com",
+			"value": "603"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "wfmz.com",
+			"value": "602"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "wfmz.com",
+			"value": "601"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "washingtonpost.com",
+			"value": "601"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "thehour.com",
+			"value": "596"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "tucson.com",
+			"value": "596"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "nzherald.co.nz",
+			"value": "588"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "mynorthwest.com",
+			"value": "588"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "nzherald.co.nz",
+			"value": "588"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "seattlepi.com",
+			"value": "587"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "wfmz.com",
+			"value": "587"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "wacotrib.com",
+			"value": "587"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "washingtonpost.com",
+			"value": "584"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "indiatimes.com",
+			"value": "584"
+		},
+		{
+			"source": "france24.com",
+			"target": "msn.com",
+			"value": "582"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "wfmz.com",
+			"value": "581"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "sfgate.com",
+			"value": "579"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "wacotrib.com",
+			"value": "577"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "washingtonpost.com",
+			"value": "577"
+		},
+		{
+			"source": "tucson.com",
+			"target": "wsoctv.com",
+			"value": "575"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "nzherald.co.nz",
+			"value": "574"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "registercitizen.com",
+			"value": "574"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "ksl.com",
+			"value": "574"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "seattlepi.com",
+			"value": "573"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "nhregister.com",
+			"value": "573"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "ctpost.com",
+			"value": "572"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "english.wafa.ps",
+			"value": "571"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "yahoo.com",
+			"value": "570"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "wacotrib.com",
+			"value": "567"
+		},
+		{
+			"source": "msn.com",
+			"target": "tucson.com",
+			"value": "567"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "greenwichtime.com",
+			"value": "567"
+		},
+		{
+			"source": "msn.com",
+			"target": "newstimes.com",
+			"value": "566"
+		},
+		{
+			"source": "ksl.com",
+			"target": "wsoctv.com",
+			"value": "565"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "tucson.com",
+			"value": "562"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "yahoo.com",
+			"value": "561"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "yahoo.com",
+			"value": "558"
+		},
+		{
+			"source": "msn.com",
+			"target": "thehour.com",
+			"value": "558"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "nhregister.com",
+			"value": "558"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "washingtonpost.com",
+			"value": "557"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "washingtonpost.com",
+			"value": "557"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "msn.com",
+			"value": "553"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "nhregister.com",
+			"value": "551"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "lmtonline.com",
+			"value": "551"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "seattlepi.com",
+			"value": "550"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "tucson.com",
+			"value": "548"
+		},
+		{
+			"source": "ksl.com",
+			"target": "msn.com",
+			"value": "547"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "startribune.com",
+			"value": "544"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "registercitizen.com",
+			"value": "544"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "msn.com",
+			"value": "544"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "thehour.com",
+			"value": "542"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "reuters.com",
+			"value": "538"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "wfmz.com",
+			"value": "537"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "middletownpress.com",
+			"value": "537"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "tampabay.com",
+			"value": "536"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "iheart.com",
+			"value": "535"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "seattlepi.com",
+			"value": "535"
+		},
+		{
+			"source": "reuters.com",
+			"target": "washingtonpost.com",
+			"value": "535"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "washingtonpost.com",
+			"value": "532"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "tampabay.com",
+			"value": "531"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "registercitizen.com",
+			"value": "528"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "stamfordadvocate.com",
+			"value": "526"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "thehour.com",
+			"value": "526"
+		},
+		{
+			"source": "thehour.com",
+			"target": "tucson.com",
+			"value": "526"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "ksl.com",
+			"value": "526"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "nzherald.co.nz",
+			"value": "524"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "stamfordadvocate.com",
+			"value": "524"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "startribune.com",
+			"value": "524"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "tucson.com",
+			"value": "523"
+		},
+		{
+			"source": "startribune.com",
+			"target": "wsoctv.com",
+			"value": "521"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "nzherald.co.nz",
+			"value": "520"
+		},
+		{
+			"source": "iheart.com",
+			"target": "nbcnews.com",
+			"value": "517"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "yahoo.com",
+			"value": "516"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "mysanantonio.com",
+			"value": "514"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "tucson.com",
+			"value": "513"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "wsoctv.com",
+			"value": "512"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "wacotrib.com",
+			"value": "509"
+		},
+		{
+			"source": "ksl.com",
+			"target": "middletownpress.com",
+			"value": "508"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "nzherald.co.nz",
+			"value": "507"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "middletownpress.com",
+			"value": "506"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "lmtonline.com",
+			"value": "506"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "sfgate.com",
+			"value": "506"
+		},
+		{
+			"source": "ksl.com",
+			"target": "thehour.com",
+			"value": "504"
+		},
+		{
+			"source": "ksl.com",
+			"target": "nhregister.com",
+			"value": "503"
+		},
+		{
+			"source": "chron.com",
+			"target": "dailymail.co.uk",
+			"value": "502"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "mynorthwest.com",
+			"value": "500"
+		},
+		{
+			"source": "ksl.com",
+			"target": "seattlepi.com",
+			"value": "499"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "tucson.com",
+			"value": "497"
+		},
+		{
+			"source": "msn.com",
+			"target": "nzherald.co.nz",
+			"value": "494"
+		},
+		{
+			"source": "ksl.com",
+			"target": "registercitizen.com",
+			"value": "492"
+		},
+		{
+			"source": "msn.com",
+			"target": "nhregister.com",
+			"value": "492"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "startribune.com",
+			"value": "492"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "stamfordadvocate.com",
+			"value": "490"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "newstimes.com",
+			"value": "488"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "wsoctv.com",
+			"value": "487"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "startribune.com",
+			"value": "484"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "tucson.com",
+			"value": "483"
+		},
+		{
+			"source": "msn.com",
+			"target": "registercitizen.com",
+			"value": "483"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "lmtonline.com",
+			"value": "481"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "greensboro.com",
+			"value": "481"
+		},
+		{
+			"source": "chron.com",
+			"target": "fredericksburg.com",
+			"value": "480"
+		},
+		{
+			"source": "msn.com",
+			"target": "wacotrib.com",
+			"value": "479"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "mynorthwest.com",
+			"value": "478"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "mysanantonio.com",
+			"value": "476"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "seattlepi.com",
+			"value": "474"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "middletownpress.com",
+			"value": "473"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "msn.com",
+			"value": "471"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "washingtonpost.com",
+			"value": "466"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "wfmz.com",
+			"value": "465"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "zazoom.it",
+			"value": "464"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "mysanantonio.com",
+			"value": "464"
+		},
+		{
+			"source": "thehour.com",
+			"target": "wsoctv.com",
+			"value": "461"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "washingtonpost.com",
+			"value": "454"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "msn.com",
+			"value": "454"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "wsoctv.com",
+			"value": "452"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "tucson.com",
+			"value": "449"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "wsoctv.com",
+			"value": "449"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "reuters.com",
+			"value": "447"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "chron.com",
+			"value": "444"
+		},
+		{
+			"source": "ksl.com",
+			"target": "newstimes.com",
+			"value": "442"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "thehour.com",
+			"value": "442"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "nzherald.co.nz",
+			"value": "442"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "registercitizen.com",
+			"value": "441"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "thehour.com",
+			"value": "441"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "mynorthwest.com",
+			"value": "440"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "seattlepi.com",
+			"value": "440"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "washingtonpost.com",
+			"value": "439"
+		},
+		{
+			"source": "msn.com",
+			"target": "stamfordadvocate.com",
+			"value": "439"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "msn.com",
+			"value": "438"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "tampabay.com",
+			"value": "436"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "wacotrib.com",
+			"value": "434"
+		},
+		{
+			"source": "chron.com",
+			"target": "indiatimes.com",
+			"value": "434"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "msn.com",
+			"value": "432"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "tucson.com",
+			"value": "431"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "sfgate.com",
+			"value": "431"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "wacotrib.com",
+			"value": "430"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "tampabay.com",
+			"value": "429"
+		},
+		{
+			"source": "ksl.com",
+			"target": "stamfordadvocate.com",
+			"value": "429"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "mysanantonio.com",
+			"value": "428"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "wsoctv.com",
+			"value": "428"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "yahoo.com",
+			"value": "426"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "mysanantonio.com",
+			"value": "425"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "wsoctv.com",
+			"value": "423"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "wsoctv.com",
+			"value": "423"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "wacotrib.com",
+			"value": "422"
+		},
+		{
+			"source": "startribune.com",
+			"target": "tampabay.com",
+			"value": "422"
+		},
+		{
+			"source": "startribune.com",
+			"target": "thehour.com",
+			"value": "422"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "nhregister.com",
+			"value": "420"
+		},
+		{
+			"source": "msn.com",
+			"target": "wsoctv.com",
+			"value": "418"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "newstimes.com",
+			"value": "418"
+		},
+		{
+			"source": "wafa.ps",
+			"target": "wfmz.com",
+			"value": "416"
+		},
+		{
+			"source": "reuters.com",
+			"target": "sfgate.com",
+			"value": "416"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "wsoctv.com",
+			"value": "415"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "registercitizen.com",
+			"value": "413"
+		},
+		{
+			"source": "iheart.com",
+			"target": "startribune.com",
+			"value": "413"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "wsoctv.com",
+			"value": "413"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "ksl.com",
+			"value": "411"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "stamfordadvocate.com",
+			"value": "411"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "wsoctv.com",
+			"value": "411"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "washingtonpost.com",
+			"value": "410"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "startribune.com",
+			"value": "408"
+		},
+		{
+			"source": "reuters.com",
+			"target": "wfmz.com",
+			"value": "408"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "startribune.com",
+			"value": "408"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "tampabay.com",
+			"value": "407"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "startribune.com",
+			"value": "406"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "msn.com",
+			"value": "406"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "wfmz.com",
+			"value": "405"
+		},
+		{
+			"source": "iheart.com",
+			"target": "msn.com",
+			"value": "404"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "tucson.com",
+			"value": "403"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "sputniknews.com",
+			"value": "403"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "stamfordadvocate.com",
+			"value": "400"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "newstimes.com",
+			"value": "400"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "startribune.com",
+			"value": "399"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "mynorthwest.com",
+			"value": "399"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "tampabay.com",
+			"value": "397"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "registercitizen.com",
+			"value": "393"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "chieftain.com",
+			"value": "392"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "startribune.com",
+			"value": "389"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "nhregister.com",
+			"value": "389"
+		},
+		{
+			"source": "ksl.com",
+			"target": "mysanantonio.com",
+			"value": "388"
+		},
+		{
+			"source": "iheart.com",
+			"target": "sputniknews.com",
+			"value": "387"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "tampabay.com",
+			"value": "387"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "washingtonpost.com",
+			"value": "386"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "nzherald.co.nz",
+			"value": "384"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "fredericksburg.com",
+			"value": "384"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "wfmz.com",
+			"value": "383"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "washingtonpost.com",
+			"value": "383"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "wfmz.com",
+			"value": "383"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "msn.com",
+			"value": "382"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "nhregister.com",
+			"value": "382"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "yahoo.com",
+			"value": "381"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "tampabay.com",
+			"value": "381"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "thehour.com",
+			"value": "381"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "seattlepi.com",
+			"value": "379"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "startribune.com",
+			"value": "379"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "wsoctv.com",
+			"value": "378"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "mynorthwest.com",
+			"value": "374"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "nzherald.co.nz",
+			"value": "373"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "stamfordadvocate.com",
+			"value": "369"
+		},
+		{
+			"source": "iheart.com",
+			"target": "indiatimes.com",
+			"value": "369"
+		},
+		{
+			"source": "palestinemonitor.org",
+			"target": "wafa.ps",
+			"value": "368"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "yahoo.com",
+			"value": "368"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "wacotrib.com",
+			"value": "368"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "washingtonpost.com",
+			"value": "367"
+		},
+		{
+			"source": "msn.com",
+			"target": "mynorthwest.com",
+			"value": "366"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "nbcnews.com",
+			"value": "365"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "wsoctv.com",
+			"value": "364"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "msn.com",
+			"value": "362"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "startribune.com",
+			"value": "356"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "thehour.com",
+			"value": "354"
+		},
+		{
+			"source": "chron.com",
+			"target": "reuters.com",
+			"value": "353"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "mysanantonio.com",
+			"value": "353"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "tampabay.com",
+			"value": "348"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "sfgate.com",
+			"value": "348"
+		},
+		{
+			"source": "iheart.com",
+			"target": "washingtonpost.com",
+			"value": "347"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "tampabay.com",
+			"value": "347"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "greensboro.com",
+			"value": "345"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "nhregister.com",
+			"value": "345"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "tampabay.com",
+			"value": "345"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "sfgate.com",
+			"value": "340"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "tampabay.com",
+			"value": "339"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "mysanantonio.com",
+			"value": "338"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "reuters.com",
+			"value": "337"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "startribune.com",
+			"value": "332"
+		},
+		{
+			"source": "wafa.ps",
+			"target": "yahoo.com",
+			"value": "332"
+		},
+		{
+			"source": "msn.com",
+			"target": "wafa.ps",
+			"value": "332"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "mynorthwest.com",
+			"value": "331"
+		},
+		{
+			"source": "ksl.com",
+			"target": "lmtonline.com",
+			"value": "330"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "greenwichtime.com",
+			"value": "326"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "wacotrib.com",
+			"value": "325"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "reuters.com",
+			"value": "325"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "seattlepi.com",
+			"value": "324"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "ksl.com",
+			"value": "324"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "wsoctv.com",
+			"value": "317"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "tucson.com",
+			"value": "317"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "mysanantonio.com",
+			"value": "317"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "msn.com",
+			"value": "315"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "middletownpress.com",
+			"value": "314"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "iheart.com",
+			"value": "313"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "msn.com",
+			"value": "312"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "nzherald.co.nz",
+			"value": "312"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "tampabay.com",
+			"value": "311"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "startribune.com",
+			"value": "311"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "seattlepi.com",
+			"value": "310"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "newstimes.com",
+			"value": "310"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "indiatimes.com",
+			"value": "309"
+		},
+		{
+			"source": "msn.com",
+			"target": "seattlepi.com",
+			"value": "309"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "greenwichtime.com",
+			"value": "308"
+		},
+		{
+			"source": "reuters.com",
+			"target": "wacotrib.com",
+			"value": "307"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "wfmz.com",
+			"value": "307"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "registercitizen.com",
+			"value": "306"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "ksl.com",
+			"value": "306"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "dailymail.co.uk",
+			"value": "306"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "middletownpress.com",
+			"value": "304"
+		},
+		{
+			"source": "reuters.com",
+			"target": "wsoctv.com",
+			"value": "304"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "tucson.com",
+			"value": "302"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "wsoctv.com",
+			"value": "302"
+		},
+		{
+			"source": "chron.com",
+			"target": "nbcnews.com",
+			"value": "300"
+		},
+		{
+			"source": "ksl.com",
+			"target": "reuters.com",
+			"value": "298"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "ksl.com",
+			"value": "298"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "tampabay.com",
+			"value": "297"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "greensboro.com",
+			"value": "295"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "wsoctv.com",
+			"value": "294"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "lmtonline.com",
+			"value": "294"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "indiatimes.com",
+			"value": "292"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "newstimes.com",
+			"value": "292"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "wafa.ps",
+			"value": "290"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "startribune.com",
+			"value": "290"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "dailymail.co.uk",
+			"value": "289"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "ctpost.com",
+			"value": "283"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "reuters.com",
+			"value": "283"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "reuters.com",
+			"value": "283"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "wsoctv.com",
+			"value": "282"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "msn.com",
+			"value": "282"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "indiatimes.com",
+			"value": "281"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "sfgate.com",
+			"value": "281"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "nbcnews.com",
+			"value": "281"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "france24.com",
+			"value": "280"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "newstimes.com",
+			"value": "278"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "sfgate.com",
+			"value": "278"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "nzherald.co.nz",
+			"value": "275"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "indiatimes.com",
+			"value": "274"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "fasopresse.net",
+			"value": "273"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "chieftain.com",
+			"value": "272"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "dailymail.co.uk",
+			"value": "272"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "startribune.com",
+			"value": "272"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "stamfordadvocate.com",
+			"value": "271"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "greenwichtime.com",
+			"value": "270"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "reuters.com",
+			"value": "268"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "washingtonpost.com",
+			"value": "268"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "wfmz.com",
+			"value": "268"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "startribune.com",
+			"value": "267"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "indiatimes.com",
+			"value": "265"
+		},
+		{
+			"source": "msn.com",
+			"target": "startribune.com",
+			"value": "265"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "reuters.com",
+			"value": "265"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "nhregister.com",
+			"value": "263"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "stamfordadvocate.com",
+			"value": "262"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "mysanantonio.com",
+			"value": "262"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "yahoo.com",
+			"value": "261"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "mynorthwest.com",
+			"value": "260"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "registercitizen.com",
+			"value": "259"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "thehour.com",
+			"value": "259"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "stamfordadvocate.com",
+			"value": "258"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "thehour.com",
+			"value": "257"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "middletownpress.com",
+			"value": "257"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "fredericksburg.com",
+			"value": "257"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "tampabay.com",
+			"value": "256"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "iheart.com",
+			"value": "255"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "ctpost.com",
+			"value": "255"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "thehour.com",
+			"value": "254"
+		},
+		{
+			"source": "dw.com",
+			"target": "english.wafa.ps",
+			"value": "254"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "middletownpress.com",
+			"value": "254"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "tampabay.com",
+			"value": "250"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "xinhuanet.com",
+			"value": "250"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "startribune.com",
+			"value": "249"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "registercitizen.com",
+			"value": "249"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "indiatimes.com",
+			"value": "249"
+		},
+		{
+			"source": "chron.com",
+			"target": "iheart.com",
+			"value": "249"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "reuters.com",
+			"value": "247"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "france24.com",
+			"value": "247"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "stamfordadvocate.com",
+			"value": "245"
+		},
+		{
+			"source": "reuters.com",
+			"target": "tampabay.com",
+			"value": "245"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "newstimes.com",
+			"value": "243"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "thehour.com",
+			"value": "242"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "nhregister.com",
+			"value": "241"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "reuters.com",
+			"value": "239"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "nhregister.com",
+			"value": "237"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "wafa.ps",
+			"value": "237"
+		},
+		{
+			"source": "dawn.com",
+			"target": "indiatimes.com",
+			"value": "237"
+		},
+		{
+			"source": "msn.com",
+			"target": "mysanantonio.com",
+			"value": "236"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "greenwichtime.com",
+			"value": "236"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "registercitizen.com",
+			"value": "234"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "reuters.com",
+			"value": "234"
+		},
+		{
+			"source": "chron.com",
+			"target": "foxnews.com",
+			"value": "233"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "tucson.com",
+			"value": "233"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "newstimes.com",
+			"value": "232"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "reuters.com",
+			"value": "231"
+		},
+		{
+			"source": "reuters.com",
+			"target": "thehour.com",
+			"value": "231"
+		},
+		{
+			"source": "reuters.com",
+			"target": "tucson.com",
+			"value": "229"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "seattlepi.com",
+			"value": "229"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "mynorthwest.com",
+			"value": "228"
+		},
+		{
+			"source": "reuters.com",
+			"target": "zazoom.it",
+			"value": "227"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "wfmz.com",
+			"value": "225"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "yahoo.com",
+			"value": "225"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "middletownpress.com",
+			"value": "225"
+		},
+		{
+			"source": "dw.com",
+			"target": "msn.com",
+			"value": "224"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "nbcnews.com",
+			"value": "223"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "dailymail.co.uk",
+			"value": "223"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "mynorthwest.com",
+			"value": "222"
+		},
+		{
+			"source": "reuters.com",
+			"target": "stamfordadvocate.com",
+			"value": "222"
+		},
+		{
+			"source": "reuters.com",
+			"target": "tribunnews.com",
+			"value": "219"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "greenwichtime.com",
+			"value": "218"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "mysanantonio.com",
+			"value": "218"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "mynorthwest.com",
+			"value": "217"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "stamfordadvocate.com",
+			"value": "216"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "dailymail.co.uk",
+			"value": "216"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "wsoctv.com",
+			"value": "215"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "nzherald.co.nz",
+			"value": "215"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "lmtonline.com",
+			"value": "215"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "greensboro.com",
+			"value": "214"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "seattlepi.com",
+			"value": "213"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "indiatimes.com",
+			"value": "210"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "wsoctv.com",
+			"value": "209"
+		},
+		{
+			"source": "ksl.com",
+			"target": "wafa.ps",
+			"value": "208"
+		},
+		{
+			"source": "startribune.com",
+			"target": "wafa.ps",
+			"value": "208"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "tucson.com",
+			"value": "208"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "wafa.ps",
+			"value": "208"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "wafa.ps",
+			"value": "208"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "wafa.ps",
+			"value": "208"
+		},
+		{
+			"source": "wafa.ps",
+			"target": "washingtonpost.com",
+			"value": "208"
+		},
+		{
+			"source": "iheart.com",
+			"target": "ksl.com",
+			"value": "207"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "wfmz.com",
+			"value": "207"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "lmtonline.com",
+			"value": "206"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "tampabay.com",
+			"value": "206"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "thehour.com",
+			"value": "205"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "seattlepi.com",
+			"value": "204"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "chron.com",
+			"value": "202"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "iheart.com",
+			"value": "202"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "middletownpress.com",
+			"value": "201"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "nzherald.co.nz",
+			"value": "201"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "cbslocal.com",
+			"value": "201"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "nzherald.co.nz",
+			"value": "200"
+		},
+		{
+			"source": "iheart.com",
+			"target": "lmtonline.com",
+			"value": "200"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "registercitizen.com",
+			"value": "200"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "tampabay.com",
+			"value": "199"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "wafa.ps",
+			"value": "198"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "msn.com",
+			"value": "197"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "wacotrib.com",
+			"value": "194"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "wsoctv.com",
+			"value": "193"
+		},
+		{
+			"source": "iheart.com",
+			"target": "xinhuanet.com",
+			"value": "193"
+		},
+		{
+			"source": "msn.com",
+			"target": "nytimes.com",
+			"value": "193"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "dailymail.co.uk",
+			"value": "192"
+		},
+		{
+			"source": "reuters.com",
+			"target": "ziarelive.ro",
+			"value": "192"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "dailymail.co.uk",
+			"value": "191"
+		},
+		{
+			"source": "reuters.com",
+			"target": "seattlepi.com",
+			"value": "191"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "nhregister.com",
+			"value": "189"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "wacotrib.com",
+			"value": "188"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "dawn.com",
+			"value": "188"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "wacotrib.com",
+			"value": "186"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "nhregister.com",
+			"value": "184"
+		},
+		{
+			"source": "reuters.com",
+			"target": "startribune.com",
+			"value": "184"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "sputniknews.com",
+			"value": "184"
+		},
+		{
+			"source": "dw.com",
+			"target": "reuters.com",
+			"value": "182"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "nbcnews.com",
+			"value": "179"
+		},
+		{
+			"source": "msn.com",
+			"target": "tribunnews.com",
+			"value": "179"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "reuters.com",
+			"value": "179"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "gwdtoday.com",
+			"value": "178"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "wfmz.com",
+			"value": "177"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "lmtonline.com",
+			"value": "177"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "wsoctv.com",
+			"value": "177"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "tampabay.com",
+			"value": "175"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "indiatimes.com",
+			"value": "175"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "nhregister.com",
+			"value": "175"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "gwdtoday.com",
+			"value": "174"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "newstimes.com",
+			"value": "173"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "nbcnews.com",
+			"value": "170"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "foxnews.com",
+			"value": "170"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "foxnews.com",
+			"value": "168"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "greensboro.com",
+			"value": "168"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "reuters.com",
+			"value": "167"
+		},
+		{
+			"source": "france24.com",
+			"target": "wafa.ps",
+			"value": "166"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "mysanantonio.com",
+			"value": "164"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "ksl.com",
+			"value": "164"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "registercitizen.com",
+			"value": "163"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "chron.com",
+			"value": "163"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "stamfordadvocate.com",
+			"value": "162"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "washingtonpost.com",
+			"value": "162"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "mysanantonio.com",
+			"value": "162"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "tampabay.com",
+			"value": "162"
+		},
+		{
+			"source": "reuters.com",
+			"target": "sputniknews.com",
+			"value": "161"
+		},
+		{
+			"source": "reuters.com",
+			"target": "wafa.ps",
+			"value": "160"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "reuters.com",
+			"value": "160"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "nhregister.com",
+			"value": "158"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "nbcnews.com",
+			"value": "157"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "nzherald.co.nz",
+			"value": "157"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "newstimes.com",
+			"value": "157"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "thehour.com",
+			"value": "156"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "iheart.com",
+			"value": "155"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "tampabay.com",
+			"value": "155"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "nbcnews.com",
+			"value": "155"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "cbslocal.com",
+			"value": "154"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "washingtonpost.com",
+			"value": "153"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "nzherald.co.nz",
+			"value": "152"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "tribunnews.com",
+			"value": "151"
+		},
+		{
+			"source": "ksl.com",
+			"target": "nbcnews.com",
+			"value": "151"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "chieftain.com",
+			"value": "150"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "stamfordadvocate.com",
+			"value": "150"
+		},
+		{
+			"source": "iheart.com",
+			"target": "tribunnews.com",
+			"value": "149"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "sfgate.com",
+			"value": "149"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "channelnewsasia.com",
+			"value": "149"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "ksl.com",
+			"value": "147"
+		},
+		{
+			"source": "iheart.com",
+			"target": "wsoctv.com",
+			"value": "146"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "seattlepi.com",
+			"value": "146"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "sfgate.com",
+			"value": "145"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "tampabay.com",
+			"value": "145"
+		},
+		{
+			"source": "france24.com",
+			"target": "indiatimes.com",
+			"value": "143"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "tucson.com",
+			"value": "142"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "foxnews.com",
+			"value": "142"
+		},
+		{
+			"source": "dawn.com",
+			"target": "yahoo.com",
+			"value": "141"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "indiatimes.com",
+			"value": "140"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "registercitizen.com",
+			"value": "140"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "iheart.com",
+			"value": "139"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "dailymail.co.uk",
+			"value": "139"
+		},
+		{
+			"source": "iheart.com",
+			"target": "wacotrib.com",
+			"value": "139"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "wsoctv.com",
+			"value": "137"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "nbcnews.com",
+			"value": "134"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "foxnews.com",
+			"value": "134"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "tucson.com",
+			"value": "132"
+		},
+		{
+			"source": "dw.com",
+			"target": "iheart.com",
+			"value": "132"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "nt.am",
+			"value": "128"
+		},
+		{
+			"source": "dawn.com",
+			"target": "msn.com",
+			"value": "128"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "france24.com",
+			"value": "128"
+		},
+		{
+			"source": "msn.com",
+			"target": "sputniknews.com",
+			"value": "128"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "fredericksburg.com",
+			"value": "127"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "sfgate.com",
+			"value": "126"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "reuters.com",
+			"value": "126"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "yahoo.com",
+			"value": "125"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "startribune.com",
+			"value": "125"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "yahoo.com",
+			"value": "125"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "nbcnews.com",
+			"value": "125"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "startribune.com",
+			"value": "124"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "startribune.com",
+			"value": "124"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "tucson.com",
+			"value": "123"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "nhregister.com",
+			"value": "122"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "chieftain.com",
+			"value": "120"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "businessinsider.com",
+			"value": "120"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "tucson.com",
+			"value": "120"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "reuters.com",
+			"value": "120"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "nbcnews.com",
+			"value": "119"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "registercitizen.com",
+			"value": "118"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "nytimes.com",
+			"value": "118"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "tribunnews.com",
+			"value": "118"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "newstimes.com",
+			"value": "117"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "gwdtoday.com",
+			"value": "117"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "middletownpress.com",
+			"value": "117"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "washingtonpost.com",
+			"value": "116"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "thehour.com",
+			"value": "116"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "middletownpress.com",
+			"value": "116"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "stamfordadvocate.com",
+			"value": "116"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "wacotrib.com",
+			"value": "116"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "registercitizen.com",
+			"value": "116"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "gwdtoday.com",
+			"value": "116"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "wfmz.com",
+			"value": "116"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "foxnews.com",
+			"value": "114"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "ziarelive.ro",
+			"value": "114"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "english.wafa.ps",
+			"value": "114"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "mynorthwest.com",
+			"value": "112"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "mysanantonio.com",
+			"value": "112"
+		},
+		{
+			"source": "chron.com",
+			"target": "nytimes.com",
+			"value": "112"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "cbslocal.com",
+			"value": "112"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "indiatimes.com",
+			"value": "112"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "seattlepi.com",
+			"value": "111"
+		},
+		{
+			"source": "france24.com",
+			"target": "reuters.com",
+			"value": "111"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "seattlepi.com",
+			"value": "110"
+		},
+		{
+			"source": "dw.com",
+			"target": "yahoo.com",
+			"value": "110"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "ksl.com",
+			"value": "109"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "nytimes.com",
+			"value": "109"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "ziarelive.ro",
+			"value": "109"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "channelnewsasia.com",
+			"value": "108"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "nbcnews.com",
+			"value": "108"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "nbcnews.com",
+			"value": "108"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "washingtonpost.com",
+			"value": "107"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "ctpost.com",
+			"value": "106"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "middletownpress.com",
+			"value": "106"
+		},
+		{
+			"source": "msn.com",
+			"target": "zazoom.it",
+			"value": "106"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "iheart.com",
+			"value": "105"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "zazoom.it",
+			"value": "105"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "seattlepi.com",
+			"value": "102"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "zazoom.it",
+			"value": "101"
+		},
+		{
+			"source": "iheart.com",
+			"target": "thehour.com",
+			"value": "101"
+		},
+		{
+			"source": "iheart.com",
+			"target": "middletownpress.com",
+			"value": "101"
+		},
+		{
+			"source": "iheart.com",
+			"target": "stamfordadvocate.com",
+			"value": "101"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "ziarelive.ro",
+			"value": "100"
+		},
+		{
+			"source": "iheart.com",
+			"target": "ziarelive.ro",
+			"value": "100"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "mysanantonio.com",
+			"value": "100"
+		},
+		{
+			"source": "yahoo.com",
+			"target": "zazoom.it",
+			"value": "100"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "mynorthwest.com",
+			"value": "100"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "reuters.com",
+			"value": "100"
+		},
+		{
+			"source": "yahoo.com",
+			"target": "ziarelive.ro",
+			"value": "99"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "nbcnews.com",
+			"value": "98"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "wfmz.com",
+			"value": "98"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "lmtonline.com",
+			"value": "97"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "iheart.com",
+			"value": "97"
+		},
+		{
+			"source": "iheart.com",
+			"target": "newstimes.com",
+			"value": "96"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "france24.com",
+			"value": "95"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "dawn.com",
+			"value": "95"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "thehour.com",
+			"value": "95"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "newstimes.com",
+			"value": "94"
+		},
+		{
+			"source": "iheart.com",
+			"target": "nhregister.com",
+			"value": "93"
+		},
+		{
+			"source": "iheart.com",
+			"target": "registercitizen.com",
+			"value": "93"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "tribunnews.com",
+			"value": "93"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "nbcnews.com",
+			"value": "92"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "msn.com",
+			"value": "92"
+		},
+		{
+			"source": "msn.com",
+			"target": "ziarelive.ro",
+			"value": "92"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "ziarelive.ro",
+			"value": "91"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "nzherald.co.nz",
+			"value": "89"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "foxnews.com",
+			"value": "88"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "yahoo.com",
+			"value": "88"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "zazoom.it",
+			"value": "86"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "nbcnews.com",
+			"value": "86"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "startribune.com",
+			"value": "85"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "dailymail.co.uk",
+			"value": "84"
+		},
+		{
+			"source": "msn.com",
+			"target": "time.mk",
+			"value": "84"
+		},
+		{
+			"source": "dawn.com",
+			"target": "reuters.com",
+			"value": "84"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "tribunnews.com",
+			"value": "84"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "nzherald.co.nz",
+			"value": "83"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "tucson.com",
+			"value": "83"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "wafa.ps",
+			"value": "82"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "businessinsider.com",
+			"value": "82"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "greenwichtime.com",
+			"value": "82"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "stamfordadvocate.com",
+			"value": "82"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "business-standard.com",
+			"value": "80"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "fredericksburg.com",
+			"value": "79"
+		},
+		{
+			"source": "msn.com",
+			"target": "xinhuanet.com",
+			"value": "78"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "sputniknews.com",
+			"value": "77"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "fredericksburg.com",
+			"value": "76"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "fredericksburg.com",
+			"value": "75"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "startribune.com",
+			"value": "74"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "nbcnews.com",
+			"value": "73"
+		},
+		{
+			"source": "chron.com",
+			"target": "english.wafa.ps",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "tampabay.com",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "sfgate.com",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "nzherald.co.nz",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "startribune.com",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "tucson.com",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "washingtonpost.com",
+			"value": "73"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "greensboro.com",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "ksl.com",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "seattlepi.com",
+			"value": "73"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "fredericksburg.com",
+			"value": "73"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "mynorthwest.com",
+			"value": "71"
+		},
+		{
+			"source": "dawn.com",
+			"target": "thenews.com.pk",
+			"value": "71"
+		},
+		{
+			"source": "dawn.com",
+			"target": "wafa.ps",
+			"value": "71"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "nytimes.com",
+			"value": "70"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "lmtonline.com",
+			"value": "70"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "yahoo.com",
+			"value": "68"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "lmtonline.com",
+			"value": "68"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "yahoo.com",
+			"value": "68"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "nzherald.co.nz",
+			"value": "67"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "thehour.com",
+			"value": "67"
+		},
+		{
+			"source": "ksl.com",
+			"target": "nytimes.com",
+			"value": "67"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "tampabay.com",
+			"value": "65"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "ctpost.com",
+			"value": "65"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "xinhuanet.com",
+			"value": "64"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "tucson.com",
+			"value": "64"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "nytimes.com",
+			"value": "64"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "fredericksburg.com",
+			"value": "64"
+		},
+		{
+			"source": "nt.am",
+			"target": "zazoom.it",
+			"value": "64"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "fredericksburg.com",
+			"value": "64"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "france24.com",
+			"value": "64"
+		},
+		{
+			"source": "reuters.com",
+			"target": "xinhuanet.com",
+			"value": "63"
+		},
+		{
+			"source": "xinhuanet.com",
+			"target": "yahoo.com",
+			"value": "62"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "zazoom.it",
+			"value": "61"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "mysanantonio.com",
+			"value": "60"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "wacotrib.com",
+			"value": "60"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "ksl.com",
+			"value": "59"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "sfgate.com",
+			"value": "59"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "nhregister.com",
+			"value": "59"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "nytimes.com",
+			"value": "58"
+		},
+		{
+			"source": "iheart.com",
+			"target": "sfgate.com",
+			"value": "57"
+		},
+		{
+			"source": "time.mk",
+			"target": "tucson.com",
+			"value": "57"
+		},
+		{
+			"source": "france24.com",
+			"target": "sfgate.com",
+			"value": "57"
+		},
+		{
+			"source": "time.mk",
+			"target": "yahoo.com",
+			"value": "57"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "dw.com",
+			"value": "57"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "stamfordadvocate.com",
+			"value": "57"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "zazoom.it",
+			"value": "56"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "chieftain.com",
+			"value": "55"
+		},
+		{
+			"source": "france24.com",
+			"target": "washingtonpost.com",
+			"value": "54"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "tribunnews.com",
+			"value": "54"
+		},
+		{
+			"source": "dawn.com",
+			"target": "nzherald.co.nz",
+			"value": "54"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "tribunnews.com",
+			"value": "54"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "wfmz.com",
+			"value": "54"
+		},
+		{
+			"source": "chron.com",
+			"target": "dawn.com",
+			"value": "53"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "reuters.com",
+			"value": "53"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "thehour.com",
+			"value": "53"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "nytimes.com",
+			"value": "52"
+		},
+		{
+			"source": "dawn.com",
+			"target": "tampabay.com",
+			"value": "52"
+		},
+		{
+			"source": "france24.com",
+			"target": "nzherald.co.nz",
+			"value": "52"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "tribunnews.com",
+			"value": "51"
+		},
+		{
+			"source": "chron.com",
+			"target": "france24.com",
+			"value": "51"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "cbc.ca",
+			"value": "50"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "nytimes.com",
+			"value": "50"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "nbcnews.com",
+			"value": "50"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "wacotrib.com",
+			"value": "50"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "nytimes.com",
+			"value": "50"
+		},
+		{
+			"source": "france24.com",
+			"target": "wfmz.com",
+			"value": "49"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "nytimes.com",
+			"value": "49"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "middletownpress.com",
+			"value": "49"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "yahoo.com",
+			"value": "48"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "tampabay.com",
+			"value": "48"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "sfgate.com",
+			"value": "48"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "wfmz.com",
+			"value": "48"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "msn.com",
+			"value": "47"
+		},
+		{
+			"source": "chron.com",
+			"target": "ziarelive.ro",
+			"value": "47"
+		},
+		{
+			"source": "dawn.com",
+			"target": "france24.com",
+			"value": "47"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "washingtonpost.com",
+			"value": "46"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "ziarelive.ro",
+			"value": "46"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "foxnews.com",
+			"value": "46"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "wafa.ps",
+			"value": "46"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "seattlepi.com",
+			"value": "46"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "cbc.ca",
+			"value": "46"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "nytimes.com",
+			"value": "46"
+		},
+		{
+			"source": "time.mk",
+			"target": "ziarelive.ro",
+			"value": "46"
+		},
+		{
+			"source": "time.mk",
+			"target": "zazoom.it",
+			"value": "45"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "registercitizen.com",
+			"value": "45"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "washingtonpost.com",
+			"value": "45"
+		},
+		{
+			"source": "dw.com",
+			"target": "time.mk",
+			"value": "45"
+		},
+		{
+			"source": "dw.com",
+			"target": "sputniknews.com",
+			"value": "45"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "lmtonline.com",
+			"value": "44"
+		},
+		{
+			"source": "france24.com",
+			"target": "tampabay.com",
+			"value": "44"
+		},
+		{
+			"source": "france24.com",
+			"target": "nbcnews.com",
+			"value": "44"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "newstimes.com",
+			"value": "44"
+		},
+		{
+			"source": "iheart.com",
+			"target": "reuters.com",
+			"value": "44"
+		},
+		{
+			"source": "dw.com",
+			"target": "nbcnews.com",
+			"value": "43"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "wsoctv.com",
+			"value": "43"
+		},
+		{
+			"source": "reuters.com",
+			"target": "time.mk",
+			"value": "43"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "washingtonpost.com",
+			"value": "42"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "nytimes.com",
+			"value": "42"
+		},
+		{
+			"source": "msn.com",
+			"target": "thenews.com.pk",
+			"value": "42"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "thenews.com.pk",
+			"value": "42"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "yahoo.com",
+			"value": "42"
+		},
+		{
+			"source": "dawn.com",
+			"target": "greensboro.com",
+			"value": "42"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "chron.com",
+			"value": "42"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "zazoom.it",
+			"value": "42"
+		},
+		{
+			"source": "wfmz.com",
+			"target": "zazoom.it",
+			"value": "41"
+		},
+		{
+			"source": "dawn.com",
+			"target": "wfmz.com",
+			"value": "41"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "palestinemonitor.org",
+			"value": "40"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "sputniknews.com",
+			"value": "40"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "nytimes.com",
+			"value": "40"
+		},
+		{
+			"source": "dawn.com",
+			"target": "nbcnews.com",
+			"value": "40"
+		},
+		{
+			"source": "dawn.com",
+			"target": "foxnews.com",
+			"value": "40"
+		},
+		{
+			"source": "msn.com",
+			"target": "palestinemonitor.org",
+			"value": "40"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "sfgate.com",
+			"value": "39"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "dawn.com",
+			"value": "39"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "nytimes.com",
+			"value": "39"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "ghanaweb.com",
+			"value": "39"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "dailymail.co.uk",
+			"value": "39"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "nytimes.com",
+			"value": "39"
+		},
+		{
+			"source": "thehour.com",
+			"target": "zazoom.it",
+			"value": "38"
+		},
+		{
+			"source": "chron.com",
+			"target": "ghanaweb.com",
+			"value": "38"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "foxnews.com",
+			"value": "38"
+		},
+		{
+			"source": "france24.com",
+			"target": "sputniknews.com",
+			"value": "38"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "zazoom.it",
+			"value": "38"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "indiatimes.com",
+			"value": "38"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "palestinemonitor.org",
+			"value": "38"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "zazoom.it",
+			"value": "38"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "cbc.ca",
+			"value": "37"
+		},
+		{
+			"source": "france24.com",
+			"target": "wsoctv.com",
+			"value": "37"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "msn.com",
+			"value": "37"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "dw.com",
+			"value": "37"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "indiatimes.com",
+			"value": "37"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "france24.com",
+			"value": "37"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "zazoom.it",
+			"value": "37"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "wfmz.com",
+			"value": "37"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "foxnews.com",
+			"value": "36"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "wsoctv.com",
+			"value": "36"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "thenews.com.pk",
+			"value": "36"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "chron.com",
+			"value": "36"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "ghanaweb.com",
+			"value": "36"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "stamfordadvocate.com",
+			"value": "36"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "wfmz.com",
+			"value": "36"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "reuters.com",
+			"value": "35"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "middletownpress.com",
+			"value": "35"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "greenwichtime.com",
+			"value": "35"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "ziarelive.ro",
+			"value": "35"
+		},
+		{
+			"source": "ksl.com",
+			"target": "time.mk",
+			"value": "35"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "zazoom.it",
+			"value": "35"
+		},
+		{
+			"source": "dawn.com",
+			"target": "sfgate.com",
+			"value": "35"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "mynorthwest.com",
+			"value": "35"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "washingtonpost.com",
+			"value": "34"
+		},
+		{
+			"source": "wsoctv.com",
+			"target": "ziarelive.ro",
+			"value": "34"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "zazoom.it",
+			"value": "34"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "stamfordadvocate.com",
+			"value": "34"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "cbslocal.com",
+			"value": "34"
+		},
+		{
+			"source": "france24.com",
+			"target": "greensboro.com",
+			"value": "34"
+		},
+		{
+			"source": "chron.com",
+			"target": "zazoom.it",
+			"value": "34"
+		},
+		{
+			"source": "dawn.com",
+			"target": "washingtonpost.com",
+			"value": "34"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "sfgate.com",
+			"value": "34"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "nytimes.com",
+			"value": "33"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "france24.com",
+			"value": "33"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "sputniknews.com",
+			"value": "33"
+		},
+		{
+			"source": "washingtonpost.com",
+			"target": "ziarelive.ro",
+			"value": "33"
+		},
+		{
+			"source": "zazoom.it",
+			"target": "ziarelive.ro",
+			"value": "33"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "tampabay.com",
+			"value": "32"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "ziarelive.ro",
+			"value": "32"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "seattlepi.com",
+			"value": "32"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "time.mk",
+			"value": "32"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "reuters.com",
+			"value": "32"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "dawn.com",
+			"value": "32"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "thehour.com",
+			"value": "32"
+		},
+		{
+			"source": "iheart.com",
+			"target": "nzherald.co.nz",
+			"value": "32"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "wfmz.com",
+			"value": "32"
+		},
+		{
+			"source": "chron.com",
+			"target": "couriermail.com.au",
+			"value": "31"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "tribunnews.com",
+			"value": "31"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "newstimes.com",
+			"value": "31"
+		},
+		{
+			"source": "france24.com",
+			"target": "wacotrib.com",
+			"value": "31"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "tampabay.com",
+			"value": "31"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "ksl.com",
+			"value": "31"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "sputniknews.com",
+			"value": "31"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "ziarelive.ro",
+			"value": "31"
+		},
+		{
+			"source": "dawn.com",
+			"target": "seattlepi.com",
+			"value": "31"
+		},
+		{
+			"source": "washingtonpost.com",
+			"target": "zazoom.it",
+			"value": "31"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "fasopresse.net",
+			"value": "31"
+		},
+		{
+			"source": "time.mk",
+			"target": "wfmz.com",
+			"value": "31"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "nytimes.com",
+			"value": "31"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "tucson.com",
+			"value": "31"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "nbcnews.com",
+			"value": "31"
+		},
+		{
+			"source": "france24.com",
+			"target": "ksl.com",
+			"value": "31"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "wacotrib.com",
+			"value": "30"
+		},
+		{
+			"source": "dawn.com",
+			"target": "wacotrib.com",
+			"value": "30"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "registercitizen.com",
+			"value": "30"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "thenews.com.pk",
+			"value": "30"
+		},
+		{
+			"source": "wfmz.com",
+			"target": "ziarelive.ro",
+			"value": "30"
+		},
+		{
+			"source": "dw.com",
+			"target": "washingtonpost.com",
+			"value": "30"
+		},
+		{
+			"source": "france24.com",
+			"target": "greenwichtime.com",
+			"value": "30"
+		},
+		{
+			"source": "time.mk",
+			"target": "tribunnews.com",
+			"value": "30"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "france24.com",
+			"value": "30"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "sputniknews.com",
+			"value": "30"
+		},
+		{
+			"source": "france24.com",
+			"target": "thehour.com",
+			"value": "30"
+		},
+		{
+			"source": "france24.com",
+			"target": "newstimes.com",
+			"value": "30"
+		},
+		{
+			"source": "iheart.com",
+			"target": "tampabay.com",
+			"value": "29"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "channelnewsasia.com",
+			"value": "29"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "mysanantonio.com",
+			"value": "29"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "chieftain.com",
+			"value": "29"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "greenwichtime.com",
+			"value": "29"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "registercitizen.com",
+			"value": "29"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "lmtonline.com",
+			"value": "28"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "zazoom.it",
+			"value": "28"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "nbcnews.com",
+			"value": "28"
+		},
+		{
+			"source": "dawn.com",
+			"target": "nhregister.com",
+			"value": "28"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "nbcnews.com",
+			"value": "28"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "reuters.com",
+			"value": "28"
+		},
+		{
+			"source": "dawn.com",
+			"target": "tucson.com",
+			"value": "28"
+		},
+		{
+			"source": "france24.com",
+			"target": "stamfordadvocate.com",
+			"value": "28"
+		},
+		{
+			"source": "dawn.com",
+			"target": "wsoctv.com",
+			"value": "28"
+		},
+		{
+			"source": "france24.com",
+			"target": "startribune.com",
+			"value": "28"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "time.mk",
+			"value": "28"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "sputniknews.com",
+			"value": "28"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "cbslocal.com",
+			"value": "27"
+		},
+		{
+			"source": "france24.com",
+			"target": "seattlepi.com",
+			"value": "27"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "thenews.com.pk",
+			"value": "27"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "time.mk",
+			"value": "27"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "sputniknews.com",
+			"value": "27"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "nzherald.co.nz",
+			"value": "27"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "greensboro.com",
+			"value": "27"
+		},
+		{
+			"source": "dw.com",
+			"target": "tucson.com",
+			"value": "27"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "time.mk",
+			"value": "27"
+		},
+		{
+			"source": "france24.com",
+			"target": "registercitizen.com",
+			"value": "27"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "msn.com",
+			"value": "27"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "iheart.com",
+			"value": "27"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "ziarelive.ro",
+			"value": "27"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "indiatimes.com",
+			"value": "26"
+		},
+		{
+			"source": "france24.com",
+			"target": "nhregister.com",
+			"value": "26"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "dawn.com",
+			"value": "26"
+		},
+		{
+			"source": "thehour.com",
+			"target": "time.mk",
+			"value": "26"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "nytimes.com",
+			"value": "26"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "middletownpress.com",
+			"value": "26"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "mynorthwest.com",
+			"value": "26"
+		},
+		{
+			"source": "dw.com",
+			"target": "wfmz.com",
+			"value": "26"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "wafa.ps",
+			"value": "26"
+		},
+		{
+			"source": "dawn.com",
+			"target": "registercitizen.com",
+			"value": "26"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "time.mk",
+			"value": "26"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "nhregister.com",
+			"value": "26"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "ctpost.com",
+			"value": "26"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "iheart.com",
+			"value": "26"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "time.mk",
+			"value": "25"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "ziarelive.ro",
+			"value": "25"
+		},
+		{
+			"source": "washingtonpost.com",
+			"target": "xinhuanet.com",
+			"value": "25"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "washingtonpost.com",
+			"value": "25"
+		},
+		{
+			"source": "france24.com",
+			"target": "ziarelive.ro",
+			"value": "25"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "wsoctv.com",
+			"value": "25"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "zazoom.it",
+			"value": "25"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "zazoom.it",
+			"value": "25"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "nytimes.com",
+			"value": "24"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "registercitizen.com",
+			"value": "24"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "dawn.com",
+			"value": "24"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "greenwichtime.com",
+			"value": "24"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "tribunnews.com",
+			"value": "24"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "nytimes.com",
+			"value": "24"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "mysanantonio.com",
+			"value": "24"
+		},
+		{
+			"source": "france24.com",
+			"target": "middletownpress.com",
+			"value": "24"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "ksl.com",
+			"value": "24"
+		},
+		{
+			"source": "chron.com",
+			"target": "tribunnews.com",
+			"value": "24"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "time.mk",
+			"value": "24"
+		},
+		{
+			"source": "dw.com",
+			"target": "indiatimes.com",
+			"value": "24"
+		},
+		{
+			"source": "wfmz.com",
+			"target": "xinhuanet.com",
+			"value": "24"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "time.mk",
+			"value": "24"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "tribunnews.com",
+			"value": "24"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "time.mk",
+			"value": "23"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "dawn.com",
+			"value": "23"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "xinhuanet.com",
+			"value": "23"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "xinhuanet.com",
+			"value": "23"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "tucson.com",
+			"value": "23"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "zazoom.it",
+			"value": "23"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "xinhuanet.com",
+			"value": "23"
+		},
+		{
+			"source": "reuters.com",
+			"target": "thenews.com.pk",
+			"value": "23"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "washingtonpost.com",
+			"value": "23"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "nytimes.com",
+			"value": "23"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "thehour.com",
+			"value": "23"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "xinhuanet.com",
+			"value": "23"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "xinhuanet.com",
+			"value": "22"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "wsoctv.com",
+			"value": "22"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "washingtonpost.com",
+			"value": "22"
+		},
+		{
+			"source": "thehour.com",
+			"target": "xinhuanet.com",
+			"value": "22"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "sputniknews.com",
+			"value": "22"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "xinhuanet.com",
+			"value": "22"
+		},
+		{
+			"source": "dw.com",
+			"target": "ziarelive.ro",
+			"value": "22"
+		},
+		{
+			"source": "dw.com",
+			"target": "sfgate.com",
+			"value": "21"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "nbcnews.com",
+			"value": "21"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "zazoom.it",
+			"value": "21"
+		},
+		{
+			"source": "dw.com",
+			"target": "greensboro.com",
+			"value": "21"
+		},
+		{
+			"source": "dawn.com",
+			"target": "stamfordadvocate.com",
+			"value": "21"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "stamfordadvocate.com",
+			"value": "21"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "tribunnews.com",
+			"value": "21"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "thehour.com",
+			"value": "21"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "nytimes.com",
+			"value": "21"
+		},
+		{
+			"source": "chron.com",
+			"target": "sputniknews.com",
+			"value": "21"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "ziarelive.ro",
+			"value": "21"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "startribune.com",
+			"value": "21"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "sputniknews.com",
+			"value": "21"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "channelnewsasia.com",
+			"value": "21"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "dw.com",
+			"value": "21"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "ziarelive.ro",
+			"value": "21"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "tribunnews.com",
+			"value": "21"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "seattlepi.com",
+			"value": "21"
+		},
+		{
+			"source": "france24.com",
+			"target": "mynorthwest.com",
+			"value": "21"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "time.mk",
+			"value": "21"
+		},
+		{
+			"source": "dawn.com",
+			"target": "thehour.com",
+			"value": "20"
+		},
+		{
+			"source": "chron.com",
+			"target": "dw.com",
+			"value": "20"
+		},
+		{
+			"source": "dawn.com",
+			"target": "ziarelive.ro",
+			"value": "20"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "xinhuanet.com",
+			"value": "20"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "dawn.com",
+			"value": "20"
+		},
+		{
+			"source": "time.mk",
+			"target": "wacotrib.com",
+			"value": "20"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "xinhuanet.com",
+			"value": "20"
+		},
+		{
+			"source": "dawn.com",
+			"target": "fredericksburg.com",
+			"value": "20"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "time.mk",
+			"value": "20"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "time.mk",
+			"value": "20"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "foxnews.com",
+			"value": "20"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "xinhuanet.com",
+			"value": "19"
+		},
+		{
+			"source": "palestinemonitor.org",
+			"target": "yahoo.com",
+			"value": "19"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "sputniknews.com",
+			"value": "19"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "xinhuanet.com",
+			"value": "19"
+		},
+		{
+			"source": "dw.com",
+			"target": "nzherald.co.nz",
+			"value": "19"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "sputniknews.com",
+			"value": "19"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "nhregister.com",
+			"value": "19"
+		},
+		{
+			"source": "dw.com",
+			"target": "tampabay.com",
+			"value": "19"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "channelnewsasia.com",
+			"value": "19"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "nytimes.com",
+			"value": "19"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "sputniknews.com",
+			"value": "19"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "fredericksburg.com",
+			"value": "19"
+		},
+		{
+			"source": "english.wafa.ps",
+			"target": "foxnews.com",
+			"value": "19"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "newstimes.com",
+			"value": "19"
+		},
+		{
+			"source": "france24.com",
+			"target": "xinhuanet.com",
+			"value": "19"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "time.mk",
+			"value": "19"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "seattlepi.com",
+			"value": "19"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "time.mk",
+			"value": "19"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "ziarelive.ro",
+			"value": "19"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "zazoom.it",
+			"value": "18"
+		},
+		{
+			"source": "france24.com",
+			"target": "thenews.com.pk",
+			"value": "18"
+		},
+		{
+			"source": "dw.com",
+			"target": "france24.com",
+			"value": "18"
+		},
+		{
+			"source": "iheart.com",
+			"target": "tucson.com",
+			"value": "18"
+		},
+		{
+			"source": "dawn.com",
+			"target": "mysanantonio.com",
+			"value": "18"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "time.mk",
+			"value": "18"
+		},
+		{
+			"source": "france24.com",
+			"target": "tucson.com",
+			"value": "18"
+		},
+		{
+			"source": "wsoctv.com",
+			"target": "zazoom.it",
+			"value": "18"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "france24.com",
+			"value": "18"
+		},
+		{
+			"source": "dw.com",
+			"target": "middletownpress.com",
+			"value": "17"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "france24.com",
+			"value": "17"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "zazoom.it",
+			"value": "17"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "sputniknews.com",
+			"value": "17"
+		},
+		{
+			"source": "dawn.com",
+			"target": "middletownpress.com",
+			"value": "17"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "time.mk",
+			"value": "17"
+		},
+		{
+			"source": "dw.com",
+			"target": "ksl.com",
+			"value": "17"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "time.mk",
+			"value": "17"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "startribune.com",
+			"value": "17"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "sputniknews.com",
+			"value": "17"
+		},
+		{
+			"source": "wsoctv.com",
+			"target": "xinhuanet.com",
+			"value": "17"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "fasopresse.net",
+			"value": "17"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "time.mk",
+			"value": "17"
+		},
+		{
+			"source": "dw.com",
+			"target": "wacotrib.com",
+			"value": "17"
+		},
+		{
+			"source": "dawn.com",
+			"target": "mynorthwest.com",
+			"value": "17"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "zazoom.it",
+			"value": "16"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "zazoom.it",
+			"value": "16"
+		},
+		{
+			"source": "wacotrib.com",
+			"target": "zazoom.it",
+			"value": "16"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "startribune.com",
+			"value": "16"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "couriermail.com.au",
+			"value": "16"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "ziarelive.ro",
+			"value": "16"
+		},
+		{
+			"source": "dawn.com",
+			"target": "newstimes.com",
+			"value": "16"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "palestinemonitor.org",
+			"value": "16"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "mynorthwest.com",
+			"value": "16"
+		},
+		{
+			"source": "palestinemonitor.org",
+			"target": "washingtonpost.com",
+			"value": "16"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "ziarelive.ro",
+			"value": "16"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "time.mk",
+			"value": "16"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "wacotrib.com",
+			"value": "16"
+		},
+		{
+			"source": "dawn.com",
+			"target": "ksl.com",
+			"value": "16"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "xinhuanet.com",
+			"value": "16"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "xinhuanet.com",
+			"value": "16"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "stamfordadvocate.com",
+			"value": "15"
+		},
+		{
+			"source": "france24.com",
+			"target": "nytimes.com",
+			"value": "15"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "dw.com",
+			"value": "15"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "nzherald.co.nz",
+			"value": "15"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "time.mk",
+			"value": "15"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "nzherald.co.nz",
+			"value": "15"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "france24.com",
+			"value": "15"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "xinhuanet.com",
+			"value": "15"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "ziarelive.ro",
+			"value": "15"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "xinhuanet.com",
+			"value": "15"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "foxnews.com",
+			"value": "15"
+		},
+		{
+			"source": "dw.com",
+			"target": "thehour.com",
+			"value": "15"
+		},
+		{
+			"source": "dw.com",
+			"target": "nhregister.com",
+			"value": "15"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "tribunnews.com",
+			"value": "15"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "stamfordadvocate.com",
+			"value": "15"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "stamfordadvocate.com",
+			"value": "15"
+		},
+		{
+			"source": "france24.com",
+			"target": "mysanantonio.com",
+			"value": "15"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "couriermail.com.au",
+			"value": "14"
+		},
+		{
+			"source": "time.mk",
+			"target": "washingtonpost.com",
+			"value": "14"
+		},
+		{
+			"source": "dw.com",
+			"target": "fredericksburg.com",
+			"value": "14"
+		},
+		{
+			"source": "dw.com",
+			"target": "foxnews.com",
+			"value": "14"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "wfmz.com",
+			"value": "14"
+		},
+		{
+			"source": "dw.com",
+			"target": "wsoctv.com",
+			"value": "14"
+		},
+		{
+			"source": "dw.com",
+			"target": "xinhuanet.com",
+			"value": "14"
+		},
+		{
+			"source": "ksl.com",
+			"target": "zazoom.it",
+			"value": "14"
+		},
+		{
+			"source": "france24.com",
+			"target": "lmtonline.com",
+			"value": "14"
+		},
+		{
+			"source": "dawn.com",
+			"target": "nytimes.com",
+			"value": "14"
+		},
+		{
+			"source": "time.mk",
+			"target": "wsoctv.com",
+			"value": "14"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "xinhuanet.com",
+			"value": "14"
+		},
+		{
+			"source": "dw.com",
+			"target": "greenwichtime.com",
+			"value": "14"
+		},
+		{
+			"source": "dw.com",
+			"target": "tribunnews.com",
+			"value": "14"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "tribunnews.com",
+			"value": "14"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "ghanaweb.com",
+			"value": "14"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "tribunnews.com",
+			"value": "14"
+		},
+		{
+			"source": "thehour.com",
+			"target": "ziarelive.ro",
+			"value": "14"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "ziarelive.ro",
+			"value": "14"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "dw.com",
+			"value": "14"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "startribune.com",
+			"value": "13"
+		},
+		{
+			"source": "tucson.com",
+			"target": "ziarelive.ro",
+			"value": "13"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "ziarelive.ro",
+			"value": "13"
+		},
+		{
+			"source": "dawn.com",
+			"target": "startribune.com",
+			"value": "13"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "ctpost.com",
+			"value": "13"
+		},
+		{
+			"source": "palestinemonitor.org",
+			"target": "xinhuanet.com",
+			"value": "13"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "fredericksburg.com",
+			"value": "13"
+		},
+		{
+			"source": "dawn.com",
+			"target": "time.mk",
+			"value": "13"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "thenews.com.pk",
+			"value": "13"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "sputniknews.com",
+			"value": "13"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "ksl.com",
+			"value": "13"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "tribunnews.com",
+			"value": "13"
+		},
+		{
+			"source": "tucson.com",
+			"target": "zazoom.it",
+			"value": "13"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "newstimes.com",
+			"value": "13"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "ziarelive.ro",
+			"value": "13"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "ghanaweb.com",
+			"value": "13"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "sfgate.com",
+			"value": "13"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "sputniknews.com",
+			"value": "13"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "time.mk",
+			"value": "12"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "tampabay.com",
+			"value": "12"
+		},
+		{
+			"source": "wacotrib.com",
+			"target": "ziarelive.ro",
+			"value": "12"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "couriermail.com.au",
+			"value": "12"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "tribunnews.com",
+			"value": "12"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "dw.com",
+			"value": "12"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "time.mk",
+			"value": "12"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "nbcnews.com",
+			"value": "12"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "ziarelive.ro",
+			"value": "12"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "tribunnews.com",
+			"value": "12"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "washingtonpost.com",
+			"value": "12"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "indiatimes.com",
+			"value": "12"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "lmtonline.com",
+			"value": "12"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "thehour.com",
+			"value": "12"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "france24.com",
+			"value": "12"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "lmtonline.com",
+			"value": "12"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "greenwichtime.com",
+			"value": "12"
+		},
+		{
+			"source": "ksl.com",
+			"target": "tribunnews.com",
+			"value": "12"
+		},
+		{
+			"source": "chron.com",
+			"target": "xinhuanet.com",
+			"value": "11"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "dw.com",
+			"value": "11"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "tribunnews.com",
+			"value": "11"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "newstimes.com",
+			"value": "11"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "ziarelive.ro",
+			"value": "11"
+		},
+		{
+			"source": "iheart.com",
+			"target": "mysanantonio.com",
+			"value": "11"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "lmtonline.com",
+			"value": "11"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "stamfordadvocate.com",
+			"value": "11"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "ziarelive.ro",
+			"value": "11"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "tucson.com",
+			"value": "11"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "sputniknews.com",
+			"value": "11"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "time.mk",
+			"value": "11"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "mysanantonio.com",
+			"value": "11"
+		},
+		{
+			"source": "dw.com",
+			"target": "registercitizen.com",
+			"value": "11"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "iheart.com",
+			"value": "11"
+		},
+		{
+			"source": "france24.com",
+			"target": "fredericksburg.com",
+			"value": "11"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "greensboro.com",
+			"value": "11"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "fasopresse.net",
+			"value": "11"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "nhregister.com",
+			"value": "11"
+		},
+		{
+			"source": "sfgate.com",
+			"target": "thenews.com.pk",
+			"value": "11"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "ziarelive.ro",
+			"value": "11"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "middletownpress.com",
+			"value": "11"
+		},
+		{
+			"source": "dawn.com",
+			"target": "greenwichtime.com",
+			"value": "11"
+		},
+		{
+			"source": "dw.com",
+			"target": "newstimes.com",
+			"value": "11"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "business-standard.com",
+			"value": "11"
+		},
+		{
+			"source": "dw.com",
+			"target": "palestinemonitor.org",
+			"value": "11"
+		},
+		{
+			"source": "ksl.com",
+			"target": "ziarelive.ro",
+			"value": "11"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "sputniknews.com",
+			"value": "11"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "zazoom.it",
+			"value": "11"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "ghanaweb.com",
+			"value": "11"
+		},
+		{
+			"source": "chron.com",
+			"target": "thenews.com.pk",
+			"value": "11"
+		},
+		{
+			"source": "dw.com",
+			"target": "nytimes.com",
+			"value": "11"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "ziarelive.ro",
+			"value": "11"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "ziarelive.ro",
+			"value": "11"
+		},
+		{
+			"source": "dw.com",
+			"target": "mynorthwest.com",
+			"value": "11"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "ghanaweb.com",
+			"value": "11"
+		},
+		{
+			"source": "dw.com",
+			"target": "zazoom.it",
+			"value": "10"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "tribunnews.com",
+			"value": "10"
+		},
+		{
+			"source": "dw.com",
+			"target": "stamfordadvocate.com",
+			"value": "10"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "nytimes.com",
+			"value": "10"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "xinhuanet.com",
+			"value": "10"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "zazoom.it",
+			"value": "10"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "dawn.com",
+			"value": "10"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "xinhuanet.com",
+			"value": "10"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "ziarelive.ro",
+			"value": "10"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "mysanantonio.com",
+			"value": "10"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "zazoom.it",
+			"value": "10"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "sputniknews.com",
+			"value": "10"
+		},
+		{
+			"source": "dawn.com",
+			"target": "sputniknews.com",
+			"value": "10"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "greenwichtime.com",
+			"value": "10"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "iheart.com",
+			"value": "10"
+		},
+		{
+			"source": "dw.com",
+			"target": "seattlepi.com",
+			"value": "10"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "time.mk",
+			"value": "10"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "zazoom.it",
+			"value": "10"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "tampabay.com",
+			"value": "9"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "dw.com",
+			"value": "9"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "xinhuanet.com",
+			"value": "9"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "fasopresse.net",
+			"value": "9"
+		},
+		{
+			"source": "ksl.com",
+			"target": "xinhuanet.com",
+			"value": "9"
+		},
+		{
+			"source": "dawn.com",
+			"target": "lmtonline.com",
+			"value": "9"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "newstimes.com",
+			"value": "9"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "xinhuanet.com",
+			"value": "9"
+		},
+		{
+			"source": "wacotrib.com",
+			"target": "xinhuanet.com",
+			"value": "9"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "mynorthwest.com",
+			"value": "9"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "nhregister.com",
+			"value": "9"
+		},
+		{
+			"source": "startribune.com",
+			"target": "time.mk",
+			"value": "8"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "ghanaweb.com",
+			"value": "8"
+		},
+		{
+			"source": "startribune.com",
+			"target": "tribunnews.com",
+			"value": "8"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "sputniknews.com",
+			"value": "8"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "tribunnews.com",
+			"value": "8"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "wsoctv.com",
+			"value": "8"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "ziarelive.ro",
+			"value": "8"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "thehour.com",
+			"value": "8"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "sputniknews.com",
+			"value": "8"
+		},
+		{
+			"source": "startribune.com",
+			"target": "xinhuanet.com",
+			"value": "8"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "couriermail.com.au",
+			"value": "8"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "tribunnews.com",
+			"value": "8"
+		},
+		{
+			"source": "newstimes.com",
+			"target": "tribunnews.com",
+			"value": "8"
+		},
+		{
+			"source": "startribune.com",
+			"target": "ziarelive.ro",
+			"value": "8"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "tribunnews.com",
+			"value": "8"
+		},
+		{
+			"source": "chron.com",
+			"target": "time.mk",
+			"value": "8"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "time.mk",
+			"value": "8"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "xinhuanet.com",
+			"value": "8"
+		},
+		{
+			"source": "nbcnews.com",
+			"target": "zazoom.it",
+			"value": "8"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "ghanaweb.com",
+			"value": "8"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "france24.com",
+			"value": "8"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "tucson.com",
+			"value": "8"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "xinhuanet.com",
+			"value": "7"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "zazoom.it",
+			"value": "7"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "ziarelive.ro",
+			"value": "7"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "ctpost.com",
+			"value": "7"
+		},
+		{
+			"source": "dawn.com",
+			"target": "tribunnews.com",
+			"value": "7"
+		},
+		{
+			"source": "dw.com",
+			"target": "startribune.com",
+			"value": "7"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "greensboro.com",
+			"value": "7"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "nytimes.com",
+			"value": "7"
+		},
+		{
+			"source": "iheart.com",
+			"target": "nytimes.com",
+			"value": "7"
+		},
+		{
+			"source": "dw.com",
+			"target": "lmtonline.com",
+			"value": "7"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "xinhuanet.com",
+			"value": "7"
+		},
+		{
+			"source": "thehour.com",
+			"target": "tribunnews.com",
+			"value": "7"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "iheart.com",
+			"value": "7"
+		},
+		{
+			"source": "dw.com",
+			"target": "mysanantonio.com",
+			"value": "7"
+		},
+		{
+			"source": "dawn.com",
+			"target": "ghanaweb.com",
+			"value": "7"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "xinhuanet.com",
+			"value": "7"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "dw.com",
+			"value": "7"
+		},
+		{
+			"source": "nzherald.co.nz",
+			"target": "thenews.com.pk",
+			"value": "7"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "thehour.com",
+			"value": "7"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "tribunnews.com",
+			"value": "7"
+		},
+		{
+			"source": "iheart.com",
+			"target": "mynorthwest.com",
+			"value": "7"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "ziarelive.ro",
+			"value": "7"
+		},
+		{
+			"source": "ksl.com",
+			"target": "sputniknews.com",
+			"value": "7"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "wsoctv.com",
+			"value": "7"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "indiatimes.com",
+			"value": "7"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "tribunnews.com",
+			"value": "7"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "xinhuanet.com",
+			"value": "7"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "greenwichtime.com",
+			"value": "7"
+		},
+		{
+			"source": "xinhuanet.com",
+			"target": "ziarelive.ro",
+			"value": "6"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "zazoom.it",
+			"value": "6"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "wsoctv.com",
+			"value": "6"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "couriermail.com.au",
+			"value": "6"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "lmtonline.com",
+			"value": "6"
+		},
+		{
+			"source": "indiatimes.com",
+			"target": "xinhuanet.com",
+			"value": "6"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "zazoom.it",
+			"value": "6"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "sputniknews.com",
+			"value": "6"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "nzherald.co.nz",
+			"value": "6"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "time.mk",
+			"value": "6"
+		},
+		{
+			"source": "dawn.com",
+			"target": "dw.com",
+			"value": "6"
+		},
+		{
+			"source": "chron.com",
+			"target": "fasopresse.net",
+			"value": "6"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "sputniknews.com",
+			"value": "6"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "thenews.com.pk",
+			"value": "6"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "dawn.com",
+			"value": "6"
+		},
+		{
+			"source": "tucson.com",
+			"target": "xinhuanet.com",
+			"value": "6"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "lmtonline.com",
+			"value": "6"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "startribune.com",
+			"value": "6"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "ghanaweb.com",
+			"value": "6"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "ghanaweb.com",
+			"value": "6"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "zazoom.it",
+			"value": "6"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "time.mk",
+			"value": "6"
+		},
+		{
+			"source": "startribune.com",
+			"target": "zazoom.it",
+			"value": "6"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "zazoom.it",
+			"value": "6"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "ghanaweb.com",
+			"value": "5"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "seattlepi.com",
+			"value": "5"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "startribune.com",
+			"value": "5"
+		},
+		{
+			"source": "iheart.com",
+			"target": "seattlepi.com",
+			"value": "5"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "nytimes.com",
+			"value": "5"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "mysanantonio.com",
+			"value": "5"
+		},
+		{
+			"source": "dailymail.co.uk",
+			"target": "gwdtoday.com",
+			"value": "5"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "sputniknews.com",
+			"value": "5"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "xinhuanet.com",
+			"value": "5"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "sputniknews.com",
+			"value": "5"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "thenews.com.pk",
+			"value": "5"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "ziarelive.ro",
+			"value": "5"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "washingtonpost.com",
+			"value": "5"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "mynorthwest.com",
+			"value": "5"
+		},
+		{
+			"source": "xinhuanet.com",
+			"target": "zazoom.it",
+			"value": "5"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "xinhuanet.com",
+			"value": "5"
+		},
+		{
+			"source": "iheart.com",
+			"target": "thenews.com.pk",
+			"value": "5"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "time.mk",
+			"value": "5"
+		},
+		{
+			"source": "foxnews.com",
+			"target": "ziarelive.ro",
+			"value": "5"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "chron.com",
+			"value": "5"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "tucson.com",
+			"value": "5"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "sputniknews.com",
+			"value": "5"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "wafa.ps",
+			"value": "5"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "fasopresse.net",
+			"value": "5"
+		},
+		{
+			"source": "greensboro.com",
+			"target": "gwdtoday.com",
+			"value": "5"
+		},
+		{
+			"source": "seattlepi.com",
+			"target": "thenews.com.pk",
+			"value": "4"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "iheart.com",
+			"value": "4"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "tribunnews.com",
+			"value": "4"
+		},
+		{
+			"source": "chieftain.com",
+			"target": "fasopresse.net",
+			"value": "4"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "fasopresse.net",
+			"value": "4"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "france24.com",
+			"value": "4"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "dawn.com",
+			"value": "4"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "seattlepi.com",
+			"value": "4"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "tribunnews.com",
+			"value": "4"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "couriermail.com.au",
+			"value": "4"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "greensboro.com",
+			"value": "4"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "xinhuanet.com",
+			"value": "4"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "xinhuanet.com",
+			"value": "4"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "wacotrib.com",
+			"value": "4"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "xinhuanet.com",
+			"value": "4"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "wsoctv.com",
+			"value": "4"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "ziarelive.ro",
+			"value": "4"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "tribunnews.com",
+			"value": "4"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "tribunnews.com",
+			"value": "4"
+		},
+		{
+			"source": "tampabay.com",
+			"target": "thenews.com.pk",
+			"value": "4"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "wacotrib.com",
+			"value": "4"
+		},
+		{
+			"source": "dawn.com",
+			"target": "xinhuanet.com",
+			"value": "4"
+		},
+		{
+			"source": "ghanaweb.com",
+			"target": "thenews.com.pk",
+			"value": "4"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "time.mk",
+			"value": "4"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "chieftain.com",
+			"value": "4"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "ksl.com",
+			"value": "4"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "nbcnews.com",
+			"value": "4"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "cbc.ca",
+			"value": "4"
+		},
+		{
+			"source": "france24.com",
+			"target": "tribunnews.com",
+			"value": "4"
+		},
+		{
+			"source": "nt.am",
+			"target": "sputniknews.com",
+			"value": "4"
+		},
+		{
+			"source": "france24.com",
+			"target": "zazoom.it",
+			"value": "4"
+		},
+		{
+			"source": "palestinemonitor.org",
+			"target": "ziarelive.ro",
+			"value": "3"
+		},
+		{
+			"source": "business-standard.com",
+			"target": "nt.am",
+			"value": "3"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "xinhuanet.com",
+			"value": "3"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "ghanaweb.com",
+			"value": "3"
+		},
+		{
+			"source": "greenwichtime.com",
+			"target": "thenews.com.pk",
+			"value": "3"
+		},
+		{
+			"source": "nhregister.com",
+			"target": "thenews.com.pk",
+			"value": "3"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "fasopresse.net",
+			"value": "3"
+		},
+		{
+			"source": "fredericksburg.com",
+			"target": "sputniknews.com",
+			"value": "3"
+		},
+		{
+			"source": "middletownpress.com",
+			"target": "thenews.com.pk",
+			"value": "3"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "thenews.com.pk",
+			"value": "3"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "ziarelive.ro",
+			"value": "3"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "businessinsider.com",
+			"value": "3"
+		},
+		{
+			"source": "iheart.com",
+			"target": "zazoom.it",
+			"value": "3"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "registercitizen.com",
+			"value": "3"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "zazoom.it",
+			"value": "3"
+		},
+		{
+			"source": "tribunnews.com",
+			"target": "wacotrib.com",
+			"value": "3"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "xinhuanet.com",
+			"value": "3"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "xinhuanet.com",
+			"value": "3"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "tribunnews.com",
+			"value": "3"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "lmtonline.com",
+			"value": "3"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "sputniknews.com",
+			"value": "3"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "wfmz.com",
+			"value": "3"
+		},
+		{
+			"source": "france24.com",
+			"target": "iheart.com",
+			"value": "3"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "sputniknews.com",
+			"value": "3"
+		},
+		{
+			"source": "ctpost.com",
+			"target": "thenews.com.pk",
+			"value": "3"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "fredericksburg.com",
+			"value": "2"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "sfgate.com",
+			"value": "2"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "tucson.com",
+			"value": "2"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "greensboro.com",
+			"value": "2"
+		},
+		{
+			"source": "dawn.com",
+			"target": "zazoom.it",
+			"value": "2"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "wfmz.com",
+			"value": "2"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "thenews.com.pk",
+			"value": "2"
+		},
+		{
+			"source": "businessinsider.com",
+			"target": "thenews.com.pk",
+			"value": "2"
+		},
+		{
+			"source": "ksl.com",
+			"target": "thenews.com.pk",
+			"value": "2"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "wfmz.com",
+			"value": "2"
+		},
+		{
+			"source": "dawn.com",
+			"target": "gwdtoday.com",
+			"value": "2"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "dw.com",
+			"value": "2"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "sfgate.com",
+			"value": "2"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "ksl.com",
+			"value": "2"
+		},
+		{
+			"source": "cbslocal.com",
+			"target": "gwdtoday.com",
+			"value": "2"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "nhregister.com",
+			"value": "2"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "time.mk",
+			"value": "2"
+		},
+		{
+			"source": "registercitizen.com",
+			"target": "thenews.com.pk",
+			"value": "2"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "fasopresse.net",
+			"value": "2"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "iheart.com",
+			"value": "2"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "middletownpress.com",
+			"value": "2"
+		},
+		{
+			"source": "cbc.ca",
+			"target": "gwdtoday.com",
+			"value": "2"
+		},
+		{
+			"source": "thehour.com",
+			"target": "thenews.com.pk",
+			"value": "2"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "zazoom.it",
+			"value": "2"
+		},
+		{
+			"source": "mysanantonio.com",
+			"target": "tribunnews.com",
+			"value": "2"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "ziarelive.ro",
+			"value": "2"
+		},
+		{
+			"source": "mynorthwest.com",
+			"target": "time.mk",
+			"value": "2"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "tampabay.com",
+			"value": "2"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "ziarelive.ro",
+			"value": "2"
+		},
+		{
+			"source": "stamfordadvocate.com",
+			"target": "thenews.com.pk",
+			"value": "2"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "indiatimes.com",
+			"value": "2"
+		},
+		{
+			"source": "france24.com",
+			"target": "ghanaweb.com",
+			"value": "2"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "beaumontenterprise.com",
+			"value": "2"
+		},
+		{
+			"source": "startribune.com",
+			"target": "thenews.com.pk",
+			"value": "2"
+		},
+		{
+			"source": "nytimes.com",
+			"target": "zazoom.it",
+			"value": "2"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "registercitizen.com",
+			"value": "2"
+		},
+		{
+			"source": "chron.com",
+			"target": "gwdtoday.com",
+			"value": "2"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "gwdtoday.com",
+			"value": "1"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "seattlepi.com",
+			"value": "1"
+		},
+		{
+			"source": "france24.com",
+			"target": "time.mk",
+			"value": "1"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "channelnewsasia.com",
+			"value": "1"
+		},
+		{
+			"source": "dw.com",
+			"target": "fasopresse.net",
+			"value": "1"
+		},
+		{
+			"source": "dw.com",
+			"target": "ghanaweb.com",
+			"value": "1"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "mynorthwest.com",
+			"value": "1"
+		},
+		{
+			"source": "sputniknews.com",
+			"target": "thenews.com.pk",
+			"value": "1"
+		},
+		{
+			"source": "thenews.com.pk",
+			"target": "zazoom.it",
+			"value": "1"
+		},
+		{
+			"source": "channelnewsasia.com",
+			"target": "couriermail.com.au",
+			"value": "1"
+		},
+		{
+			"source": "dawn.com",
+			"target": "fasopresse.net",
+			"value": "1"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "mysanantonio.com",
+			"value": "1"
+		},
+		{
+			"source": "couriermail.com.au",
+			"target": "zazoom.it",
+			"value": "1"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "wsoctv.com",
+			"value": "1"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "mysanantonio.com",
+			"value": "1"
+		},
+		{
+			"source": "dw.com",
+			"target": "thenews.com.pk",
+			"value": "1"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "ziarelive.ro",
+			"value": "1"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "yahoo.com",
+			"value": "1"
+		},
+		{
+			"source": "lmtonline.com",
+			"target": "tribunnews.com",
+			"value": "1"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "thenews.com.pk",
+			"value": "1"
+		},
+		{
+			"source": "allafrica.com",
+			"target": "startribune.com",
+			"value": "1"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "thenews.com.pk",
+			"value": "1"
+		},
+		{
+			"source": "beaumontenterprise.com",
+			"target": "fasopresse.net",
+			"value": "1"
+		},
+		{
+			"source": "fasopresse.net",
+			"target": "tucson.com",
+			"value": "1"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "lmtonline.com",
+			"value": "1"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "mynorthwest.com",
+			"value": "1"
+		},
+		{
+			"source": "gwdtoday.com",
+			"target": "nzherald.co.nz",
+			"value": "1"
+		}
+	]
+}
