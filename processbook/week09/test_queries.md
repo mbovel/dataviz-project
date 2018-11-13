@@ -23,4 +23,4 @@ ORDER BY
   count DESC
 ```
 
-[See result](./number_of_common_articles.csv)
+[See result](./number_of_common_articles_partitioned.csv)
