@@ -1,0 +1,415 @@
+[
+  {
+    "avg": "-5.667354556845121",
+    "std": "1.643564323834599",
+    "count": "14",
+    "CountryName": "Bahrain",
+    "FIPS": "BA"
+  },
+  {
+    "avg": "-3.3537289326215487",
+    "std": "2.8924839952123174",
+    "count": "11",
+    "CountryName": "Guyana",
+    "FIPS": "GY"
+  },
+  {
+    "avg": "-3.3481181382480063",
+    "std": "2.682555960474418",
+    "count": "28",
+    "CountryName": "Philippines",
+    "FIPS": "RP"
+  },
+  {
+    "avg": "-3.0899458052754407",
+    "std": "2.35805408552159",
+    "count": "25",
+    "CountryName": "Singapore",
+    "FIPS": "SN"
+  },
+  {
+    "avg": "-3.031406591169629",
+    "std": "2.6342799316563172",
+    "count": "13",
+    "CountryName": "Egypt",
+    "FIPS": "EG"
+  },
+  {
+    "avg": "-2.9057852335016787",
+    "std": "2.3393882786891202",
+    "count": "91",
+    "CountryName": "Japan",
+    "FIPS": "JA"
+  },
+  {
+    "avg": "-2.7900225171700916",
+    "std": "1.9972591028796982",
+    "count": "14",
+    "CountryName": "Greece",
+    "FIPS": "GR"
+  },
+  {
+    "avg": "-2.768906815174549",
+    "std": "2.3273389539065445",
+    "count": "10",
+    "CountryName": "Thailand",
+    "FIPS": "TH"
+  },
+  {
+    "avg": "-2.5166519317058516",
+    "std": "2.081133754661167",
+    "count": "158",
+    "CountryName": "Australia",
+    "FIPS": "AS"
+  },
+  {
+    "avg": "-2.3782593011142583",
+    "std": "2.040159788813011",
+    "count": "46",
+    "CountryName": "Cameroon",
+    "FIPS": "CM"
+  },
+  {
+    "avg": "-2.3522519402113757",
+    "std": "2.4627503758397244",
+    "count": "15",
+    "CountryName": "United Arab Emirates",
+    "FIPS": "AE"
+  },
+  {
+    "avg": "-2.3157881488927035",
+    "std": "2.5272029091407666",
+    "count": "53",
+    "CountryName": "New Zealand",
+    "FIPS": "NZ"
+  },
+  {
+    "avg": "-2.2851933949612917",
+    "std": "2.3948333142721934",
+    "count": "35",
+    "CountryName": "Ireland",
+    "FIPS": "EI"
+  },
+  {
+    "avg": "-2.2236215788783023",
+    "std": "1.4534143529257901",
+    "count": "23",
+    "CountryName": "Austria",
+    "FIPS": "AU"
+  },
+  {
+    "avg": "-2.2154281318842903",
+    "std": "1.811604627380833",
+    "count": "44",
+    "CountryName": "Congo",
+    "FIPS": "CF"
+  },
+  {
+    "avg": "-2.187827467558903",
+    "std": "1.5308474486704233",
+    "count": "11",
+    "CountryName": "Algeria",
+    "FIPS": "AG"
+  },
+  {
+    "avg": "-2.074131245412845",
+    "std": "1.491391235576443",
+    "count": "18",
+    "CountryName": "Italy",
+    "FIPS": "IT"
+  },
+  {
+    "avg": "-2.0361295412657983",
+    "std": "2.6568716085088355",
+    "count": "415",
+    "CountryName": "Canada",
+    "FIPS": "CA"
+  },
+  {
+    "avg": "-2.0326941383333947",
+    "std": "2.395364964271855",
+    "count": "6596",
+    "CountryName": "United States of America",
+    "FIPS": "US"
+  },
+  {
+    "avg": "-1.961495707244354",
+    "std": "2.560566870965224",
+    "count": "217",
+    "CountryName": "India",
+    "FIPS": "IN"
+  },
+  {
+    "avg": "-1.922716049564366",
+    "std": "2.7933172414733174",
+    "count": "14",
+    "CountryName": "Ghana",
+    "FIPS": "GH"
+  },
+  {
+    "avg": "-1.9206387097930975",
+    "std": "1.4317647128043276",
+    "count": "11",
+    "CountryName": "Jamaica",
+    "FIPS": "JM"
+  },
+  {
+    "avg": "-1.9116715335511891",
+    "std": "1.9480391163058388",
+    "count": "7",
+    "CountryName": "Malta",
+    "FIPS": "MT"
+  },
+  {
+    "avg": "-1.8777351501559787",
+    "std": "1.9496606813517796",
+    "count": "49",
+    "CountryName": "South Africa",
+    "FIPS": "SF"
+  },
+  {
+    "avg": "-1.8221563466218134",
+    "std": "2.1667503504592753",
+    "count": "125",
+    "CountryName": "Belgium",
+    "FIPS": "BE"
+  },
+  {
+    "avg": "-1.7750754865975031",
+    "std": "2.4422037250014537",
+    "count": "864",
+    "CountryName": "France",
+    "FIPS": "FR"
+  },
+  {
+    "avg": "-1.751216681598241",
+    "std": "2.5706888257057585",
+    "count": "11",
+    "CountryName": "Saudi Arabia",
+    "FIPS": "SA"
+  },
+  {
+    "avg": "-1.7262082519521273",
+    "std": "1.9459040007870245",
+    "count": "11",
+    "CountryName": "Azerbaijan",
+    "FIPS": "AJ"
+  },
+  {
+    "avg": "-1.724379304169246",
+    "std": "2.6805423922116898",
+    "count": "313",
+    "CountryName": "Germany",
+    "FIPS": "GM"
+  },
+  {
+    "avg": "-1.7203542386681085",
+    "std": "2.2531162642555356",
+    "count": "41",
+    "CountryName": "Luxembourg",
+    "FIPS": "LU"
+  },
+  {
+    "avg": "-1.7126825469850655",
+    "std": "1.8109423889087712",
+    "count": "22",
+    "CountryName": "Chad",
+    "FIPS": "CD"
+  },
+  {
+    "avg": "-1.7018567797656696",
+    "std": "2.8034874931438285",
+    "count": "38",
+    "CountryName": "Brazil",
+    "FIPS": "BR"
+  },
+  {
+    "avg": "-1.6998477693792955",
+    "std": "2.380715607228854",
+    "count": "924",
+    "CountryName": "United Kingdom",
+    "FIPS": "UK"
+  },
+  {
+    "avg": "-1.670287213219297",
+    "std": "2.8100907709778564",
+    "count": "19",
+    "CountryName": "Syria",
+    "FIPS": "SY"
+  },
+  {
+    "avg": "-1.5336555114352453",
+    "std": "2.0867122238377034",
+    "count": "201",
+    "CountryName": "Switzerland",
+    "FIPS": "SZ"
+  },
+  {
+    "avg": "-1.4723913693281718",
+    "std": "1.1228912123003214",
+    "count": "7",
+    "CountryName": "Senegal",
+    "FIPS": "SG"
+  },
+  {
+    "avg": "-1.4352792777280126",
+    "std": "2.7158574162846425",
+    "count": "11",
+    "CountryName": "Iran",
+    "FIPS": "IR"
+  },
+  {
+    "avg": "-1.3706113490617369",
+    "std": "2.4903797342410257",
+    "count": "95",
+    "CountryName": "Dominican Republic",
+    "FIPS": "DR"
+  },
+  {
+    "avg": "-1.260970990985289",
+    "std": "2.7330279418059056",
+    "count": "328",
+    "CountryName": "Colombia",
+    "FIPS": "CO"
+  },
+  {
+    "avg": "-1.203608023245242",
+    "std": "2.696403816292602",
+    "count": "1127",
+    "CountryName": "Spain",
+    "FIPS": "SP"
+  },
+  {
+    "avg": "-1.182727900379934",
+    "std": "1.843957723607736",
+    "count": "15",
+    "CountryName": "Haiti",
+    "FIPS": "HA"
+  },
+  {
+    "avg": "-1.1589831260060937",
+    "std": "2.9964965926046916",
+    "count": "117",
+    "CountryName": "Paraguay",
+    "FIPS": "PA"
+  },
+  {
+    "avg": "-1.1305079346977598",
+    "std": "2.875975479826306",
+    "count": "754",
+    "CountryName": "Mexico",
+    "FIPS": "MX"
+  },
+  {
+    "avg": "-1.1068498494832764",
+    "std": "2.958675962496819",
+    "count": "71",
+    "CountryName": "Panama",
+    "FIPS": "PM"
+  },
+  {
+    "avg": "-1.092411158014909",
+    "std": "1.0948365074713589",
+    "count": "183",
+    "CountryName": "Bangladesh",
+    "FIPS": "BG"
+  },
+  {
+    "avg": "-1.0286658530152861",
+    "std": "2.7485007948864815",
+    "count": "6",
+    "CountryName": "Jersey",
+    "FIPS": "JE"
+  },
+  {
+    "avg": "-0.8811621080653763",
+    "std": "1.6635449743930097",
+    "count": "6",
+    "CountryName": "Czech Republic",
+    "FIPS": "EZ"
+  },
+  {
+    "avg": "-0.8580384631542489",
+    "std": "0.15954119988343518",
+    "count": "14",
+    "CountryName": "Latvia",
+    "FIPS": "LG"
+  },
+  {
+    "avg": "-0.7210405475602214",
+    "std": "2.46453159384534",
+    "count": "1877",
+    "CountryName": "Argentina",
+    "FIPS": "AR"
+  },
+  {
+    "avg": "-0.7014015169476232",
+    "std": "2.8309723956380553",
+    "count": "297",
+    "CountryName": "Uruguay",
+    "FIPS": "UY"
+  },
+  {
+    "avg": "-0.6843659258523576",
+    "std": "2.7542175420438575",
+    "count": "399",
+    "CountryName": "Bolivia",
+    "FIPS": "BL"
+  },
+  {
+    "avg": "-0.6594986108187971",
+    "std": "2.7657790465808043",
+    "count": "368",
+    "CountryName": "Peru",
+    "FIPS": "PE"
+  },
+  {
+    "avg": "-0.6219722787319928",
+    "std": "1.6013136331329594",
+    "count": "12",
+    "CountryName": "Iraq",
+    "FIPS": "IZ"
+  },
+  {
+    "avg": "-0.5514105239016754",
+    "std": "2.71507320251463",
+    "count": "164",
+    "CountryName": "Russia",
+    "FIPS": "RS"
+  },
+  {
+    "avg": "-0.5184684637843424",
+    "std": "2.821149910720844",
+    "count": "608",
+    "CountryName": "Chile",
+    "FIPS": "CI"
+  },
+  {
+    "avg": "-0.4949544303523902",
+    "std": "2.9436485590538974",
+    "count": "39",
+    "CountryName": "Costa Rica",
+    "FIPS": "CS"
+  },
+  {
+    "avg": "-0.31480463927364205",
+    "std": "2.786855991223737",
+    "count": "21",
+    "CountryName": "Taiwan",
+    "FIPS": "TW"
+  },
+  {
+    "avg": "-0.09603658181410524",
+    "std": "2.2404151732607036",
+    "count": "15",
+    "CountryName": "Burkina Faso",
+    "FIPS": "UV"
+  },
+  {
+    "avg": "0.04322172167643179",
+    "std": "2.3552210674646465",
+    "count": "7",
+    "CountryName": "Lebanon",
+    "FIPS": "LE"
+  }
+]
