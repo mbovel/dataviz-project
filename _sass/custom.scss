@@ -1,5 +1,9 @@
-.current {
+nav .current, nav a:hover {
   border-bottom: 0.25em solid rgb(0, 44, 122);
+}
+
+nav a:hover {
+  text-decoration: none;
 }
 
 footer {
