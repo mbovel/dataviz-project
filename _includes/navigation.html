@@ -1,9 +1,10 @@
 <nav>
 	<ul class="width-limited">
-		{% for item in site.data.navigation %}
+		{% assign menu_items = site.html_pages | where_exp: "p", "p.menu_order > 0" | sort: "menu_order" ' %}
+		{% for p in menu_items %}
 		<li>
-			<a href="{{ item.link | absolute_url }}" {% if page.url== item.link %} class="current"{% endif %}>
-				{{ item.name }}
+			<a href="{{ p.url | absolute_url }}" {% if p.url == page.url %} class="current"{% endif %}>
+				{{ p.title }}
 			</a>
 		</li>
 		{% endfor %}
