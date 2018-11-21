@@ -178,7 +178,7 @@ class GraphPlot {
     toggle_selected(d, i){
         d3.event.preventDefault();
         let s = d3.select(this);
-        let l = d3.select('#links').selectAll(this.link_type)
+        let l = d3.select('#links').selectAll('.link')
             .filter(function(d2, i2) { return d2.source == d || d2.target == d; })
         if (s.classed('selected')) {
             s.classed('selected',false);
