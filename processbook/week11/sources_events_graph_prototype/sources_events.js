@@ -196,7 +196,7 @@ class GraphPlot {
         }
     }
     positionLinks(links, plotObj){
-        if (this.link_type == 'line')
+        if (plotObj.link_type == 'line')
             links
                 .attr('x1', (d, i) => d.target.x)
                 .attr('y1', (d, i) => d.target.y)
