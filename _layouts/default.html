@@ -5,7 +5,8 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ page.title }}</title>
-	<link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+	<base href="{{ site.url }}{{ site.baseurl }}/">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -20,7 +21,7 @@
 </main>
 
 <footer class="width-limited">
-	<p>Meet <a href="{{ '/team' | absolute_url }}">the authors here</a>. The project was created for the <a
+	<p>Meet <a href="{{ site.url }}{{ site.baseurl }}{% link team.md %}">the authors here</a>. The project was created for the <a
 			href="http://edu.epfl.ch/coursebook/en/data-visualization-COM-480">Data
 		Visualization</a> course at EPFL.</p>
 </footer>

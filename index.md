@@ -8,9 +8,9 @@ menu_order: 1
 
 In this prototype, news sources are represented by green dots, while events are represented by yellow points. The links between news sources and events represent articles mentions, and their color correspondond to the tone of the mention (blue is negative and red is positive).
 
-![](/processbook/week11/sources_events_graph_prototype/prototype2_sources_events.png)
+![](processbook/week11/sources_events_graph_prototype/prototype2_sources_events.png)
 
-[Click here to see the prototype](/processbook/week11/sources_events_graph_prototype/).
+[Click here to see the prototype](processbook/week11/sources_events_graph_prototype/).
 
 # Further work
 
@@ -20,7 +20,7 @@ In this prototype, news sources are represented by green dots, while events are 
 
 # Previous work
 
-- [Previous version of the graph with sources and mentions](/processbook/week10/sources_events_graph_prototype/).
-- [Geographic map of average tone per country about a specific subject](/processbook/week10/tones_map_prototype/).
-- [Very first graph prototype showing only sources](/processbook/week09/prototype1).
+- [Previous version of the graph with sources and mentions](processbook/week10/sources_events_graph_prototype/).
+- [Geographic map of average tone per country about a specific subject](processbook/week10/tones_map_prototype/).
+- [Very first graph prototype showing only sources](processbook/week09/prototype1).
 
