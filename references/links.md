@@ -13,6 +13,12 @@ About Gdelt:
 - Who's Connected To Whom In The Global Media?: <https://www.forbes.com/sites/kalevleetaru/2015/11/12/whos-connected-to-whom-in-the-global-media/>. Cool visualization of the connexions between the world's most influential people.
 - Summary API: <https://api.gdeltproject.org/api/v2/summary/summary> and the introductory blog post about it: <https://blog.gdeltproject.org/announcing-gdelt-summary/>. Might help us to select main events. Might also be directly useable for subviews.
 
+Python librairies:
+
+- Python client for Google BigQuery: <https://googleapis.github.io/google-cloud-python/latest/bigquery/index.html>.
+- Wikipedia API: <https://github.com/martin-majlis/Wikipedia-API>.
+- pycountry <https://pypi.org/project/pycountry/>. Library to convert between countries full, two-letter and three-letter names.
+
 Other data that may be useful:
 
 - List of main news sources on Wikipedia: <https://en.wikipedia.org/wiki/Wikipedia:News_sources>.
