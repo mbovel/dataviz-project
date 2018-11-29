@@ -22,3 +22,4 @@ Python librairies:
 Other data that may be useful:
 
 - List of main news sources on Wikipedia: <https://en.wikipedia.org/wiki/Wikipedia:News_sources>.
+- List of most influential people: <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/28201>. “The Pantheon 1.0 dataset is a manually verified dataset of individuals that have transcended linguistic, temporal, and geographic boundaries.”
