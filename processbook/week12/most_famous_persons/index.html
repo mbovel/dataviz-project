@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Test</title>
+    <style>
+        svg {
+            height: 100%;
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        text {
+            font-family: sans-serif;
+            font-size: 0.5em;
+        }
+
+        path {
+            fill: none;
+            stroke-width: 0.2;
+        }
+    </style>
+</head>
+<body>
+<svg preserveAspectRatio="xMidYMid meet" viewBox="-400 -250 800 500">
+    <circle r="100" stroke="brown" stroke-opacity="0.1" fill="none"></circle>
+    <circle r="200" stroke="steelblue" stroke-opacity="0.1" fill="none"></circle>
+</svg>
+<script src="https://d3js.org/d3.v5.js"></script>
+<script src="https://d3js.org/d3-array.v2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/victor/1.1.0/victor.min.js"
+        integrity="sha256-QH04jkqJgJzblmzmCljNPAANQK9jgSJDKDow2piEYdQ=" crossorigin="anonymous"></script>
+<script>
+    async function main() {
+        const mentions = await d3.csv("mentions.csv");
+        const persons = get_unique_values(mentions, 'person');
+        const sources = get_unique_values(mentions, 'source_name');
+        const nodesData = persons.map(p => ({type: 'person', id: p}))
+            .concat(sources.map(s => ({type: 'source', id: s})));
+        const linksData = mentions.map(m => ({source: m.source_name, target: m.person, tone: m.tone_avg}));
+
+        const tmpScale = d3.scalePow()
+            .exponent(0.3)
+            .domain([-10, 10])
+            .range([1, 0]);
+        const toneScale = d => d3.interpolateRdBu(tmpScale(d));
+
+        const simulation = d3.forceSimulation(nodesData)
+            .force("charge", d3.forceCollide().radius(5))
+            .force("r", d3.forceRadial(d => d.type === "person" ? 100 : 200))
+            .force("link", d3.forceLink(linksData).id(d => d.id).strength(0));
+
+        const svg = d3.select("svg");
+
+        const links = svg.append('g')
+            .selectAll('path')
+            .data(linksData)
+            .enter()
+            .append('path')
+            .attr('stroke', d => toneScale(d.tone));
+
+        const nodes = svg.append("g")
+            .selectAll("g")
+            .data(nodesData)
+            .enter()
+            .append("g");
+
+        const circles = nodes
+            .append('circle')
+            .attr("r", 2.5)
+            .attr("fill", d => d.type === "person" ? "brown" : "steelblue");
+
+        const labels = nodes.append("text")
+            .attr("dx", 12)
+            .attr("dy", ".35em")
+            .text(d => d.id);
+
+        simulation.on("tick", () => {
+            nodes.attr("transform", d => `translate(${d.x}, ${d.y})`);
+            links.attr('d', link_bezier_curve);
+        });
+
+        function get_unique_values(data, field) {
+            return [...d3.rollup(data, _ => undefined, d => d[field]).keys()];
+        }
+
+        function link_bezier_curve(link) {
+            const center = new Victor(0, 0);
+            const targetv = Victor.fromObject(link.target).subtract(center);
+            const sourcev = Victor.fromObject(link.source).subtract(center);
+            let angleDiff = targetv.angleDeg() - sourcev.angleDeg();
+            if (Math.abs(angleDiff) > 180) {
+                angleDiff = mod(angleDiff + 180, 360) - 180;
+            }
+            sourcev.rotateDeg(angleDiff / 2);
+            const scale = 1;
+            sourcev.multiply(new Victor(scale, scale));
+            sourcev.add(center);
+            return "M " + link.target.x + " " + link.target.y
+                + " S " + sourcev.x + " " + sourcev.y
+                + ", " + link.source.x + " " + link.source.y;
+        }
+
+        function mod(a, n) {
+            return (a % n + n) % n
+        }
+    }
+
+    main().catch(console.error)
+
+</script>
+</body>
+</html>
