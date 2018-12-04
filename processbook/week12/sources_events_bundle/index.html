@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Graph Test</title>
+	<meta name="author" content="Ruslan Aydarkhanov">
+
+	<link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
+</head>
+<body>
+
+<svg id="plot" viewBox="0 0 200 200" height="100%" preserveAspectRatio="xMidYMid meet">
+<!--<svg id="plot" viewBox="0 0 200 200" width="400px" height="400px">-->
+	<style>
+		text {
+			fill: rgb(200, 200, 200);
+			font-size: 4px;
+			text-anchor: start;
+		}
+
+        #eventnodes {
+            fill: Lime;
+            <!--r: 1-->
+        }
+        <!--fill: green-->
+        
+        #sourcenodes {
+            fill: yellow;
+            <!--r: 0.6-->
+        }
+        
+        .event {
+            r: 1;
+            fill: SeaGreen;
+            -webkit-transition: r 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+            -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+        }
+        
+        .selected.event {
+            r: 2;
+            fill: Lime;
+            -webkit-transition: r 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+            -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+        }
+
+        .source {
+            r: 0.6;
+            fill: orange;
+            -webkit-transition: r 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+            -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+        }
+        
+        .selected.source {
+            r: 1.2;
+            fill: yellow;
+            -webkit-transition: r 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition: r 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+            -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+        }
+
+        .link {
+            stroke-width: 0.05;
+            -webkit-transition: stroke-width 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+            -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+               -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                 -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+                    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+        }
+        
+        .link.selected {
+            stroke-width: 0.5;
+            -webkit-transition: stroke-width 500ms cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+               -moz-transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                 -o-transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                    transition: stroke-width 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+            -webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+               -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                 -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+                    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+        <!--}-->
+
+        .plotarea{
+            fill: black;
+        }
+	</style>
+</svg>
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://d3js.org/d3-time.v1.min.js"></script>
+<script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+<script type="text/javascript" src="lib/d3-ForceEdgeBundling.js"></script>
+<script src="lib/victor.min.js"></script>
+<script src="sources_events.js"></script>
+</body>
+</html>
