@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Title</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+			integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="assets/css/visualization.css" />
+		<link rel="stylesheet" href="assets/css/visualization-graph.css" />
+		<link rel="stylesheet" href="assets/css/visualization-sidebar.css" />
+	</head>
+	<body>
+		<main>
+			<svg id="plot" viewBox="-250 -250 500 500" preserveAspectRatio="xMidYMid meet"></svg>
+			<div id="sidebar"></div>
+		</main>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"
+			integrity="sha256-va1Vhe+all/yVFhzgwmwBgWMVfLHjXlNJfvsrjUBRgk="
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/victor/1.1.0/victor.min.js"
+			integrity="sha256-QH04jkqJgJzblmzmCljNPAANQK9jgSJDKDow2piEYdQ="
+			crossorigin="anonymous"
+		></script>
+		<script src="src/GraphPlot.js"></script>
+		<script src="src/GraphSimulation.js"></script>
+		<script src="src/Sidebar.js"></script>
+		<script src="src/main.js"></script>
+	</body>
+</html>
