@@ -1,0 +1,23 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	height: 100%;
+}
+
+#plot {
+	background-color: #111;
+	height: 100%;
+	width: 100%;
+}
+
+#sidebar {
+	background-color: #222;
+}

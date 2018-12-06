@@ -1,0 +1,23 @@
+{
+  "name": "dataviz-project",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^1.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "clean": "prettier --write src/* assets/css/* visualization.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbovel/dataviz-project.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/mbovel/dataviz-project/issues"
+  },
+  "homepage": "https://github.com/mbovel/dataviz-project#readme"
+}

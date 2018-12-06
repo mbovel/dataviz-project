@@ -1,0 +1,3 @@
+class GraphSimulation {
+	constructor() {}
+}
