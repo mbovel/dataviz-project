@@ -5,7 +5,7 @@ from utils import run_bigquery, strings_list, DATA_DIR
 FROM = '2018-12-01'
 TO = '2018-12-02'
 
-persons = run_bigquery(name='persons', sql=f"""
+persons_query = f"""
 SELECT
   COUNT(*) AS mentions_count,
   person
@@ -24,9 +24,10 @@ GROUP BY
 ORDER BY
   mentions_count DESC
 LIMIT 20
-""")
+"""
+persons = run_bigquery(name='persons', sql=persons_query)
 
-sources = run_bigquery(name='sources', sql=f"""
+sources_query = f"""
 SELECT
   MentionSourceName as source_name,
   COUNT(*) mentions_count
@@ -40,9 +41,10 @@ GROUP BY
 ORDER BY
   mentions_count DESC
 LIMIT 20
-""")
+"""
+sources = run_bigquery(name='sources', sql=sources_query)
 
-mentions = run_bigquery(name='mentions', sql=f"""
+mentions_query = f"""
 SELECT
   COUNT(*) mentions_count,
   source_name,
@@ -73,7 +75,8 @@ ORDER BY
   source_name
 LIMIT
   5000
-""")
+"""
+mentions = run_bigquery(name='mentions', sql=mentions_query)
 
 output_file = os.path.join(DATA_DIR, 'mentions.csv')
 mentions.to_csv(output_file, index=False)
