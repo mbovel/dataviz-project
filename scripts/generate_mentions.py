@@ -1,6 +1,8 @@
 import os
 
-from utils import run_bigquery, strings_list, DATA_DIR
+import pandas
+
+from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE
 
 FROM = '2018-12-01'
 TO = '2018-12-02'
@@ -27,22 +29,7 @@ LIMIT 20
 """
 persons = run_bigquery(name='persons', sql=persons_query)
 
-sources_query = f"""
-SELECT
-  MentionSourceName as source_name,
-  COUNT(*) mentions_count
-FROM
-  `gdelt-bq.gdeltv2.eventmentions_partitioned`
-WHERE
-  _PARTITIONTIME >= TIMESTAMP('{FROM}')
-  AND _PARTITIONTIME < TIMESTAMP('{TO}')
-GROUP BY
-  source_name
-ORDER BY
-  mentions_count DESC
-LIMIT 20
-"""
-sources = run_bigquery(name='sources', sql=sources_query)
+sources = pandas.read_csv(SOURCES_FILE)
 
 mentions_query = f"""
 SELECT
@@ -65,7 +52,7 @@ FROM (
     AND _PARTITIONTIME < TIMESTAMP('{TO}'))
 WHERE
   person IN ({strings_list(persons.person.values.tolist())})
-  AND source_name IN ({strings_list(sources.source_name.values.tolist())})
+  AND source_name IN ({strings_list(sources.domain.values.tolist())})
 GROUP BY
   person,
   source_name
