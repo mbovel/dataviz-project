@@ -34,14 +34,14 @@ sources = pandas.read_csv(SOURCES_FILE)
 mentions_query = f"""
 SELECT
   COUNT(*) mentions_count,
-  source_name,
+  source_domain,
   person,
   AVG(tone) AS tone_avg,
   STDDEV(tone) AS tone_std
 FROM (
   SELECT
     DocumentIdentifier,
-    SourceCommonName AS source_name,
+    SourceCommonName AS source_domain,
     CAST((SPLIT(V2Tone)[OFFSET(0)]) AS FLOAT64) AS tone,
     REGEXP_REPLACE(personOffset, r',.*', '') AS person
   FROM
@@ -52,18 +52,22 @@ FROM (
     AND _PARTITIONTIME < TIMESTAMP('{TO}'))
 WHERE
   person IN ({strings_list(persons.person.values.tolist())})
-  AND source_name IN ({strings_list(sources.domain.values.tolist())})
+  AND source_domain IN ({strings_list(sources.domain.values.tolist())})
 GROUP BY
   person,
-  source_name
+  source_domain
 ORDER BY
   mentions_count DESC,
   person,
-  source_name
+  source_domain
 LIMIT
   5000
 """
 mentions = run_bigquery(name='mentions', sql=mentions_query)
 
+domain_index = pandas.Index(sources.domain).unique()
+mentions['source_index'] = mentions.source_domain.apply(lambda domain: domain_index.get_loc(domain)).values.tolist()
+mentions.drop(columns=['source_domain'], inplace=True)
+
 output_file = os.path.join(DATA_DIR, 'mentions.csv')
-mentions.to_csv(output_file, index=False)
+mentions.to_csv(output_file, index=False, float_format='%.3f')
