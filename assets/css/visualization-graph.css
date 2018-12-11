@@ -1,10 +1,30 @@
 text {
 	font-family: sans-serif;
-	fill: #777;
+	fill: rgb(200, 200, 200);
+	text-anchor: start;
 }
 
 circle {
 	stroke: #777;
 	stroke-width: 1;
 	fill: none;
+}
+
+text {
+	fill: rgb(200, 200, 200);
+	font-size: 4px;
+	text-anchor: start;
+}
+
+.link {
+	fill: none;
+	stroke-width: 0.07;
+}
+
+.person {
+	fill: grey;
+}
+
+.source {
+	fill: grey;
 }
