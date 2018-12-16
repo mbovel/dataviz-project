@@ -3,6 +3,7 @@ class GraphPlot {
 		this.simulation = new GraphSimulation();
 		this.createScale();
 		this.createGraph(container);
+        makeMapLegend();
 	}
 
 	createScale() {

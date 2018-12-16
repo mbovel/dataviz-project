@@ -12,10 +12,18 @@
 		<link rel="stylesheet" href="assets/css/visualization.css" />
 		<link rel="stylesheet" href="assets/css/visualization-graph.css" />
 		<link rel="stylesheet" href="assets/css/visualization-sidebar.css" />
+		<link rel="stylesheet" href="assets/css/visualization-maplegend.css" />
 	</head>
 	<body>
 		<main>
-			<svg id="plot" viewBox="-250 -250 500 500" preserveAspectRatio="xMidYMid meet"></svg>
+            <div id="plotarea">
+                <svg id="plot" viewBox="-250 -250 500 500" preserveAspectRatio="xMidYMid meet">
+                </svg>
+                <div id="mapbox">
+                    <div id="map"></div>
+                </div>
+            </div>
+
 			<div id="sidebar"></div>
 		</main>
 
@@ -26,8 +34,13 @@
 			integrity="sha256-QH04jkqJgJzblmzmCljNPAANQK9jgSJDKDow2piEYdQ="
 			crossorigin="anonymous"
 		></script>
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+                integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+                crossorigin=""></script>
 		<script src="src/utils.js"></script>
 		<script src="src/getData.js"></script>
+		<script src="src/regionColorMap.js"></script>
+		<script src="src/maplegend.js"></script>
 		<script src="src/GraphPlot.js"></script>
 		<script src="src/GraphSimulation.js"></script>
 		<script src="src/Sidebar.js"></script>
