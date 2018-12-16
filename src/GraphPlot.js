@@ -46,19 +46,21 @@ class GraphPlot {
 	}
 
 	static linkAvoidCenter(/**object*/ link) {
-		const targetv = Victor.fromObject(link.target);
-		const sourcev = Victor.fromObject(link.source);
+        let innerring = link.target;
+        let outerring = link.source;
+		const innerVec = Victor.fromObject(innerring);
+		const outerVec = Victor.fromObject(outerring);
 
-		let angleDiff = targetv.angleDeg() - sourcev.angleDeg();
+		let angleDiff = outerVec.angleDeg() - innerVec.angleDeg();
 		if (Math.abs(angleDiff) > 180) {
 			angleDiff = mod(angleDiff + 180, 360) - 180;
 		}
-		sourcev.rotateDeg(angleDiff / 2);
+		innerVec.rotateDeg(angleDiff / 3);
 
-		const scale = (Math.abs(angleDiff) / 180 / 3) * 8 + 1;
-		sourcev.multiply(new Victor(scale, scale));
+		const scale = (Math.abs(angleDiff) / 180 / 1) * 2 + 1;
+		innerVec.multiply(new Victor(scale, scale));
 
-		return `M${link.target.x} ${link.target.y}
-                S${sourcev.x} ${sourcev.y}, ${link.source.x} ${link.source.y}`;
+		return `M${innerring.x} ${innerring.y}
+                S${innerVec.x} ${innerVec.y}, ${outerring.x} ${outerring.y}`;
 	}
 }
