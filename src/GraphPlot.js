@@ -35,6 +35,7 @@ class GraphPlot {
 			.enter()
 			.append("circle")
 			.attr("r", 1)
+            .style("fill", d => regionColorMap.get(d["region"]))
 			.attr("class", d => "node " + d.type);
 		nodesJoin.exit().remove();
 

@@ -26,5 +26,6 @@ text {
 }
 
 .source {
+	stroke: none;
 	fill: grey;
 }
