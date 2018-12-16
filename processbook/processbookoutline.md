@@ -5,8 +5,9 @@
     ### Related Work and Inspiration
 ## Data
     ### Description of the Dataset
-    ### Exploraory Data Analysis
+    ### Exploratory Data Analysis
 ## Design
+    ### Ideation and Sketching
     ### Prototyping
     ### Final Implementation
 ## Evaluation
