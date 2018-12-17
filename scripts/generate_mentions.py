@@ -1,4 +1,5 @@
 import itertools
+import json
 import os
 import textwrap
 from typing import List
@@ -93,19 +94,24 @@ def compute_data_for_period(period):
     mentions.drop(columns=['person'], inplace=True)
 
     # Write CSV files
-    mentions_file = os.path.join(DATA_DIR, f'mentions_{period_string}.csv')
+    mentions_file = os.path.join(DATA_DIR, 'mentions', f"{period_string}.csv")
     mentions.to_csv(mentions_file, index=False, float_format='%.3f')
     print(f"Wrote {mentions_file}.")
-    persons_file = os.path.join(DATA_DIR, f'persons_{period_string}.csv')
+    persons_file = os.path.join(DATA_DIR, 'persons', f"{period_string}.csv")
     persons.to_csv(persons_file, index=False, float_format='%.3f')
     print(f"Wrote {persons_file}.")
 
 
-START = '2018-11-01'
-END = '2018-11-02'
+if __name__ == "__main__":
+    with open(os.path.join(DATA_DIR, 'config.json')) as f:
+        config = json.load(f)
 
-days = pandas.date_range(START, END, freq='D')
-months = pandas.date_range(START, END, freq='MS')
+    START = config['start_date']
+    END = config['end_date']
 
-for period in itertools.chain(days, months):
-    compute_data_for_period(period)
+    days = pandas.date_range(START, END, freq='D')
+    months = pandas.date_range(START, END, freq='MS')
+    years = pandas.date_range(START, END, freq='YS')
+
+    for period in itertools.chain(days, months, years):
+        compute_data_for_period(period)
