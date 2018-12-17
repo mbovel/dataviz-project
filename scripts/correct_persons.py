@@ -11,9 +11,9 @@ pantheon = pandas.read_csv('../data/pantheon.tsv', sep='\t')
 def correct_person(person_name, maxdist):
     matches = filter(lambda n: ldistance(person_name, n) <= maxdist, pantheon.name)
     sorted_matches = sorted(matches, key=lambda n: ldistance(person_name, n))
-    return sorted_matches
+    return sorted_matches[0] if sorted_matches else person_name
 
 
 @timeit
-def correct_persons(mentions, maxdist=2):
-    mentions.person = mentions.person.apply(correct_person, args=(maxdist,))
+def correct_persons(persons, maxdist=2):
+    return persons.apply(correct_person, args=(maxdist,))
