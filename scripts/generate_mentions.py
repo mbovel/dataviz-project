@@ -1,3 +1,4 @@
+import itertools
 import os
 import textwrap
 from typing import List
@@ -7,31 +8,33 @@ import pandas
 from correct_persons import correct_persons
 from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE
 
+PERSONS_N = 30
 
-def persons_query(from_date: str, to_date: str):
+
+def persons_query(period: pandas.Timestamp):
     return textwrap.dedent(f"""
         SELECT
           COUNT(*) AS mentions_count,
-          person
+          name
         FROM (
           SELECT
             DocumentIdentifier,
-            REGEXP_REPLACE(personOffset, r',.*', '') AS person
+            REGEXP_REPLACE(personOffset, r',.*', '') AS name
           FROM
             `gdelt-bq.gdeltv2.gkg_partitioned` gkg,
             UNNEST(SPLIT(V2Persons ,';')) AS personOffset
           WHERE
-            _PARTITIONTIME >= TIMESTAMP('{from_date}')
-            AND _PARTITIONTIME < TIMESTAMP('{to_date}'))
+            _PARTITIONTIME >= TIMESTAMP('{period}')
+            AND _PARTITIONTIME < TIMESTAMP('{period + 1}'))
         GROUP BY
-          person
+          name
         ORDER BY
           mentions_count DESC
-        LIMIT 20
+        LIMIT {PERSONS_N}
     """)
 
 
-def mentions_query(from_date: str, to_date: str, in_sources: List[str], in_persons: List[str]):
+def mentions_query(period: pandas.Timestamp, in_sources: List[str], in_persons: List[str]):
     return textwrap.dedent(f"""
         SELECT
           COUNT(*) mentions_count,
@@ -49,8 +52,8 @@ def mentions_query(from_date: str, to_date: str, in_sources: List[str], in_perso
             `gdelt-bq.gdeltv2.gkg_partitioned` gkg,
             UNNEST(SPLIT(V2Persons,';')) AS personOffset
           WHERE
-            _PARTITIONTIME >= TIMESTAMP('{from_date}')
-            AND _PARTITIONTIME < TIMESTAMP('{to_date}'))
+            _PARTITIONTIME >= TIMESTAMP('{period}')
+            AND _PARTITIONTIME < TIMESTAMP('{period + 1}'))
         WHERE
           person IN ({strings_list(in_persons)})
           AND source_domain IN ({strings_list(in_sources)})
@@ -66,21 +69,43 @@ def mentions_query(from_date: str, to_date: str, in_sources: List[str], in_perso
     """)
 
 
-FROM = '2018-12-01'
-TO = '2018-12-02'
+def compute_data_for_period(period):
+    period_string = f"{period.strftime('%Y-%m-%d')}_{(period + 1).strftime('%Y-%m-%d')}"
+    print(f"\n--- Computing mentions for period {period} ---")
 
-persons = run_bigquery(name='persons',
-                       sql=persons_query(FROM, TO))
-sources = pandas.read_csv(SOURCES_FILE)
-mentions = run_bigquery(name='mentions',
-                        sql=mentions_query(FROM, TO, sources.domain.values.tolist(), persons.person.values.tolist()))
+    # Get data
+    persons = run_bigquery(name='persons', sql=persons_query(period))
+    persons_list = persons.name.values.tolist()
+    sources = pandas.read_csv(SOURCES_FILE)
+    sources_list = sources.domain.values.tolist()
+    mentions = run_bigquery(name='mentions', sql=mentions_query(period, sources_list, persons_list))
 
-# Replace sources domains with indices
-domain_index = pandas.Index(sources.domain).unique()
-mentions['source_index'] = mentions.source_domain.apply(lambda domain: domain_index.get_loc(domain)).values.tolist()
-mentions.drop(columns=['source_domain'], inplace=True)
+    # Fix person names
+    persons.name = correct_persons(persons.name)
+    mentions.person = correct_persons(mentions.person)
 
-correct_persons(mentions)
+    # Replace sources domains with indices
+    source_index = pandas.Index(sources.domain).unique()
+    person_index = pandas.Index(persons.name).unique()
+    mentions['source_index'] = mentions.source_domain.apply(lambda d: source_index.get_loc(d))
+    mentions['person_index'] = mentions.person.apply(lambda n: person_index.get_loc(n))
+    mentions.drop(columns=['source_domain'], inplace=True)
+    mentions.drop(columns=['person'], inplace=True)
 
-output_file = os.path.join(DATA_DIR, 'mentions.csv')
-mentions.to_csv(output_file, index=False, float_format='%.3f')
+    # Write CSV files
+    mentions_file = os.path.join(DATA_DIR, f'mentions_{period_string}.csv')
+    mentions.to_csv(mentions_file, index=False, float_format='%.3f')
+    print(f"Wrote {mentions_file}.")
+    persons_file = os.path.join(DATA_DIR, f'persons_{period_string}.csv')
+    persons.to_csv(persons_file, index=False, float_format='%.3f')
+    print(f"Wrote {persons_file}.")
+
+
+START = '2018-11-01'
+END = '2018-11-02'
+
+days = pandas.date_range(START, END, freq='D')
+months = pandas.date_range(START, END, freq='MS')
+
+for period in itertools.chain(days, months):
+    compute_data_for_period(period)
