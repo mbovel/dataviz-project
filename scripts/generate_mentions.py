@@ -4,7 +4,7 @@ from typing import List
 
 import pandas
 
-from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE
+from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE, correct_persons
 
 
 def persons_query(from_date: str, to_date: str):
@@ -64,6 +64,7 @@ def mentions_query(from_date: str, to_date: str, in_sources: List[str], in_perso
           5000
     """)
 
+pantheonDF = pd.read_csv('../data/pantheon.tsv', sep='\t', index_col='name')
 
 FROM = '2018-12-01'
 TO = '2018-12-02'
@@ -78,6 +79,8 @@ mentions = run_bigquery(name='mentions',
 domain_index = pandas.Index(sources.domain).unique()
 mentions['source_index'] = mentions.source_domain.apply(lambda domain: domain_index.get_loc(domain)).values.tolist()
 mentions.drop(columns=['source_domain'], inplace=True)
+
+correct_persons(mentions, pantheonDF.index, inplace=True)
 
 output_file = os.path.join(DATA_DIR, 'mentions.csv')
 mentions.to_csv(output_file, index=False, float_format='%.3f')

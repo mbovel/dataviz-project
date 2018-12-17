@@ -22,6 +22,7 @@ text {
 }
 
 .person {
+	stroke: none;
 	fill: grey;
 }
 

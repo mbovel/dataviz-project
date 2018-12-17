@@ -4,6 +4,8 @@ import re
 import textwrap
 from typing import List
 
+from Levenshtein import distance as Ldistance
+
 import pandas
 from google.cloud import bigquery
 from google.cloud.bigquery import QueryJobConfig
@@ -57,3 +59,15 @@ def wrap_line(line: str):
     indent = WS.match(line).group(0)
     wrapper = textwrap.TextWrapper(initial_indent='', subsequent_indent=indent + '  ', width=100)
     return '\n'.join(wrapper.wrap(line))
+
+def correct_persons(mentions, pantheonnames, maxdist=2, inplace=False):
+    persons = mentions.person
+    persons_corrected = []
+    for p in persons:
+        shortlist = filter(lambda n: Ldistance(p,n) <= maxdist, pantheonnames)
+        shortlist = sorted(shortlist, key=lambda n: Ldistance(p,n))
+        persons_corrected.append(p if len(shortlist) == 0 else shortlist[0])
+    if not inplace:
+        mentions = mentions.copy()
+    mentions.person = persons_corrected
+    return mentions

@@ -1,6 +1,8 @@
 async function getData(/**number*/ year, /**number*/ month, /**number*/ day) {
 	const mentions = await d3.csv("data/mentions.csv");
 	const mainSources = await d3.csv("data/sources.csv");
+    const pantheon = await d3.tsv('data/pantheon.tsv');
+    const personsRegion = d3.rollup(pantheon, v => v[0].continentName, d => d.name);
 
 	const sources = get_unique_values(mentions, "source_index").map(source_index => ({
 		type: "source",
@@ -10,6 +12,7 @@ async function getData(/**number*/ year, /**number*/ month, /**number*/ day) {
 	}));
 	const persons = get_unique_values(mentions, "person").map(name => ({
 		type: "person",
+        region: personsRegion.get(name),
 		id: name
 	}));
 	const nodes = persons.concat(sources);
