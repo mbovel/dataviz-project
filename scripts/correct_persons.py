@@ -1,10 +1,12 @@
+import os
+
 import pandas
 from Levenshtein import distance as ldistance
 from cachetools import cached
 
-from utils import timeit
+from utils import timeit, DATA_DIR
 
-pantheon = pandas.read_csv('../data/pantheon.tsv', sep='\t')
+pantheon = pandas.read_csv(os.path.join(DATA_DIR, 'pantheon.tsv'), sep='\t')
 
 
 @cached(cache={})
