@@ -1,5 +1,5 @@
 import pandas
-from Levenshtein import distance as Ldistance
+from Levenshtein import distance as ldistance
 from cachetools import cached
 
 from utils import timeit
@@ -9,8 +9,8 @@ pantheon = pandas.read_csv('../data/pantheon.tsv', sep='\t')
 
 @cached(cache={})
 def correct_person(person_name, maxdist):
-    matches = filter(lambda n: Ldistance(person_name, n) <= maxdist, pantheon.name)
-    sorted_matches = sorted(matches, key=lambda n: Ldistance(person_name, n))
+    matches = filter(lambda n: ldistance(person_name, n) <= maxdist, pantheon.name)
+    sorted_matches = sorted(matches, key=lambda n: ldistance(person_name, n))
     return sorted_matches
 
 
