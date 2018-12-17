@@ -2,9 +2,8 @@ import hashlib
 import os
 import re
 import textwrap
+import time
 from typing import List
-
-from Levenshtein import distance as Ldistance
 
 import pandas
 from google.cloud import bigquery
@@ -60,14 +59,14 @@ def wrap_line(line: str):
     wrapper = textwrap.TextWrapper(initial_indent='', subsequent_indent=indent + '  ', width=100)
     return '\n'.join(wrapper.wrap(line))
 
-def correct_persons(mentions, pantheonnames, maxdist=2, inplace=False):
-    persons = mentions.person
-    persons_corrected = []
-    for p in persons:
-        shortlist = filter(lambda n: Ldistance(p,n) <= maxdist, pantheonnames)
-        shortlist = sorted(shortlist, key=lambda n: Ldistance(p,n))
-        persons_corrected.append(p if len(shortlist) == 0 else shortlist[0])
-    if not inplace:
-        mentions = mentions.copy()
-    mentions.person = persons_corrected
-    return mentions
+
+# https://medium.com/pythonhive/python-decorator-to-measure-the-execution-time-of-methods-fa04cb6bb36d
+def timeit(method):
+    def timed(*args, **kw):
+        ts = time.time()
+        result = method(*args, **kw)
+        te = time.time()
+        print('Function %s ran in  %2.2f s.' % (method.__name__, (te - ts)))
+        return result
+
+    return timed
