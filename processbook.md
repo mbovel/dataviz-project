@@ -161,7 +161,7 @@ We had hoped that clusters would emerge of sources discussing the same topics, p
 
 Another example of early visualizations we used to see data trends was a geographical map where the color of the countries corresponded to the average tone of the media in that country for a certain event, seen in Figure 6. This particular example shows the responses of countries to the election of the right-wing politician Jair Bolsonaro in Brasil ([source code](https://github.com/mbovel/dataviz-project/tree/master/processbook/week10/tones_map_prototype)):
 
-![Figure 6](processbook/finalbookimgs/tonesmap.png)
+![Figure 6](processbook/finalbookimgs/tonesmap.PNG)
 <center>Figure 6. Map of Tones of Media for Single Events</center>
 
 While these were very much rough visualizations, they did provide us with visual examples of how we would need to modify certain visualizations if we wanted them to be effective tools. 
