@@ -1,0 +1,19 @@
+#sidebar {
+	padding: 1.5em;
+}
+
+#sidebar p {
+	margin: 2em 0;
+}
+
+#time-controls input {
+	margin: 0.3em 0;
+}
+
+#time-controls span {
+	display: block;
+}
+
+#time-controls label {
+	font-size: 0.85em;
+}

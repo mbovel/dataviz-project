@@ -3,7 +3,7 @@ class GraphPlot {
 		this.simulation = new GraphSimulation();
 		this.createScale();
 		this.createGraph(container);
-        makeMapLegend();
+		makeMapLegend();
 	}
 
 	createScale() {
@@ -21,8 +21,8 @@ class GraphPlot {
 		this.nodesGroup = this.svgEl.append("g").attr("id", "nodes");
 	}
 
-	updateData(/**{nodes: array, links: array}*/ data) {
-		const linksJoin = this.linksGroup.selectAll("path").data(data.links);
+	updateData({ nodes, links }) {
+		const linksJoin = this.linksGroup.selectAll("path").data(links);
 		const linksEls = linksJoin
 			.enter()
 			.append("path")
@@ -30,16 +30,16 @@ class GraphPlot {
 			.attr("stroke", d => this.toneScale(d["tone"]));
 		linksJoin.exit().remove();
 
-		const nodesJoin = this.nodesGroup.selectAll("circle").data(data.nodes);
+		const nodesJoin = this.nodesGroup.selectAll("circle").data(nodes);
 		const nodesEls = nodesJoin
 			.enter()
 			.append("circle")
 			.attr("r", 1)
-            .style("fill", d => regionColorMap.get(d["region"]))
+			.style("fill", d => regionColorMap.get(d["region"]))
 			.attr("class", d => "node " + d.type);
 		nodesJoin.exit().remove();
 
-		this.simulation.updateData(data);
+		this.simulation.updateData({ nodes, links });
 		this.simulation.onTick(() => {
 			nodesEls.attr("transform", d => `translate(${d.x}, ${d.y})`);
 			linksEls.attr("d", GraphPlot.linkAvoidCenter);
@@ -47,8 +47,8 @@ class GraphPlot {
 	}
 
 	static linkAvoidCenter(/**object*/ link) {
-        let innerring = link.target;
-        let outerring = link.source;
+		let innerring = link.target;
+		let outerring = link.source;
 		const innerVec = Victor.fromObject(innerring);
 		const outerVec = Victor.fromObject(outerring);
 
