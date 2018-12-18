@@ -6,13 +6,13 @@
 }
 
 #map {
-	height: 20em;
-	width: 30em;
+	height: 30em;
+    width: 45em;
 }
 
 #mapbox {
 	position: absolute;
-	right: 0%;
+	left: 0%;
 	top: 0%;
 }
 
