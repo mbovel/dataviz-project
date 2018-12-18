@@ -23,26 +23,28 @@ class GraphPlot {
 
 	updateData({ nodes, links }) {
 		const linksJoin = this.linksGroup.selectAll("path").data(links);
-		const linksEls = linksJoin
+		const linksEnterEls = linksJoin
 			.enter()
 			.append("path")
 			.classed("link", true)
 			.attr("stroke", d => this.toneScale(d["tone"]));
+		const linksEnterUpdateEls = linksEnterEls.merge(linksJoin);
 		linksJoin.exit().remove();
 
 		const nodesJoin = this.nodesGroup.selectAll("circle").data(nodes);
-		const nodesEls = nodesJoin
+		const nodesEnterEls = nodesJoin
 			.enter()
 			.append("circle")
 			.attr("r", 1)
 			.style("fill", d => regionColorMap.get(d["region"]))
 			.attr("class", d => "node " + d.type);
+		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
 		nodesJoin.exit().remove();
 
 		this.simulation.updateData({ nodes, links });
 		this.simulation.onTick(() => {
-			nodesEls.attr("transform", d => `translate(${d.x}, ${d.y})`);
-			linksEls.attr("d", GraphPlot.linkAvoidCenter);
+			nodesEnterUpdateEls.attr("transform", d => `translate(${d.x}, ${d.y})`);
+			linksEnterUpdateEls.attr("d", GraphPlot.linkAvoidCenter);
 		});
 	}
 
