@@ -7,6 +7,7 @@ from typing import List
 import pandas
 
 from correct_persons import correct_persons
+from scrape_photos import download_photos
 from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE, timeit
 
 PERSONS_N = 30
@@ -85,6 +86,8 @@ def compute_data_for_period(period):
     # Fix person names
     persons.name = correct_persons(persons.name)
     mentions.person = correct_persons(mentions.person)
+
+    download_photos(persons.name)
 
     # Replace sources domains with indices
     source_index = pandas.Index(sources.domain).unique()
