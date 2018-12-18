@@ -3,24 +3,18 @@ layout: default
 title: Home
 menu_order: 1
 ---
+# Welcome.
 
-# Prototype
+Are all media sources equally truthful? As we all know from the headlines we read every day, the answer is clearly no. But, does that mean finding truth is hopeless, that we are lost with no trustworthy statements among the millions of words published every day? Fortunately, the answer to that question is also no. While filtering pure reporting from pure storytelling is difficult, it's certainly doable, and we're here to help.
 
-In this prototype, news sources are represented by green dots, while events are represented by yellow points. The links between news sources and events represent articles mentions, and their color correspondond to the tone of the mention (blue is negative and red is positive).
+Important information about different news sources can be inferred from the ways that they connect with other sources and from the subjects of their reporting. We've built a tool that enables you to explore reporting trends of some of the most influential media sources in the world. Needless to say, we love it, but rather than boring you with yet more words for you to read, we'll let you check it our for yourself: 
 
-![](processbook/week11/sources_events_graph_prototype/prototype2_sources_events.png)
+[Click here for an interactive visualization of global media sources and what they report on.](visualization.html)
 
-[Click here to see the prototype](processbook/week11/sources_events_graph_prototype/).
+## "Where can I get more information?"
+- To learn more about us, the authors, check out our [Team page](team.md). 
+- If you're curious about where we got our data, head over to the [Data page](data.md).
+- If you'd like to know more information about the background of our project and the design process, you're more than welcome to read our whole [processbook](processbook.md)
+- Finally, you can see all of the source code for our project, including prototypes and the entire design pipeline from the earlies stages, on [our Github repo](https://github.com/mbovel/dataviz-project).
 
-# Further work
-
-- We will explore furthur ways of arranging the vertices in space. The idea of having the news sources in an inner circle and the events on an outer circle seems promissing, but we still have to choose how to sort and distribute them exactly.
-- We might add labels to news sources and events, either permanently or on click or hover.
-- We might add a notion of time: mentions appearing little by little according to when the articles were published for example.
-
-# Previous work
-
-- [Previous version of the graph with sources and mentions](processbook/week10/sources_events_graph_prototype/).
-- [Geographic map of average tone per country about a specific subject](processbook/week10/tones_map_prototype/).
-- [Very first graph prototype showing only sources](processbook/week09/prototype1).
-
+#### Enjoy!
