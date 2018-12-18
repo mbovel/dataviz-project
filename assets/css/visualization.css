@@ -7,20 +7,50 @@ body {
 	font-family: "Roboto", sans-serif;
 	color: #ccc;
 	font-size: 1.2em;
+	background-color: #111;
+}
+
+#container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
 }
 
 main {
-	display: grid;
-	grid-template-columns: 4fr 1fr;
-	height: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: row;
 }
 
-#plot {
-	background-color: #111;
-	height: 100%;
-	width: 100%;
+#bar-chart {
+	flex: 3;
+	background-color: #1e1722;
 }
 
-#sidebar {
+#persons-ranking {
+	flex: 1;
+	background-color: #17341c;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	background-color: #222;
+	padding: 1em;
+}
+
+nav div {
+	margin-right: 3em;
+}
+
+#time-chooser label,
+#time-chooser input {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#time-chooser input[type="range"] {
+	width: 10em;
 }

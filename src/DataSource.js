@@ -1,47 +1,33 @@
-const MAX_PERSONS_NUMBER = 1000;
-
 class DataSource {
-	constructor(pantheon, mainSources, { start_date, end_date }) {
-		this.pantheon = pantheon;
-		this.mainSources = mainSources;
-		this.personsRegion = d3.rollup(pantheon, v => v[0]["continentName"], d => d.name);
+	constructor(/**Array<Object>*/ sources, { /**Date*/ start_date, /**Date*/ end_date }) {
+		this.sources = sources;
 		this.minDate = new Date(start_date);
 		this.maxDate = new Date(end_date);
 	}
 
 	static async init() {
-		const pantheon = await d3.tsv("data/pantheon.tsv");
-		const mainSources = await d3.csv("data/sources.csv");
+		const sources = await d3.csv("data/sources.csv");
 		const config = await d3.json("data/config.json");
-		return new DataSource(pantheon, mainSources, config);
+		return new DataSource(sources, config);
 	}
 
 	async load(/**Date*/ start, /**Date*/ end) {
-		const mentions = await d3.csv(`data/mentions/${formatDate(start)}_${formatDate(end)}.csv`);
-		const personsInfo = await d3.csv(
-			`data/persons/${formatDate(start)}_${formatDate(end)}.csv`
-		);
+		const timeRange = `${formatDate(start)}_${formatDate(end)}`;
 
-		const persons = personsInfo.map((person, person_index) => ({
+		const personsRaw = await d3.csv(`data/persons/${timeRange}.csv`);
+		const persons = personsRaw.map(person => ({
 			type: "person",
-			region: this.personsRegion.get(person["name"]),
 			name: person["name"]
 		}));
 
-		const sources = getUniqueValues(mentions, "source_index").map(source_index => ({
-			type: "source",
-			name: this.mainSources[source_index]["name"],
-			region: this.mainSources[source_index]["region"]
+		const mentionsRaw = await d3.csv(`data/mentions/${timeRange}.csv`);
+		const mentions = mentionsRaw.map(mention => ({
+			source: this.sources[mention["source_index"]],
+			target: persons[mention["person_index"]],
+			tone: mention["tone_avg"],
+			std: mention["tone_std"]
 		}));
 
-		const nodes = persons.concat(sources);
-
-		const links = mentions.map(mention => ({
-			source: this.mainSources[mention["source_index"]]["name"],
-			target: persons[mention["person_index"]]["name"],
-			tone: mention["tone_avg"]
-		})).splice(0, 100);
-
-		return { nodes, links };
+		return { persons, mentions };
 	}
 }

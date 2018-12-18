@@ -14,63 +14,43 @@
 		/>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/visualization.css" />
-		<link rel="stylesheet" href="assets/css/visualization-slider.css" />
 		<link rel="stylesheet" href="assets/css/visualization-graph.css" />
 		<link rel="stylesheet" href="assets/css/visualization-sidebar.css" />
 		<link rel="stylesheet" href="assets/css/visualization-maplegend.css" />
 	</head>
 	<body>
-		<main>
-			<div id="plotarea">
-				<svg
-					id="plot"
-					viewBox="-250 -250 500 500"
-					preserveAspectRatio="xMidYMid meet"
-				></svg>
-				<div id="mapbox"><div id="map"></div></div>
-			</div>
-
-			<div id="sidebar">
-				<div id="time-controls">
-					<p class="year-control">
-						<span class="year-display">2018</span>
-						<input
-							type="range"
-							class="slider year-slider"
-							min="2017"
-							max="2018"
-							value="2018"
-							step="1"
-						/>
-						<label class="control control-checkbox">
-							Show whole year
-							<input type="checkbox" checked="checked" class="whole-year-toggle" />
-							<span class="control-indicator"></span>
-						</label>
-					</p>
-					<p class="month-control">
-						<span class="month-display">August</span> <input type="range" class="slider
-						month-slider" min=0" max="11" value="1" step="1">
-						<label class="control control-checkbox">
-							Show whole month
-							<input type="checkbox" checked="checked" class="whole-month-toggle" />
-							<span class="control-indicator"></span>
-						</label>
-					</p>
-					<p class="day-control">
-						<span class="day-display">Today</span>
-						<input
-							type="range"
-							class="slider day-slider"
-							min="1"
-							max="30"
-							value="1"
-							step="1"
-						/>
-					</p>
+		<div id="container">
+			<main>
+				<div id="bar-chart"></div>
+				<div id="persons-ranking"></div>
+			</main>
+			<nav>
+				<div id="region-selector">
+					<label>
+						Sources region:
+						<select>
+							<option>USA</option>
+							<option>Swiss</option>
+						</select>
+					</label>
 				</div>
-			</div>
-		</main>
+				<div id="time-slider">
+					<label>Date: <input type="range" min="0" max="20" value="5" step="1" /> </label>
+					<label
+						>Granularity:
+						<select>
+							<option>Day</option>
+							<option>Month</option>
+							<option>Year</option>
+						</select>
+					</label>
+				</div>
+				<div id="sort-buttons">
+					<button class="sort-by-source-name">Sorty by source names</button>
+					<button class="sort-by-tone">Sorty by tone</button>
+				</div>
+			</nav>
+		</div>
 
 		<script src="https://d3js.org/d3.v5.js"></script>
 		<script src="https://d3js.org/d3-array.v2.min.js"></script>
@@ -85,12 +65,16 @@
 			crossorigin=""
 		></script>
 		<script src="src/utils.js"></script>
+
 		<script src="src/DataSource.js"></script>
-		<script src="src/regionColorMap.js"></script>
-		<script src="src/maplegend.js"></script>
-		<script src="src/GraphPlot.js"></script>
-		<script src="src/GraphSimulation.js"></script>
-		<script src="src/Sidebar.js"></script>
+		<script src="src/Model.js"></script>
+
+		<script src="src/BarChart.js"></script>
+		<script src="src/PersonsRanking.js"></script>
+		<script src="src/RegionSelector.js"></script>
+		<script src="src/SortButtons.js"></script>
+		<script src="src/TimeSlider.js"></script>
+
 		<script src="src/main.js"></script>
 	</body>
 </html>
