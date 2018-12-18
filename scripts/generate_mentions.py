@@ -7,7 +7,7 @@ from typing import List
 import pandas
 
 from correct_persons import correct_persons
-from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE
+from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE, timeit
 
 PERSONS_N = 30
 
@@ -70,6 +70,7 @@ def mentions_query(period: pandas.Timestamp, in_sources: List[str], in_persons: 
     """)
 
 
+@timeit
 def compute_data_for_period(period):
     period_string = f"{period.strftime('%Y-%m-%d')}_{(period + 1).strftime('%Y-%m-%d')}"
     print(f"\n--- Computing mentions for period {period} ---")
@@ -113,5 +114,5 @@ if __name__ == "__main__":
     months = pandas.date_range(START, END, freq='MS')
     years = pandas.date_range(START, END, freq='YS')
 
-    for period in itertools.chain(days, months, years):
+    for period in itertools.chain(years, months, days):
         compute_data_for_period(period)
