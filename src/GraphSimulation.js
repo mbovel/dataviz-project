@@ -2,8 +2,8 @@ class GraphSimulation {
 	constructor() {
 		const linksForce = d3
 			.forceLink()
-			.id(d => d.id)
 			.strength(d => d.tone / 10000)
+			.id(d => d.name)
 			.distance(50);
 
 		const chargeForce = d3
