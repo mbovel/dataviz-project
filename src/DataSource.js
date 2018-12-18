@@ -1,3 +1,5 @@
+const MAX_PERSONS_NUMBER = 1000;
+
 class DataSource {
 	constructor(pantheon, mainSources, { start_date, end_date }) {
 		this.pantheon = pantheon;
@@ -20,25 +22,25 @@ class DataSource {
 			`data/persons/${formatDate(start)}_${formatDate(end)}.csv`
 		);
 
-		const sources = getUniqueValues(mentions, "source_index").map(source_index => ({
-			type: "source",
-			name: this.mainSources[source_index],
-			region: this.mainSources[source_index]["region"],
-			id: source_index
-		}));
-
 		const persons = personsInfo.map((person, person_index) => ({
 			type: "person",
 			region: this.personsRegion.get(person["name"]),
-			name: person["name"],
-			id: person_index
+			name: person["name"]
 		}));
+
+		const sources = getUniqueValues(mentions, "source_index").map(source_index => ({
+			type: "source",
+			name: this.mainSources[source_index]["name"],
+			region: this.mainSources[source_index]["region"]
+		}));
+
+		console.log(sources);
 
 		const nodes = persons.concat(sources);
 
 		const links = mentions.map(mention => ({
-			source: mention["source_index"],
-			target: mention["person_index"],
+			source: this.mainSources[mention["source_index"]]["name"],
+			target: persons[mention["person_index"]]["name"],
 			tone: mention["tone_avg"]
 		}));
 
