@@ -28,5 +28,6 @@ class GraphSimulation {
 	updateData(/**{nodes: array, links: array}*/ data) {
 		this._simulation.nodes(data.nodes);
 		this._simulation.force("links").links(data.links);
+		this._simulation.alphaTarget(0.3).restart();
 	}
 }
