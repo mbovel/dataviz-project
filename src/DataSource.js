@@ -34,8 +34,6 @@ class DataSource {
 			region: this.mainSources[source_index]["region"]
 		}));
 
-		console.log(sources);
-
 		const nodes = persons.concat(sources);
 
 		const links = mentions.map(mention => ({
