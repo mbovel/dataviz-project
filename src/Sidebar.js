@@ -66,7 +66,6 @@ class Sidebar {
 			maxDateComponents
 		);
 
-		console.log([dateComponents, clampedDate, mins, maxs]);
 		this.updateSliders(mins, "min");
 		this.updateSliders(maxs, "max");
 		this.updateSliders(clampedDate, "value");

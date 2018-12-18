@@ -42,7 +42,7 @@ class DataSource {
 			source: this.mainSources[mention["source_index"]]["name"],
 			target: persons[mention["person_index"]]["name"],
 			tone: mention["tone_avg"]
-		}));
+		})).splice(0, 100);
 
 		return { nodes, links };
 	}
