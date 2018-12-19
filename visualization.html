@@ -17,11 +17,18 @@
 		<link rel="stylesheet" href="assets/css/visualization-graph.css" />
 		<link rel="stylesheet" href="assets/css/visualization-sidebar.css" />
 		<link rel="stylesheet" href="assets/css/visualization-maplegend.css" />
+		<link rel="stylesheet" href="assets/css/visualization-barchart.css" />
 	</head>
 	<body>
 		<div id="container">
 			<main>
-				<div id="bar-chart"></div>
+				<div id="bar-chart">
+					<svg
+						id="bar-chart-svg"
+						viewBox="0 -200 500 300"
+						preserveAspectRatio="xMidYMid meet"
+					></svg>
+				</div>
 				<div id="persons-ranking"></div>
 			</main>
 			<nav>

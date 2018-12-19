@@ -4,8 +4,10 @@ async function init() {
 
 	const personsRanking = new PersonsRanking(document.querySelector("#persons-ranking"), model);
 	const timeSlider = new TimeSlider(document.querySelector("#time-slider"), model);
+	const barChart = new BarChart(document.querySelector("#bar-chart-svg"), model);
 
 	model.register(personsRanking);
+	model.register(barChart);
 	model.register(timeSlider);
 	model.init().catch(console.error);
 }
