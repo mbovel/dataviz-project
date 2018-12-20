@@ -10,4 +10,8 @@ async function init() {
 	model.init().catch(console.error);
 }
 
+const tooltip = d3.select("body").append("div")	
+            .attr("class", "tooltip")				
+            .style("opacity", 0);
+
 init().catch(console.error);

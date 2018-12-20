@@ -3,16 +3,27 @@ class PersonsRanking {
 		this.model = model;
 		this.createScale();
 		this.createGraph(container);
-        this.nPersons = 30;
 	}
 
 	createScale() {
-		this.sizeScale = d3.scaleLog()
-            .range([30,50])
-            .domain([1,10000]);
         this.colorScale = d3.scaleOrdinal()
-            .range(d3.schemeCategory10);
+            //.range(d3.schemeCategory10);
+            .range(d3.schemeSet3);
+        const maxtone = 7;
+        const tmpScale = d3.scalePow()
+                .exponent(0.3)
+                .domain([-maxtone, maxtone])
+                .range([0, 1]);
+        this.toneScale = d => d3.interpolateRdYlGn(tmpScale(d));
 	}
+
+    setScales(nPersons){
+		this.circlePositionX = i => this.x + this.width/2 + this.width / 5 * (i % 3 - 1);
+        this.circlePositionY = i => this.y + this.height / (nPersons + 1) * (i+1);
+		this.circleSize = d3.scaleLog()
+            .range([this.height / nPersons / 1.5, this.height / nPersons*1.5])
+            .domain([10,1000]);
+    }
 
 	createGraph(/**HTMLElement*/ container) {
 		this.svgEl = d3.select(container);
@@ -26,31 +37,10 @@ class PersonsRanking {
 		this.height = parseFloat(viewBox[3]);
 	}
 
-    imageExist(url){
-        if(url){
-            var req = new XMLHttpRequest();
-            req.open('GET', url, false);
-            req.send();
-            return req.status==200;
-        } else {
-            return false;
-        }
-    }
-
-    getPersonsFromMentions(mentions){
-	    let personsMap = d3.rollup(mentions, v => ({tone:v.reduce((sum, el) => sum + parseFloat(el.tone), 0) / v.length}), d => d.target.name);
-        let persons = [];
-        for (const [k,v] of personsMap) {
-                v.name = k
-                persons.push(v);
-        }
-        return persons;
-    }
-
     setState({persons, mentions, selectedPerson}) {
-        //if (persons[0].hasOwnProperty('tone'))
-            //persons = this.getPersonsFromMentions(mentions);
-        console.log(selectedPerson)
+        this.setScales(persons.length);
+        persons.sort((x,y) => y.tone - x.tone);
+        //persons.sort((x,y) => y.nmentions - x.mentions);
 
 		const defsEls = this.defsGroup.selectAll("pattern").data(persons, d => d.name);
 		const patternEls = defsEls
@@ -62,60 +52,87 @@ class PersonsRanking {
             .attr('height', "100%")
             .attr('width', "100%")
         patternEls
+            .append('rect')
+            .attr('width', 1)
+            .attr('height', 1)
+            .attr('fill', d => this.colorScale(d.name))
+        patternEls
+            .append('text')
+            .attr('class', 'circlename')
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', "middle")
+            .attr('x', .5)
+            .attr('y', .5)
+            .text(d => d.name.split(" ").map(n => n.charAt(0)).join(''))
+        patternEls
             .append('image')
             .attr('y', "-0.0")
             .attr('x', "-0.4")
             .attr('height', "1.8")
             .attr('width', "1.8")
+            .on('error', function(d){d3.select(this).attr('href','data/photos/Empty.png')})
             .attr('href', d => "data/photos/" + d.name + ".jpg");
-		defsEls.exit().remove();
+		defsEls.exit()
+            .transition()
+            .delay(1000)
+            .remove();
 
 		const nodesJoin = this.nodesGroup.selectAll("g.person").data(persons, d => d.name);
+		nodesJoin.exit()
+            .transition(1000)
+            .attr("transform", (d,i) => `translate(150,${this.circlePositionY(i)})`)
+            .transition()
+            .delay(1000)
+            .remove();
 		const nodesEnterEls = nodesJoin
 			.enter()
             .append('g')
-            .attr('class', 'person');
+            .attr('class', 'person')
+            .attr("transform", (d,i) => `translate(150,${this.circlePositionY(i)})`);
         nodesEnterEls
 			.append("circle")
-            .style("fill", d => this.imageExist("data/photos/" + d.name + ".jpg") ? `url(#image:${d.name.replace(/\s+/g, '_')})` : this.colorScale(d.name)) 
-			.attr("stroke", d => this.colorScale(d.name))
-			.style("stroke-width", this.height / 300)
+            .style("fill", d => `url(#image:${d.name.replace(/\s+/g, '_')})`) 
+			.attr("stroke", d => this.toneScale(d.tone))
+			.style("stroke-width", d => this.circleSize(d.mentions) / 8)
 			.attr("class", d => "person")
             .on("mouseover", this.toggleHighlight)
             .on("mouseout", this.toggleHighlight)
             .on('click', d => this.model.selectPerson(d.name));
-        nodesEnterEls
-            .append('text')
-            .attr('class', 'circlename')
-            .attr('text-anchor', 'middle')
-            .attr('alignment-baseline', "middle")
-            .text(d => this.imageExist("data/photos/" + d.name + ".jpg") ? '' : d.name.split(" ").map(n => n.charAt(0)).join(''))
 
 		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
-		nodesJoin.exit().remove();
 
         nodesEnterUpdateEls
-            .sort((x,y) => d3.descending(x.tone, y.tone))
             .transition()
             .duration(2000)
-            .attr("transform", (d,i) => `translate(${this.x + this.width/2 + this.width / 5 * (i % 3 - 1)}, ${this.y + this.height / (this.nPersons + 1) * (i+1)})`);
+            .attr("transform", (d,i) => `translate(${this.circlePositionX(i)},${this.circlePositionY(i)})`);
         nodesEnterUpdateEls.select('circle')
-			.attr("r", d => this.height / this.nPersons / (d.name === selectedPerson ? 1.0 : 1.2))
+			.attr("r", d => this.circleSize(d.nmentions))
 	}
 
-    toggleHighlight(){
+    toggleHighlight(d){
         //d3.event.preventDefault();
         let s = d3.select(this);
-        console.log(s)
         let fill = d3.hsl(s.attr('stroke'));
         if (s.classed('highlighted')) {
             fill.l -= 0.15;
             s.classed('highlighted',false)
             .attr('stroke', fill)
+
+            tooltip.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
         } else {
             fill.l += 0.15;
             s.classed('highlighted',true)
             .attr('stroke', fill)
+
+            tooltip.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            tooltip.html(d.name)	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px")
+                .style('color', 'black');
         }
     }
 }
