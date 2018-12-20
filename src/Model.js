@@ -14,7 +14,7 @@ class Model {
 			maxDate: this.datasource.maxDate,
 			freq: "D",
 			selectedPerson: "Donald Trump",
-			region: "America"
+			region: "Americas"
 		});
 	}
 

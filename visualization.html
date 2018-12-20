@@ -17,12 +17,19 @@
 		<link rel="stylesheet" href="assets/css/visualization-graph.css" />
 		<link rel="stylesheet" href="assets/css/visualization-sidebar.css" />
 		<link rel="stylesheet" href="assets/css/visualization-maplegend.css" />
+		<link rel="stylesheet" href="assets/css/visualization-persons.css" />
 	</head>
 	<body>
 		<div id="container">
 			<main>
 				<div id="bar-chart"></div>
-				<div id="persons-ranking"></div>
+				<div id="persons-ranking">
+					<svg
+						id="persons-ranking-svg"
+						viewBox="0 0 100 300"
+						preserveAspectRatio="xMidYMid meet"
+					></svg>
+				</div>
 			</main>
 			<nav>
 				<div id="region-selector">
