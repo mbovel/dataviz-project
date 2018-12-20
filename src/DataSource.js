@@ -11,11 +11,21 @@ class DataSource {
 		return new DataSource(sources, config);
 	}
 
+    getPersonsFromMentions(mentions){
+	    let personsMap = d3.rollup(mentions, v => ({tone:v.reduce((sum, el) => sum + parseFloat(el.tone), 0) / v.length, nmentions: v.length}), d => d.target.name);
+        let persons = [];
+        for (const [k,v] of personsMap) {
+                v.name = k
+                persons.push(v);
+        }
+        return persons;
+    }
+
 	async load(/**Date*/ start, /**Date*/ end) {
 		const timeRange = `${formatDate(start)}_${formatDate(end)}`;
 
 		const personsRaw = await d3.csv(`data/persons/${timeRange}.csv`);
-		const persons = personsRaw.map(person => ({
+		let persons = personsRaw.map(person => ({
 			type: "person",
 			name: person["name"]
 		}));
@@ -27,6 +37,8 @@ class DataSource {
 			tone: mention["tone_avg"],
 			std: mention["tone_std"]
 		}));
+
+        persons = this.getPersonsFromMentions(mentions);
 
 		return { persons, mentions };
 	}
