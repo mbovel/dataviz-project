@@ -1,0 +1,5 @@
+.circlename {
+    fill: rgb(255,255,255,1);
+    font-size: 5px;
+    pointer-events: none;
+}

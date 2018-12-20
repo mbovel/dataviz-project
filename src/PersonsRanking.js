@@ -38,18 +38,19 @@ class PersonsRanking {
     }
 
     getPersonsFromMentions(mentions){
-        let nodes = data.links;
-	    let personsMap = d3.rollup(nodes, v => v.reduce((sum, el) => sum + parseFloat(el.tone), 0) / v.length, d => d.target);
+	    let personsMap = d3.rollup(mentions, v => ({tone:v.reduce((sum, el) => sum + parseFloat(el.tone), 0) / v.length}), d => d.target.name);
         let persons = [];
-        for (const k of personsMap) {
-                persons.push({name:k[0], tone:k[1]});
+        for (const [k,v] of personsMap) {
+                v.name = k
+                persons.push(v);
         }
         return persons;
     }
 
-	setData({persons, mentions}) {
-        if (persons[0].hasOwnProperty('tone'))
-            persons = this.getPersonsFromMentions(mentions);
+    setState({persons, mentions, selectedPerson}) {
+        //if (persons[0].hasOwnProperty('tone'))
+            //persons = this.getPersonsFromMentions(mentions);
+        console.log(selectedPerson)
 
 		const defsEls = this.defsGroup.selectAll("pattern").data(persons, d => d.name);
 		const patternEls = defsEls
@@ -69,22 +70,53 @@ class PersonsRanking {
             .attr('href', d => "data/photos/" + d.name + ".jpg");
 		defsEls.exit().remove();
 
-		const nodesJoin = this.nodesGroup.selectAll("circle").data(persons, d => d.name);
+		const nodesJoin = this.nodesGroup.selectAll("g.person").data(persons, d => d.name);
 		const nodesEnterEls = nodesJoin
 			.enter()
+            .append('g')
+            .attr('class', 'person');
+        nodesEnterEls
 			.append("circle")
-			.attr("r", this.height / this.nPersons * 1.5)
             .style("fill", d => this.imageExist("data/photos/" + d.name + ".jpg") ? `url(#image:${d.name.replace(/\s+/g, '_')})` : this.colorScale(d.name)) 
-			.style("stroke", d => this.colorScale(d.name))
-			.style("stroke-width", this.height / 500)
-			.attr("class", d => "person");
+			.attr("stroke", d => this.colorScale(d.name))
+			.style("stroke-width", this.height / 300)
+			.attr("class", d => "person")
+            .on("mouseover", this.toggleHighlight)
+            .on("mouseout", this.toggleHighlight)
+            .on('click', d => this.model.selectPerson(d.name));
+        nodesEnterEls
+            .append('text')
+            .attr('class', 'circlename')
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', "middle")
+            .text(d => this.imageExist("data/photos/" + d.name + ".jpg") ? '' : d.name.split(" ").map(n => n.charAt(0)).join(''))
+
 		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
 		nodesJoin.exit().remove();
 
         nodesEnterUpdateEls
             .sort((x,y) => d3.descending(x.tone, y.tone))
             .transition()
-            .delay(2000)
-            .attr("transform", (d,i) => `translate(${this.x + this.width/2 + this.width / 5 * (i % 2 - 0.5)}, ${this.y + this.height / (this.nPersons + 1) * (i+1)})`);
+            .duration(2000)
+            .attr("transform", (d,i) => `translate(${this.x + this.width/2 + this.width / 5 * (i % 3 - 1)}, ${this.y + this.height / (this.nPersons + 1) * (i+1)})`);
+        nodesEnterUpdateEls.select('circle')
+			.attr("r", d => this.height / this.nPersons / (d.name === selectedPerson ? 1.0 : 1.2))
 	}
+
+    toggleHighlight(){
+        //d3.event.preventDefault();
+        let s = d3.select(this);
+        console.log(s)
+        let fill = d3.hsl(s.attr('stroke'));
+        if (s.classed('highlighted')) {
+            fill.l -= 0.15;
+            s.classed('highlighted',false)
+            .attr('stroke', fill)
+        } else {
+            fill.l += 0.15;
+            s.classed('highlighted',true)
+            .attr('stroke', fill)
+        }
+    }
 }
+
