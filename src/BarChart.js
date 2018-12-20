@@ -155,7 +155,6 @@ class BarChart {
 			.attr("class", "source")
             .attr('transform', (d, i) => `translate(${this.scalePosition(i) - this.scaleWidth(this.barwidth) / 2},0)`);
         barGroupEnterG.append('rect')
-            .attr('width', this.scaleWidth(this.barwidth))
             .on("mouseover", this.toggleHighlight)
             .on("mouseout", this.toggleHighlight)
             .on("click", this.onClick);
@@ -168,6 +167,7 @@ class BarChart {
         this.barGroupEnterUpdate.select('rect')
             .transition()
             .duration(1000)
+            .attr('width', d => this.scaleWidth(this.barwidth))
             .attr('fill', d => this.toneScale(d.tone))
             .attr('y', d => this.scaleBarTop(d.tone))
             .attr('height', d => this.scaleHeight(Math.abs(d.tone)));
