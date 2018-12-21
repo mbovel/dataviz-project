@@ -53,9 +53,9 @@ class Model {
 			// keep the same attributes as old state for the rest:
 			...this.state,
 			// replace persons and mentions attributes with new data:
-			...(await this._updateData({ freq, ...this.state })),
-			// Update date
-			freq
+			...(await this._updateData({ ...this.state, freq })),
+			// Update frq,
+            freq
 		});
 	}
 
@@ -64,7 +64,7 @@ class Model {
 			// keep the same attributes as old state for the rest:
 			...this.state,
 			// replace persons and mentions attributes with new data:
-			...(await this._updateData({ region, ...this.state })),
+			...(await this._updateData({ ...this.state, region })),
 			// Update region
 			region
 		});
@@ -75,7 +75,7 @@ class Model {
 			// keep the same attributes as old state for the rest:
 			...this.state,
 			// replace persons and mentions attributes with new data:
-			...(await this._updateData({ selectedPerson, ...this.state })),
+			...(await this._updateData({ ...this.state, selectedPerson })),
 			// Update selectedPerson
 			selectedPerson
 		});
