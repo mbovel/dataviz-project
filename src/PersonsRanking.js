@@ -48,7 +48,8 @@ class PersonsRanking {
           .padding(1.5);
 
         let root = d3.hierarchy({children: persons})
-              .sum(d =>  this.circleSize(d.mentionsCount))
+              //.sum(d =>  this.circleSize(d.mentionsCount))
+              .sum(d => d.mentionsCount);
 
         persons = pack(root).leaves();
 
