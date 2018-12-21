@@ -94,7 +94,7 @@ class Model {
 		const timeRange = Model._getTimeRange(date, freq);
 		const { mentions, persons } = await this.datasource.load(...timeRange, region);
 		if (selectedPerson) {
-			const mentionsFiltered = mentions.filter(m.target.name === selectedPerson);
+			const mentionsFiltered = mentions.filter(m => m.target.name === selectedPerson);
 			return { mentions: mentionsFiltered, persons };
 		}
 		return { mentions, persons };
