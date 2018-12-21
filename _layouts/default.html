@@ -28,5 +28,20 @@
 		Visualization</a> course at EPFL.</p>
 </footer>
 
+<script>
+    /* Inspired from https://stackoverflow.com/a/34765348 */
+    /* (But much better) */
+    function fix_anchors() {
+        for (const linkEl of document.querySelectorAll('a')) {
+            const url = linkEl.getAttribute('href');
+            if (url.substr(0, 1) === '#') {
+                linkEl.setAttribute('href', window.location.href + url)
+            }
+        }
+    }
+
+    fix_anchors()
+</script>
+
 </body>
 </html>
