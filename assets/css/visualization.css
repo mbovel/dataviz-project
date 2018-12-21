@@ -26,7 +26,7 @@ main {
 #bar-chart {
 	flex: 3;
 	background-color: #1e1722;
-    height: 100%;
+	height: 100%;
 }
 
 #persons-ranking {

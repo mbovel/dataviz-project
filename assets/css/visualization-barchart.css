@@ -1,19 +1,18 @@
 .xaxis {
-    stroke: rgba(255, 255, 255, 1);
-    stroke-width: 1;
-
+	stroke: rgba(255, 255, 255, 1);
+	stroke-width: 1;
 }
 
 .grids {
-    stroke: rgba(255, 255, 255, 0.1);
-    stroke-width: 0.3;
+	stroke: rgba(255, 255, 255, 0.1);
+	stroke-width: 0.3;
 }
 
 .title {
-    fill: rgb(255, 255, 255);
+	fill: rgb(255, 255, 255);
 }
 
 .xticklabel {
-    font-size:5px;
-    fill: white;
+	font-size: 5px;
+	fill: white;
 }
