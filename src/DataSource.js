@@ -11,34 +11,38 @@ class DataSource {
 		return new DataSource(sources, config);
 	}
 
-    getPersonsFromMentions(mentions){
-	    let personsMap = d3.rollup(mentions, v => ({tone:v.reduce((sum, el) => sum + parseFloat(el.tone), 0) / v.length, nmentions: v.length}), d => d.target.name);
-        let persons = [];
-        for (const [k,v] of personsMap) {
-                v.name = k
-                persons.push(v);
-        }
-        return persons;
-    }
-
 	async load(/**Date*/ start, /**Date*/ end) {
 		const timeRange = `${formatDate(start)}_${formatDate(end)}`;
 
-		const personsRaw = await d3.csv(`data/persons/${timeRange}.csv`);
-		let persons = personsRaw.map(person => ({
-			type: "person",
-			name: person["name"]
-		}));
-
 		const mentionsRaw = await d3.csv(`data/mentions/${timeRange}.csv`);
-		const mentions = mentionsRaw.map(mention => ({
-			source: this.sources[mention["source_index"]],
-			target: persons[mention["person_index"]],
-			tone: mention["tone_avg"],
-			std: mention["tone_std"]
+		const mentionsBase = mentionsRaw.map(mention => ({
+			sourceIndex: parseInt(mention["source_index"]),
+			targetIndex: parseInt(mention["person_index"]),
+			mentionsCount: parseInt(mention["mentions_count"]),
+			tone: parseFloat(mention["tone_avg"])
 		}));
 
-        persons = this.getPersonsFromMentions(mentions);
+		const personsRaw = await d3.csv(`data/persons/${timeRange}.csv`);
+		const personsStats = d3.rollup(
+			mentionsBase,
+			v => ({
+				tone: v.reduce((sum, el) => sum + el.tone, 0) / v.length,
+				mentionsCount: v.reduce((sum, el) => sum + el.mentionsCount, 0) / v.length
+			}),
+			d => d.targetIndex
+		);
+		// Augment persons with statistics.
+		const persons = personsRaw.map((person, index) => ({
+			name: person["name"],
+			...personsStats.get(index)
+		}));
+
+		// Augment mentions with direct references to person and source objects.
+		const mentions = mentionsBase.map(mention => ({
+			source: this.sources[mention.sourceIndex],
+			target: persons[mention.targetIndex],
+			...mention
+		}));
 
 		return { persons, mentions };
 	}
