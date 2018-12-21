@@ -32,6 +32,11 @@ main {
 	flex: 1;
 }
 
+#time-display {
+	margin: 1.6rem 0;
+	font-size: 1.2em;
+}
+
 #controls {
 	display: flex;
 	flex-direction: row;
@@ -41,7 +46,7 @@ main {
 }
 
 #controls div {
-	margin-right: 3em;
+	margin-right: 2em;
 }
 
 .select-wrapper input.select-dropdown {
