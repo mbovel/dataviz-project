@@ -41,7 +41,19 @@ class PersonsRanking {
 	setState({ persons, mentions, selectedPerson }) {
 		this.setScales(persons.length);
 		persons.sort((x, y) => y.tone - x.tone);
-		//persons.sort((x,y) => y.nmentions - x.mentions);
+		//persons.sort((x,y) => y.mentionsCount - x.mentionsCount);
+        
+        persons = {
+          name : "root",
+          children : persons
+        };
+
+        persons = d3.layout.pack()
+          .value(function(d) { return this.circleSize(d.mentionsCount); })
+          .size([this.width, this.height])
+          .nodes(persons);
+
+        persons.shift();
 
 		const defsEls = this.defsGroup.selectAll("pattern").data(persons, d => d.name);
 		const patternEls = defsEls.enter().append("pattern");
@@ -88,7 +100,7 @@ class PersonsRanking {
 		nodesJoin
 			.exit()
 			.transition(1000)
-			.attr("transform", (d, i) => `translate(150,${this.circlePositionY(i)})`)
+			.attr("transform", (d, i) => `translate(150,${d.y})`)
 			.transition()
 			.delay(1000)
 			.remove();
@@ -96,14 +108,14 @@ class PersonsRanking {
 			.enter()
 			.append("g")
 			.attr("class", "person")
-			.attr("transform", (d, i) => `translate(150,${this.circlePositionY(i)})`);
+			.attr("transform", (d, i) => `translate(150,${d.y})`);
 		nodesEnterEls
 			.append("circle")
 			.style("fill", d => `url(#image:${d.name.replace(/\s+/g, "_")})`)
 			.attr("stroke", d => this.toneScale(d.tone))
 			.style("stroke-width", d => {
 				console.log(d);
-				return this.circleSize(d.mentionsCount) / 8;
+				return this.height / 300;
 			})
 			.attr("class", d => "person")
 			.on("mouseover", this.toggleHighlight)
@@ -117,9 +129,9 @@ class PersonsRanking {
 			.duration(2000)
 			.attr(
 				"transform",
-				(d, i) => `translate(${this.circlePositionX(i)},${this.circlePositionY(i)})`
+				(d, i) => `translate(${d.x},${d.y})`
 			);
-		nodesEnterUpdateEls.select("circle").attr("r", d => this.circleSize(d.mentionsCount));
+		nodesEnterUpdateEls.select("circle").attr("r", d => d.r);
 	}
 
 	toggleHighlight(d) {
