@@ -37,10 +37,11 @@ class BarChart {
 			.scaleLinear()
 			.domain([0, 1])
 			.range([0, (this.width * 0.8) / nsources]);
+        let padding = this.width * 0.1 + this.scaleWidth(1) / 2;
 		this.scalePosition = d3
 			.scaleLinear()
 			.domain([0, nsources - 1])
-			.range([this.width * 0.1, this.width * 0.9]);
+			.range([padding, this.width - padding]);
 	}
 
 	createGraph(/**HTMLElement*/ container) {
@@ -171,7 +172,7 @@ class BarChart {
 			.attr(
 				"transform",
 				(d, i) =>
-					`translate(${this.scalePosition(i) - this.scaleWidth(this.barwidth) / 2},0)`
+                    `translate(${this.scalePosition(i) - this.scaleWidth(this.barwidth) / 2},0)`
 			);
 		barGroupEnterG
 			.append("rect")
