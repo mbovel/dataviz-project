@@ -130,4 +130,4 @@ if __name__ == "__main__":
     years = pandas.date_range(START, END, freq='YS')
 
     for period in itertools.chain(years, months, days):
-        compute_data_for_period(period, 'swiss')
+        compute_data_for_period(period, 'usa')
