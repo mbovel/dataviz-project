@@ -9,7 +9,8 @@
 ## Design
     ### Ideation and Sketching
     ### Prototyping
-    ### Final Implementation
+    ### Final Visualization
+    ### Technical Implementation
 ## Evaluation
     ### Deviation From Initial Proposal
     ### Knowledge/Information Contributions
