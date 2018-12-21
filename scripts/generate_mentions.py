@@ -6,7 +6,7 @@ from typing import List
 
 import pandas
 
-from correct_persons import correct_persons
+from correct_persons import correct_persons, is_city
 from scrape_photos import download_photos
 from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE, timeit
 
@@ -76,17 +76,21 @@ def compute_data_for_period(period):
     period_string = f"{period.strftime('%Y-%m-%d')}_{(period + 1).strftime('%Y-%m-%d')}"
     print(f"\n--- Computing mentions for period {period} ---")
 
-    # Get data
+    # Query Google BigQuery for most mentioned persons.
     persons = run_bigquery(name='persons', sql=persons_query(period))
+    persons = persons[~persons.name.apply(is_city)]
     persons_list = persons.name.values.tolist()
+
+    # Query Google BigQuery for mentions.
     sources = pandas.read_csv(SOURCES_FILE)
     sources_list = sources.domain.values.tolist()
     mentions = run_bigquery(name='mentions', sql=mentions_query(period, sources_list, persons_list))
 
-    # Fix person names
+    # Spell-check person names.
     persons.name = correct_persons(persons.name)
     mentions.person = correct_persons(mentions.person)
 
+    # Scrap pictures from Wikipedia.
     download_photos(persons.name)
 
     # Replace sources domains with indices

@@ -19,3 +19,12 @@ def correct_person(person_name, maxdist):
 @timeit
 def correct_persons(persons, maxdist=2):
     return persons.apply(correct_person, args=(maxdist,))
+
+
+cities = pandas.read_csv(os.path.join(DATA_DIR, 'worldcities.csv'))
+cities_index = pandas.Index(cities.city).unique()
+
+
+@cached(cache={})
+def is_city(string):
+    return cities_index.contains(string)
