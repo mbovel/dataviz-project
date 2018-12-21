@@ -24,8 +24,8 @@ class PersonsRanking {
 		this.circlePositionY = i => this.y + (this.height / (nPersons + 1)) * (i + 1);
 		this.circleSize = d3
 			.scaleLog()
-			.range([this.height / nPersons / 1.5, (this.height / nPersons) * 1.5])
-			.domain([10, 1000]);
+			.range([this.width / 2 , this.width])
+			.domain([100, 1000]);
 	}
 
 	createGraph(/**HTMLElement*/ container) {
@@ -43,22 +43,19 @@ class PersonsRanking {
 		persons.sort((x, y) => y.tone - x.tone);
 		//persons.sort((x,y) => y.mentionsCount - x.mentionsCount);
         
-        persons = {
-          name : "root",
-          children : persons
-        };
-
-        persons = d3.layout.pack()
-          .value(function(d) { return this.circleSize(d.mentionsCount); })
+        let pack = d3.pack()
           .size([this.width, this.height])
-          .nodes(persons);
+          .padding(1.5);
 
-        persons.shift();
+        let root = d3.hierarchy({children: persons})
+              .sum(d =>  this.circleSize(d.mentionsCount))
 
-		const defsEls = this.defsGroup.selectAll("pattern").data(persons, d => d.name);
+        persons = pack(root).leaves();
+
+		const defsEls = this.defsGroup.selectAll("pattern").data(persons, d => d.data.name);
 		const patternEls = defsEls.enter().append("pattern");
 		patternEls
-			.attr("id", d => "image:" + d.name.replace(/\s+/g, "_"))
+			.attr("id", d => "image:" + d.data.name.replace(/\s+/g, "_"))
 			.attr("patternContentUnits", "objectBoundingBox")
 			.attr("height", "100%")
 			.attr("width", "100%");
@@ -66,7 +63,7 @@ class PersonsRanking {
 			.append("rect")
 			.attr("width", 1)
 			.attr("height", 1)
-			.attr("fill", d => this.colorScale(d.name));
+			.attr("fill", d => this.colorScale(d.data.name));
 		patternEls
 			.append("text")
 			.attr("class", "circlename")
@@ -74,12 +71,12 @@ class PersonsRanking {
 			.attr("alignment-baseline", "middle")
 			.attr("x", 0.5)
 			.attr("y", 0.5)
-			.text(d =>
-				d.name
-					.split(" ")
-					.map(n => n.charAt(0))
-					.join("")
-			);
+            .text(d =>
+                d.data.name
+                    .split(" ")
+                    .map(n => n.charAt(0))
+                    .join("")
+            );
 		patternEls
 			.append("image")
 			.attr("y", "-0.0")
@@ -89,20 +86,20 @@ class PersonsRanking {
 			.on("error", function(d) {
 				d3.select(this).attr("href", "data/photos/Empty.png");
 			})
-			.attr("href", d => "data/photos/" + d.name + ".jpg");
+			.attr("href", d => "data/photos/" + d.data.name + ".jpg");
 		defsEls
 			.exit()
-			.transition()
-			.delay(1000)
+			//.transition()
+			//.delay(1000)
 			.remove();
 
-		const nodesJoin = this.nodesGroup.selectAll("g.person").data(persons, d => d.name);
+		const nodesJoin = this.nodesGroup.selectAll("g.person").data(persons, d => d.data.name);
 		nodesJoin
 			.exit()
-			.transition(1000)
+			//.transition(1000)
 			.attr("transform", (d, i) => `translate(150,${d.y})`)
-			.transition()
-			.delay(1000)
+			//.transition()
+			//.delay(1000)
 			.remove();
 		const nodesEnterEls = nodesJoin
 			.enter()
@@ -111,22 +108,21 @@ class PersonsRanking {
 			.attr("transform", (d, i) => `translate(150,${d.y})`);
 		nodesEnterEls
 			.append("circle")
-			.style("fill", d => `url(#image:${d.name.replace(/\s+/g, "_")})`)
-			.attr("stroke", d => this.toneScale(d.tone))
+			.style("fill", d => `url(#image:${d.data.name.replace(/\s+/g, "_")})`)
+			.attr("stroke", d => this.toneScale(d.data.tone))
 			.style("stroke-width", d => {
-				console.log(d);
 				return this.height / 300;
 			})
 			.attr("class", d => "person")
 			.on("mouseover", this.toggleHighlight)
 			.on("mouseout", this.toggleHighlight)
-			.on("click", d => this.model.selectPerson(d.name));
+			.on("click", d => this.model.selectPerson(d.data.name));
 
 		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
 
 		nodesEnterUpdateEls
-			.transition()
-			.duration(2000)
+			//.transition()
+			//.duration(2000)
 			.attr(
 				"transform",
 				(d, i) => `translate(${d.x},${d.y})`
@@ -155,7 +151,7 @@ class PersonsRanking {
 				.duration(200)
 				.style("opacity", 0.9);
 			tooltip
-				.html(d.name)
+				.html(d.data.name)
 				.style("left", d3.event.pageX + "px")
 				.style("top", d3.event.pageY - 28 + "px")
 				.style("color", "black");
