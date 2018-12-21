@@ -2,7 +2,9 @@
 	--primary-color: rgb(50, 50, 50);
 }
 
+/*****************/
 /* Global layout */
+/*****************/
 
 nav a {
 	color: var(--primary-color);
@@ -40,7 +42,9 @@ footer {
 	max-width: 45rem;
 }
 
+/*********************/
 /* Semantic elements */
+/*********************/
 
 h1,
 h2,
@@ -62,3 +66,76 @@ p {
 img {
 	max-width: 100%;
 }
+
+ol, ul {
+	padding-left: 1em;
+}
+
+
+/*******/
+/* TOC */
+/*******/
+
+#markdown-toc > li > a {
+	display: none; /* Oh dear. This is a very dirty hack. It is needed here because
+	                  Kramdown table of contents start at heading level 1 whereas we
+	                  only want them from level 2 */
+}
+
+#markdown-toc > ul {
+	padding-left: 0;
+}
+
+#markdown-toc > ul {
+	list-style: none;
+}
+
+#markdown-toc {
+	border: 1px solid #ccc;
+	padding: 1em;
+	display: inline-block;
+}
+
+#markdown-toc {
+	padding-left: 0;
+
+}
+#markdown-toc,
+#markdown-toc ol {
+	list-style: none;
+}
+
+/* From http://2ality.com/2012/01/numbering-headingshtml.html */
+
+body,
+#markdown-toc ~ h1 {
+	counter-reset: h2counter;
+}
+#markdown-toc ~ h2:before {
+	content: counter(h2counter) ".\0000a0\0000a0";
+	counter-increment: h2counter;
+	counter-reset: h3counter;
+}
+#markdown-toc ~ h3:before {
+	content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+	counter-increment: h3counter;
+}
+
+
+#markdown-toc ol {
+	counter-reset: section;                /* Creates a new instance of the
+                                            section counter with each ol
+                                            element */
+	list-style-type: none;
+}
+
+#markdown-toc ol li::before {
+	counter-increment: section;            /* Increments only this instance
+                                            of the section counter */
+	content: counters(section, ".") " ";   /* Combines the values of all instances
+                                            of the section counter, separated
+                                            by a period */
+}
+
+
+
