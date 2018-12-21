@@ -14,10 +14,12 @@ async function init() {
 		model
 	);
 	const barChart = new BarChart(document.querySelector("#bar-chart-svg"), model);
+	const regionSelector = new RegionSelector(document.querySelector("#region-selector"), model);
 
 	model.register(personsRanking);
 	model.register(barChart);
 	model.register(timeSlider);
+	model.register(regionSelector);
 	model.init().catch(console.error);
 }
 
