@@ -13,8 +13,8 @@ class Model {
 			minDate: this.datasource.minDate,
 			maxDate: this.datasource.maxDate,
 			freq: "D",
-			selectedPerson: "Donald Trump",
-			region: "Americas"
+			selectedPerson: null,
+			region: "swiss"
 		});
 	}
 
@@ -43,8 +43,19 @@ class Model {
 			...this.state,
 			// replace persons and mentions attributes with new data:
 			...(await this._updateData({ date, ...this.state })),
-			// Update date
+			// Update frequency
 			date
+		});
+	}
+
+	async setFreq(/**string*/ freq) {
+		this.setState({
+			// keep the same attributes as old state for the rest:
+			...this.state,
+			// replace persons and mentions attributes with new data:
+			...(await this._updateData({ freq, ...this.state })),
+			// Update date
+			freq
 		});
 	}
 
@@ -81,23 +92,33 @@ class Model {
 
 	async _updateData({ date, freq, region, selectedPerson }) {
 		const timeRange = Model._getTimeRange(date, freq);
-		const { mentions, persons } = await this.datasource.load(...timeRange);
-		// Todo: if no person is selected (selectedPerson === null), get means.
-		const mentionsFiltered = mentions.filter(
-			m => m.source.region === region && m.target.name === selectedPerson
-		);
-		return { mentions: mentionsFiltered, persons };
+		const { mentions, persons } = await this.datasource.load(...timeRange, region);
+		if (selectedPerson) {
+			const mentionsFiltered = mentions.filter(m.target.name === selectedPerson);
+			return { mentions: mentionsFiltered, persons };
+		}
+		return { mentions, persons };
 	}
 
 	static _getTimeRange(/**Date*/ date, /**string*/ freq) {
 		const [year, month, day] = getDateComponents(date);
 		switch (freq) {
 			case "Y":
-				return [new Date(year, 0, 1), new Date(year, 11, daysInMonth(year, 11))];
+				return [new Date(year, 0, 1), new Date(year + 1, 0, 1)];
 			case "M":
-				return [new Date(year, month, 1), new Date(year, month + 1, 1)];
+				return [
+					new Date(year, month, 1),
+					new Date(month === 12 ? year + 1 : year, (month + 1) % 12, 1)
+				];
 			case "D":
-				return [new Date(year, month, day), new Date(year, month, day + 1)];
+				return [
+					new Date(year, month, day),
+					new Date(
+						month === 12 ? year + 1 : year,
+						day === daysInMonth(month) ? month + 1 : month,
+						day === daysInMonth(month) ? 1 : day + 1
+					)
+				];
 		}
 		throw new Error(`Unknown frequency ${freq}`);
 	}

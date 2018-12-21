@@ -6,15 +6,15 @@ class DataSource {
 	}
 
 	static async init() {
-		const sources = await d3.csv("data/sources.csv");
+		const sources = await d3.csv("data/sources_swiss.csv");
 		const config = await d3.json("data/config.json");
 		return new DataSource(sources, config);
 	}
 
-	async load(/**Date*/ start, /**Date*/ end) {
+	async load(/**Date*/ start, /**Date*/ end, /**string*/ sources_subset) {
 		const timeRange = `${formatDate(start)}_${formatDate(end)}`;
 
-		const mentionsRaw = await d3.csv(`data/mentions/${timeRange}.csv`);
+		const mentionsRaw = await d3.csv(`data/mentions/${sources_subset}/${timeRange}.csv`);
 		const mentionsBase = mentionsRaw.map(mention => ({
 			sourceIndex: parseInt(mention["source_index"]),
 			targetIndex: parseInt(mention["person_index"]),
@@ -22,15 +22,16 @@ class DataSource {
 			tone: parseFloat(mention["tone_avg"])
 		}));
 
-		const personsRaw = await d3.csv(`data/persons/${timeRange}.csv`);
+		const personsRaw = await d3.csv(`data/persons/${sources_subset}/${timeRange}.csv`);
 		const personsStats = d3.rollup(
 			mentionsBase,
 			v => ({
 				tone: v.reduce((sum, el) => sum + el.tone, 0) / v.length,
-				mentionsCount: v.reduce((sum, el) => sum + el.mentionsCount, 0) / v.length
+				mentionsCount: v.reduce((sum, el) => sum + el.mentionsCount, 0)
 			}),
 			d => d.targetIndex
 		);
+
 		// Augment persons with statistics.
 		const persons = personsRaw.map((person, index) => ({
 			name: person["name"],

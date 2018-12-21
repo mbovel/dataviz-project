@@ -15,7 +15,7 @@ from utils import run_bigquery, strings_list, DATA_DIR, timeit
 PERSONS_N = 30
 
 
-def persons_query(period: pandas.Timestamp):
+def persons_query(period: pandas.Timestamp, in_sources: List[str]):
     return textwrap.dedent(f"""
         SELECT
           COUNT(*) AS mentions_count,
@@ -29,7 +29,8 @@ def persons_query(period: pandas.Timestamp):
             UNNEST(SPLIT(V2Persons ,';')) AS personOffset
           WHERE
             _PARTITIONTIME >= TIMESTAMP('{period}')
-            AND _PARTITIONTIME < TIMESTAMP('{period + 1}'))
+            AND _PARTITIONTIME < TIMESTAMP('{period + 1}')
+            AND SourceCommonName IN ({strings_list(in_sources)}))
         GROUP BY
           name
         ORDER BY
@@ -74,18 +75,22 @@ def mentions_query(period: pandas.Timestamp, in_sources: List[str], in_persons: 
 
 
 @timeit
-def compute_data_for_period(period, sources_file):
+def compute_data_for_period(period, sources_set):
+    sources_file = os.path.join(DATA_DIR, f'sources_{sources_set}.csv')
+
     period_string = f"{period.strftime('%Y-%m-%d')}_{(period + 1).strftime('%Y-%m-%d')}"
     print(f"\n--- Computing mentions for period {period} ---")
 
-    # Query Google BigQuery for most mentioned persons.
-    persons = run_bigquery(name='persons', sql=persons_query(period))
+    # Load sources list
+    sources = pandas.read_csv(sources_file)
+    sources_list = sources.domain.values.tolist()
+
+    # Query Google BigQuery for most mentioned persons by sources in our list.
+    persons = run_bigquery(name='persons', sql=persons_query(period, sources_list))
     persons = persons[~persons.name.apply(is_city)]
     persons_list = persons.name.values.tolist()
 
     # Query Google BigQuery for mentions.
-    sources = pandas.read_csv(sources_file)
-    sources_list = sources.domain.values.tolist()
     mentions = run_bigquery(name='mentions', sql=mentions_query(period, sources_list, persons_list))
 
     # Spell-check person names.
@@ -104,16 +109,15 @@ def compute_data_for_period(period, sources_file):
     mentions.drop(columns=['person'], inplace=True)
 
     # Write CSV files
-    mentions_file = os.path.join(DATA_DIR, 'mentions', f"{period_string}.csv")
+    mentions_file = os.path.join(DATA_DIR, 'mentions', f"{sources_set}/{period_string}.csv")
     mentions.to_csv(mentions_file, index=False, float_format='%.3f')
     print(f"Wrote {mentions_file}.")
-    persons_file = os.path.join(DATA_DIR, 'persons', f"{period_string}.csv")
+    persons_file = os.path.join(DATA_DIR, 'persons', f"{sources_set}/{period_string}.csv")
     persons.to_csv(persons_file, index=False, float_format='%.3f')
     print(f"Wrote {persons_file}.")
 
 
 if __name__ == "__main__":
-    SOURCES_FILE = os.path.join(DATA_DIR, 'sources_swiss.csv')
 
     with open(os.path.join(DATA_DIR, 'config.json')) as f:
         config = json.load(f)
@@ -126,4 +130,4 @@ if __name__ == "__main__":
     years = pandas.date_range(START, END, freq='YS')
 
     for period in itertools.chain(years, months, days):
-        compute_data_for_period(period, SOURCES_FILE)
+        compute_data_for_period(period, 'swiss')

@@ -1,4 +1,6 @@
 async function init() {
+	M.AutoInit(document.body);
+
 	const dataSource = await DataSource.init();
 	const model = new Model(dataSource);
 
@@ -6,7 +8,11 @@ async function init() {
 		document.querySelector("#persons-ranking-svg"),
 		model
 	);
-	const timeSlider = new TimeSlider(document.querySelector("#time-slider"), model);
+	const timeSlider = new TimeSlider(
+		document.querySelector("#time-slider"),
+		document.querySelector("#granularity-select"),
+		model
+	);
 	const barChart = new BarChart(document.querySelector("#bar-chart-svg"), model);
 
 	model.register(personsRanking);

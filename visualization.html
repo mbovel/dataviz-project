@@ -15,11 +15,18 @@
 			integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
 			crossorigin="anonymous"
 		/>
+
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/visualization.css" />
-		<link rel="stylesheet" href="assets/css/visualization-graph.css" />
-		<link rel="stylesheet" href="assets/css/visualization-sidebar.css" />
-		<link rel="stylesheet" href="assets/css/visualization-maplegend.css" />
 		<link rel="stylesheet" href="assets/css/visualization-barchart.css" />
 		<link rel="stylesheet" href="assets/css/visualization-persons.css" />
 	</head>
@@ -45,24 +52,31 @@
 					></svg>
 				</div>
 			</main>
-			<nav>
+			<div id="controls">
 				<div id="region-selector">
 					<label>
-						Sources region:
-						<select>
-							<option>USA</option>
-							<option>Swiss</option>
+						Sources subset
+						<select class="grey lighten-2">
+							<option value="usa">USA</option>
+							<option value="swiss">Swiss</option>
 						</select>
 					</label>
 				</div>
 				<div id="time-slider">
-					<label>Date: <input type="range" min="0" max="20" value="5" step="1" /> </label>
-					<label
-						>Granularity:
+					<label>
+						Date
+						<div class="range-field">
+							<input type="range" min="0" max="20" value="5" step="1" />
+						</div>
+					</label>
+				</div>
+				<div id="granularity-select">
+					<label>
+						Granularity
 						<select>
-							<option>Day</option>
-							<option>Month</option>
-							<option>Year</option>
+							<option value="D">Day</option>
+							<option value="M">Month</option>
+							<option value="Y">Year</option>
 						</select>
 					</label>
 				</div>
@@ -70,7 +84,7 @@
 					<button class="sort-by-source-name">Sorty by source names</button>
 					<button class="sort-by-tone">Sorty by tone</button>
 				</div>
-			</nav>
+			</div>
 		</div>
 
 		<script src="https://d3js.org/d3.v5.js"></script>

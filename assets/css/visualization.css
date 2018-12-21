@@ -34,7 +34,7 @@ main {
 	background-color: #17341c;
 }
 
-nav {
+#controls {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -42,16 +42,77 @@ nav {
 	padding: 1em;
 }
 
-nav div {
+#controls div {
 	margin-right: 3em;
 }
 
-#time-chooser label,
-#time-chooser input {
-	display: inline-block;
-	vertical-align: middle;
+.select-wrapper input.select-dropdown {
+	color: inherit;
 }
 
-#time-chooser input[type="range"] {
-	width: 10em;
+.select-wrapper input.select-dropdown:focus {
+	border-color: #fff;
+}
+
+.caret path:first-child {
+	fill: #ccc;
+}
+
+a,
+.dropdown-content li > span {
+	color: #333;
+}
+
+input[type="range"] {
+	width: 100%;
+}
+
+/* Duplication needed here because of browser-specific pseud-elements */
+input[type="range"]::-moz-range-thumb {
+	background-color: #ccc;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	background-color: #ccc;
+	margin: -6px 0 0 0;
+}
+
+input[type="range"]::-ms-thumb {
+	background-color: #ccc;
+}
+
+input[type="range"]::-moz-range-track {
+	height: 1px;
+	width: 100%;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	height: 1px;
+	width: 100%;
+}
+
+input[type="range"]::-ms-track {
+	height: 1px;
+	color: transparent;
+	width: 100%;
+}
+
+.range-field {
+	width: 30em;
+}
+
+input[type="range"] {
+	border: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+input[type="range"]:-moz-focusring {
+	outline: none;
+}
+
+input[type="range"] {
+	margin: 1.5em 0;
 }

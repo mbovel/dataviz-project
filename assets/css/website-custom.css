@@ -67,10 +67,10 @@ img {
 	max-width: 100%;
 }
 
-ol, ul {
+ol,
+ul {
 	padding-left: 1em;
 }
-
 
 /*******/
 /* TOC */
@@ -98,7 +98,6 @@ ol, ul {
 
 #markdown-toc {
 	padding-left: 0;
-
 }
 #markdown-toc,
 #markdown-toc ol {
@@ -121,21 +120,17 @@ body,
 	counter-increment: h3counter;
 }
 
-
 #markdown-toc ol {
-	counter-reset: section;                /* Creates a new instance of the
+	counter-reset: section; /* Creates a new instance of the
                                             section counter with each ol
                                             element */
 	list-style-type: none;
 }
 
 #markdown-toc ol li::before {
-	counter-increment: section;            /* Increments only this instance
+	counter-increment: section; /* Increments only this instance
                                             of the section counter */
-	content: counters(section, ".") " ";   /* Combines the values of all instances
+	content: counters(section, ".") " "; /* Combines the values of all instances
                                             of the section counter, separated
                                             by a period */
 }
-
-
-
