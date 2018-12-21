@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import itertools
 import json
 import os
@@ -8,7 +10,7 @@ import pandas
 
 from correct_persons import correct_persons, is_city
 from scrape_photos import download_photos
-from utils import run_bigquery, strings_list, DATA_DIR, SOURCES_FILE, timeit
+from utils import run_bigquery, strings_list, DATA_DIR, timeit
 
 PERSONS_N = 30
 
@@ -72,7 +74,7 @@ def mentions_query(period: pandas.Timestamp, in_sources: List[str], in_persons: 
 
 
 @timeit
-def compute_data_for_period(period):
+def compute_data_for_period(period, sources_file):
     period_string = f"{period.strftime('%Y-%m-%d')}_{(period + 1).strftime('%Y-%m-%d')}"
     print(f"\n--- Computing mentions for period {period} ---")
 
@@ -82,7 +84,7 @@ def compute_data_for_period(period):
     persons_list = persons.name.values.tolist()
 
     # Query Google BigQuery for mentions.
-    sources = pandas.read_csv(SOURCES_FILE)
+    sources = pandas.read_csv(sources_file)
     sources_list = sources.domain.values.tolist()
     mentions = run_bigquery(name='mentions', sql=mentions_query(period, sources_list, persons_list))
 
@@ -111,6 +113,8 @@ def compute_data_for_period(period):
 
 
 if __name__ == "__main__":
+    SOURCES_FILE = os.path.join(DATA_DIR, 'sources_swiss.csv')
+
     with open(os.path.join(DATA_DIR, 'config.json')) as f:
         config = json.load(f)
 
@@ -122,4 +126,4 @@ if __name__ == "__main__":
     years = pandas.date_range(START, END, freq='YS')
 
     for period in itertools.chain(years, months, days):
-        compute_data_for_period(period)
+        compute_data_for_period(period, SOURCES_FILE)

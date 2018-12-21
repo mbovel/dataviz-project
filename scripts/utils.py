@@ -11,7 +11,6 @@ from google.cloud.bigquery import QueryJobConfig
 
 CACHE_DIR = os.path.join(os.path.dirname(__file__), '..', 'cache')
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
-SOURCES_FILE = os.path.join(DATA_DIR, 'sources.csv')
 PHOTO_DIR = os.path.join(os.path.dirname(__file__), '..', 'data', 'photos')
 WS = re.compile("\\s*")
 
