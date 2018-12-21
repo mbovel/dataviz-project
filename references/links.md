@@ -19,7 +19,8 @@ Python librairies:
 - Wikipedia API: <https://github.com/martin-majlis/Wikipedia-API>.
 - pycountry <https://pypi.org/project/pycountry/>. Library to convert between countries full, two-letter and three-letter names.
 
-Other data that may be useful:
+Datasets:
 
 - List of main news sources on Wikipedia: <https://en.wikipedia.org/wiki/Wikipedia:News_sources>.
 - List of most influential people: <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/28201>. “The Pantheon 1.0 dataset is a manually verified dataset of individuals that have transcended linguistic, temporal, and geographic boundaries.”
+- List of cities: <https://simplemaps.com/data/world-cities>.
