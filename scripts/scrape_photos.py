@@ -1,34 +1,43 @@
-from bs4 import BeautifulSoup
-import wikipedia
-import urllib
 import os
-from utils import PHOTO_DIR
+import urllib
+
+import wikipedia
+from bs4 import BeautifulSoup
+from cachetools import cached
+
+from utils import PHOTO_DIR, timeit
+
+EMPTY_PHOTO = os.path.join(PHOTO_DIR, 'empty.png')
+
 
 def get_photo_url(name='Donald Trump'):
-    page = wikipedia.WikipediaPage(title = name)
+    page = wikipedia.WikipediaPage(title=name)
     soup = BeautifulSoup(page.html(), 'html.parser')
-    infobox = soup.find('table', {'class':'infobox vcard'})
+    infobox = soup.find('table', {'class': 'infobox vcard'})
     image = infobox.find('img')
     return 'https:' + image['src']
 
-def download_photo(name='Donald Trump'):
+
+@timeit
+@cached(cache={})
+def download_photo(output_file, name='Donald Trump'):
     try:
         url = get_photo_url(name)
-        PHOTO_FILE = os.path.join(PHOTO_DIR, name + ".jpg")
-        urllib.request.urlretrieve(url, PHOTO_FILE)
-    except:
+        urllib.request.urlretrieve(url, output_file)
+    except BaseException:
         pass
+
 
 def download_photos(names=['Donald Trump', 'Vladimir Putin']):
     if not os.path.exists(PHOTO_DIR):
         os.makedirs(PHOTO_DIR)
     for name in names:
-        PHOTO_FILE = os.path.join(PHOTO_DIR, name + ".jpg")
-        if not os.path.isfile(PHOTO_FILE):
-            download_photo(name)
+        photo_file = os.path.join(PHOTO_DIR, name + ".jpg")
+        if not os.path.isfile(photo_file):
+            download_photo(photo_file, name)
+
 
 if __name__ == '__main__':
-
     # Example
     persons = [
         'Angela Merkel',
