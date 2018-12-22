@@ -25,39 +25,25 @@ class PersonsRanking {
 		this.toneScale = d => d3.interpolateRdYlGn(tmpScale(d));
 	}
 
-	setScales(nPersons) {
-		this.circlePositionX = i => this.x + this.width / 2 + (this.width / 5) * ((i % 3) - 1);
-		this.circlePositionY = i => this.y + (this.height / (nPersons + 1)) * (i + 1);
-		this.circleSize = d3
-			.scaleLog()
-			.range([this.width / 2, this.width])
-			.domain([100, 1000]);
-	}
-
 	createGraph(/**HTMLElement*/ container) {
 		this.svgEl = d3.select(container);
 		this.defsGroup = this.svgEl.append("defs").attr("id", "defs");
 		this.nodesGroup = this.svgEl.append("g").attr("id", "nodes");
 
 		let viewBox = this.svgEl.attr("viewBox").split(" ");
-		(this.x = parseFloat(viewBox[0])), (this.y = parseFloat(viewBox[1]));
-		(this.width = parseFloat(viewBox[2])), (this.height = parseFloat(viewBox[3]));
+		this.width = parseFloat(viewBox[2]);
+		this.height = parseFloat(viewBox[3]);
 	}
 
-	setState({ data: { persons } }) {
-		this.setScales(persons.length);
-
-		let pack = d3
+	setState({ data: { persons: personsRaw, selectedPerson } }) {
+		const pack = d3
 			.pack()
 			.size([this.width, this.height])
 			.padding(2);
 
-		let root = d3
-			.hierarchy({ children: persons })
-			//.sum(d =>  this.circleSize(d.mentionsCount))
-			.sum(d => d.mentionsCount);
+		const root = d3.hierarchy({ children: personsRaw }).sum(d => d.mentionsCount);
 
-		persons = pack(root).leaves();
+		const persons = pack(root).leaves();
 
 		const defsEls = this.defsGroup.selectAll("pattern").data(persons, d => d.data.name);
 		const patternEls = defsEls.enter().append("pattern");
@@ -101,24 +87,18 @@ class PersonsRanking {
 		const nodesJoin = this.nodesGroup.selectAll("g.person").data(persons, d => d.data.name);
 		nodesJoin
 			.exit()
-			//.transition(1000)
-			.attr("transform", (d, i) => `translate(150,${d.y})`)
-			//.transition()
-			//.delay(1000)
+			.attr("transform", d => `translate(150,${d.y})`)
 			.remove();
 		const nodesEnterEls = nodesJoin
 			.enter()
 			.append("g")
-			.attr("class", "person")
-			.attr("transform", (d, i) => `translate(150,${d.y})`);
+			.attr("transform", d => `translate(150,${d.y})`)
+			.attr("class", "person");
 		nodesEnterEls
 			.append("circle")
 			.style("fill", d => `url(#image:${d.data.name.replace(/\s+/g, "_")})`)
-			.attr("stroke", d => this.toneScale(d.data.tone))
-			.style("stroke-width", () => {
-				return this.height / 100;
-			})
-			.attr("class", d => "person")
+			.style("stroke-width", this.height / 100)
+			.attr("class", "person")
 			.on("mouseover", this.showTooltip.bind(this))
 			.on("mouseout", this.hideTooltip.bind(this))
 			.on("click", d => this.model.setOptions({ selectedPerson: d.data.name }));
@@ -126,10 +106,12 @@ class PersonsRanking {
 		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
 
 		nodesEnterUpdateEls
-			//.transition()
-			//.duration(2000)
-			.attr("transform", (d, i) => `translate(${d.x},${d.y})`);
-		nodesEnterUpdateEls.select("circle").attr("r", d => d.r);
+			.transition()
+			.duration(1000)
+			.attr("transform", d => `translate(${d.x},${d.y})`)
+			.attr("stroke", d => this.toneScale(d.data.tone))
+			.select("circle")
+			.attr("r", d => d.r);
 	}
 
 	showTooltip(d, i, nodes) {
