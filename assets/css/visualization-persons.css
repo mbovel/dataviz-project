@@ -1,20 +1,27 @@
 .circlename {
 	/*fill: rgb(255,255,255,1);*/
-	fill: rgb(0, 0, 50, 1);
+	fill: rgb(0, 0, 50);
 	font-size: 0.4px;
 	font-weight: bold;
 	pointer-events: none;
 }
 
-div.tooltip {
+.person {
+	cursor: pointer;
+}
+
+.tooltip {
+	font-weight: 700;
 	position: absolute;
 	text-align: center;
-	width: 60px;
-	height: 28px;
-	padding: 2px;
-	font: 12px sans-serif;
-	background: lightsteelblue;
+	padding: 0.4em;
+	background: #ccc;
 	border: 0px;
+	color: #111;
 	border-radius: 8px;
 	pointer-events: none;
+}
+
+.tooltip p {
+	margin: 0;
 }

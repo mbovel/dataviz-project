@@ -121,8 +121,8 @@ class PersonsRanking {
 				return this.height / 300;
 			})
 			.attr("class", d => "person")
-			.on("mouseover", this.toggleHighlight.bind(this))
-			.on("mouseout", this.toggleHighlight.bind(this))
+			.on("mouseover", this.showTooltip.bind(this))
+			.on("mouseout", this.hideTooltip.bind(this))
 			.on("click", d => this.model.setOptions({ selectedPerson: d.data.name }));
 
 		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
@@ -134,31 +134,22 @@ class PersonsRanking {
 		nodesEnterUpdateEls.select("circle").attr("r", d => d.r);
 	}
 
-	toggleHighlight(d, i, nodes) {
-		//d3.event.preventDefault();
-		const s = d3.select(nodes[i]);
-		const fill = d3.hsl(s.attr("stroke"));
-		if (s.classed("highlighted")) {
-			fill.l -= 0.15;
-			s.classed("highlighted", false).attr("stroke", fill);
+	showTooltip(d, i, nodes) {
+		const { bottom, left, right } = nodes[i].getBoundingClientRect();
+		const width = right - left;
+		this.tooltip
+			.html(`<p>${d.data.name}</p><p>(${d.data.mentionsCount} mentions)</p>`)
+			.style("top", bottom - 5 + "px")
+			.style("left", left + (width - this.tooltip.node().clientWidth) / 2 + "px")
+			.transition()
+			.duration(500)
+			.style("opacity", 0.9);
+	}
 
-			this.tooltip
-				.transition()
-				.duration(500)
-				.style("opacity", 0);
-		} else {
-			fill.l += 0.15;
-			s.classed("highlighted", true).attr("stroke", fill);
-
-			this.tooltip
-				.transition()
-				.duration(200)
-				.style("opacity", 0.9);
-			this.tooltip
-				.html(d.data.name)
-				.style("left", d3.event.pageX + "px")
-				.style("top", d3.event.pageY - 28 + "px")
-				.style("color", "black");
-		}
+	hideTooltip() {
+		this.tooltip
+			.transition()
+			.duration(500)
+			.style("opacity", 0);
 	}
 }
