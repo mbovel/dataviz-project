@@ -5,11 +5,11 @@ menu_order: 5
 ---
 
 # Processbook
-Welcome to the Processbook section of this project! The purpose of this document is to discuss the entire design pipeline of the project and is partitioned accordingly:
-
 
 1. TOC
 {:toc}
+
+Welcome to the Processbook section of this project! The purpose of this document is to discuss the entire design pipeline of the project and is partitioned accordingly:
 
 - The [**Introduction**](#introduction) section discusses the background, intent, and goals of the project.
 - The [**Data**](#data) section discusses the source of the dataset and how we cleaned and wranged the data into a visualizable format. It also discusses initial explorations we completed to view inital underlying patterns in the data.
