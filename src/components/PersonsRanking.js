@@ -64,12 +64,7 @@ class PersonsRanking {
 			.attr("alignment-baseline", "middle")
 			.attr("x", 0.5)
 			.attr("y", 0.5)
-			.text(d =>
-				d.data.name
-					.split(" ")
-					.map(n => n.charAt(0))
-					.join("")
-			);
+			.text(d => PersonsRanking.getInitials(d.data.name));
 		patternEls
 			.append("image")
 			.attr("y", "-0.0")
@@ -132,5 +127,12 @@ class PersonsRanking {
 			.transition()
 			.duration(500)
 			.style("opacity", 0);
+	}
+
+	static getInitials(name) {
+		return name
+			.split(" ")
+			.map(n => n.charAt(0))
+			.join("");
 	}
 }
