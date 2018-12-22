@@ -22,14 +22,18 @@ class TimeSlider {
 		this.ticksEl = containerEl.querySelector(".ticks");
 		this.model = model;
 		this.savedOptions = null;
+		this.isDragging = false;
 
 		this.sliderEl.addEventListener("input", this.handleInput.bind(this));
+		this.sliderEl.addEventListener("mousedown", () => (this.isDragging = true));
+		this.sliderEl.addEventListener("mouseup", () => (this.isDragging = false));
 		window.addEventListener("resize", () => this.generateTicks(this.savedOptions));
 	}
 
 	setState({ options }) {
 		this.savedOptions = options;
-		this.updateSlider(options);
+		// We don't update the slider value if the user is currently using it.
+		if (!this.isDragging) this.updateSlider(options);
 		this.generateTicks(options);
 	}
 
