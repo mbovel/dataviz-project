@@ -180,9 +180,16 @@ The most important interactions are as follows:
 - The bubble chart on the right shows the people that are discussed in the news articles. The size of the bubble corresponds to the number of articles that discuss each person, while the color of the border around the person corresponds to the tonality of the person. 
 - Upon selecting a person, the bar chart shows the tonality of mentions for the specific source. Hovering over the bars highlights the individual bar, while clicking on it opens the website source in a new tab.
 ### Technical Implementation
-This website was implemented using the [Jekyll framework](https://jekyllrb.com/) and hosted with [Github pages](https://pages.github.com/). The visualizations were created entirely with d3. 
+This website was implemented using the [Jekyll framework](https://jekyllrb.com/) and hosted with [Github pages](https://pages.github.com/). The visualizations were created entirely with [D3](https://d3js.org/), and the UI was written using Google's [Materialize framework](https://materializecss.com/).
 
-The final data scraping and organization scripts were written in Python. 
+The final data scraping and organization scripts were written in Python, Particularly for the following uses:
+- Scraping Wikipedia to include images of the people. 
+- While we intended to only showcase media sources' discussion of people, many subjects in the GDELT database contained names of cities and misspelled words.
+  - To correct misspelled names, we compared subjects with the [Pantheon Database](http://pantheon.media.mit.edu/treemap/country_exports/RU/all/-4000/2010/H15/pantheon) and only retained subjects with a [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) of 2 from the names in the Pantheon dataset. We also implemented caching so that the names in the articles we found would not need to be repeatedly found in the Pantheon dataset with 2,000,000+ records.
+  - To remove cities, we ensured that the subjects we found were not in the [World Cities Database](https://simplemaps.com/data/world-cities).
+
+We intentionally chose not to Webpack or bundle due to the lack of necessity for it in when using HTTP2. Follow [this link](https://stackoverflow.com/questions/30861591/why-bundle-optimizations-are-no-longer-a-concern-in-http-2/30862010#30862010) for more information on this reasoning. 
+
 ## Evaluation
 ### Individual Contributions
 Each us comes from a different academic background, which enabled us to take ownership of different parts of the project as follows with equal value to the group as a whole:
