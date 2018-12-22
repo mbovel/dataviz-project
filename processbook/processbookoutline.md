@@ -7,12 +7,16 @@
     ### Description of the Dataset
     ### Exploratory Data Analysis
 ## Design
-    ### Ideation and Sketching
+    ### Ideation, Sketching, and Prototyping
     ### Prototyping
     ### Final Visualization
     ### Technical Implementation
 ## Evaluation
+---
     ### Deviation From Initial Proposal
     ### Knowledge/Information Contributions
     ### Technical Analysis
+    ### Future Work
+---
+    ### Individual Contributions
     ### Future Work
