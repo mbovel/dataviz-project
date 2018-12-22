@@ -142,7 +142,8 @@ In short, the obvious choice for representing weighted relationships between mul
 
 The sketch below shows an early idea for the shaded map displayed at the end of the [Exploratory Data Analyses subsection](#exploratory-data-analysis)
 
-![Figure 7](processbook/finalbookimgs/shadedmapsketch.png)
+![Figure 7](processbook/finalbookimgs/shadedmapsketch.png){: width="50%"}
+
 <center>Figure 7. Sketch of Tone Map.</center>
 
 Additionally, the following sketches display clusters that we predicted would emerge as well as some early UI ideas:
@@ -160,7 +161,7 @@ After deciding to visualize sentiment, the next important question was how to su
 
 After using only sources as nodes failed to result in clusters, we attempted using both sources and subjects as nodes, as in the following sketch. Note that the best indicator for subjects based on the structure of the available data is the *people* described in the articles.
 
-![Figure 9](processbook/finalbookimgs/twocirclessketch.png)
+![Figure 9](processbook/finalbookimgs/twocirclessketch.png){: width="70%"}
 <center>Figure 8. Early Graph and UI Sketches.</center>
 
 Using various interactivity such as highlighting all connected edges when clicking on a specific node, we reasoned, would indicate what sources talked negatively about particular subjects, and the ability to compare sources based on how they talked about a certain topic if a specific topic was selected. While we were able to generate very aesthetically-pleasing visualizations, unfortunately these were still too to draw meaningful conclusions. 
