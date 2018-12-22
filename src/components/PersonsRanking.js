@@ -50,7 +50,7 @@ class PersonsRanking {
 		let pack = d3
 			.pack()
 			.size([this.width, this.height])
-			.padding(1.5);
+			.padding(2);
 
 		let root = d3
 			.hierarchy({ children: persons })
@@ -115,8 +115,8 @@ class PersonsRanking {
 			.append("circle")
 			.style("fill", d => `url(#image:${d.data.name.replace(/\s+/g, "_")})`)
 			.attr("stroke", d => this.toneScale(d.data.tone))
-			.style("stroke-width", d => {
-				return this.height / 300;
+			.style("stroke-width", () => {
+				return this.height / 100;
 			})
 			.attr("class", d => "person")
 			.on("mouseover", this.showTooltip.bind(this))
