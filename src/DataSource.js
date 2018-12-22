@@ -2,6 +2,7 @@ const parseDate = d3.timeParse("%Y-%m-%d");
 
 class DataSource {
 	constructor({ start_date, end_date }) {
+		this.cache = new Map();
 		this.minDate = new Date(parseDate(start_date));
 		this.maxDate = new Date(parseDate(end_date));
 	}
@@ -12,12 +13,12 @@ class DataSource {
 	}
 
 	async load(/**Date*/ start, /**Date*/ end, /**string*/ region) {
-		const sources = await d3.csv(`data/sources/${region}.csv`);
+		const sources = await this.loadCSV(`data/sources/${region}.csv`);
 
 		const formatDate = d3.timeFormat("%Y-%m-%d");
 		const timeRange = `${formatDate(start)}_${formatDate(end)}`;
 
-		const mentionsRaw = await d3.csv(`data/mentions/${region}/${timeRange}.csv`);
+		const mentionsRaw = await this.loadCSV(`data/mentions/${region}/${timeRange}.csv`);
 		const mentionsBase = mentionsRaw.map(mention => ({
 			sourceIndex: parseInt(mention["source_index"]),
 			targetIndex: parseInt(mention["person_index"]),
@@ -25,7 +26,7 @@ class DataSource {
 			tone: parseFloat(mention["tone_avg"])
 		}));
 
-		const personsRaw = await d3.csv(`data/persons/${region}/${timeRange}.csv`);
+		const personsRaw = await this.loadCSV(`data/persons/${region}/${timeRange}.csv`);
 		const personsStats = d3.rollup(
 			mentionsBase,
 			v => ({
@@ -48,6 +49,17 @@ class DataSource {
 			...mention
 		}));
 
+		const data = { sources, persons, mentions };
+
 		return { sources, persons, mentions };
+	}
+
+	async loadCSV(url) {
+		if (this.cache.has(url)) {
+			return this.cache.get(url);
+		}
+		const result = await d3.csv(url);
+		this.cache.set(url, result);
+		return result;
 	}
 }
