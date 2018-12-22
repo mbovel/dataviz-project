@@ -55,7 +55,7 @@ class Model {
 			// replace persons and mentions attributes with new data:
 			...(await this._updateData({ ...this.state, freq })),
 			// Update frq,
-            freq
+			freq
 		});
 	}
 

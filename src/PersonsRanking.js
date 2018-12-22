@@ -24,7 +24,7 @@ class PersonsRanking {
 		this.circlePositionY = i => this.y + (this.height / (nPersons + 1)) * (i + 1);
 		this.circleSize = d3
 			.scaleLog()
-			.range([this.width / 2 , this.width])
+			.range([this.width / 2, this.width])
 			.domain([100, 1000]);
 	}
 
@@ -42,16 +42,18 @@ class PersonsRanking {
 		this.setScales(persons.length);
 		persons.sort((x, y) => y.tone - x.tone);
 		//persons.sort((x,y) => y.mentionsCount - x.mentionsCount);
-        
-        let pack = d3.pack()
-          .size([this.width, this.height])
-          .padding(1.5);
 
-        let root = d3.hierarchy({children: persons})
-              //.sum(d =>  this.circleSize(d.mentionsCount))
-              .sum(d => d.mentionsCount);
+		let pack = d3
+			.pack()
+			.size([this.width, this.height])
+			.padding(1.5);
 
-        persons = pack(root).leaves();
+		let root = d3
+			.hierarchy({ children: persons })
+			//.sum(d =>  this.circleSize(d.mentionsCount))
+			.sum(d => d.mentionsCount);
+
+		persons = pack(root).leaves();
 
 		const defsEls = this.defsGroup.selectAll("pattern").data(persons, d => d.data.name);
 		const patternEls = defsEls.enter().append("pattern");
@@ -72,12 +74,12 @@ class PersonsRanking {
 			.attr("alignment-baseline", "middle")
 			.attr("x", 0.5)
 			.attr("y", 0.5)
-            .text(d =>
-                d.data.name
-                    .split(" ")
-                    .map(n => n.charAt(0))
-                    .join("")
-            );
+			.text(d =>
+				d.data.name
+					.split(" ")
+					.map(n => n.charAt(0))
+					.join("")
+			);
 		patternEls
 			.append("image")
 			.attr("y", "-0.0")
@@ -124,10 +126,7 @@ class PersonsRanking {
 		nodesEnterUpdateEls
 			//.transition()
 			//.duration(2000)
-			.attr(
-				"transform",
-				(d, i) => `translate(${d.x},${d.y})`
-			);
+			.attr("transform", (d, i) => `translate(${d.x},${d.y})`);
 		nodesEnterUpdateEls.select("circle").attr("r", d => d.r);
 	}
 
