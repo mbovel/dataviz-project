@@ -70,7 +70,7 @@ class PersonsRanking {
 			.append("rect")
 			.attr("width", 1)
 			.attr("height", 1)
-			.attr("fill", d => this.colorScale(d.data.name));
+			.attr("fill", "#bbb");
 		patternEls
 			.append("text")
 			.attr("class", "circlename")
