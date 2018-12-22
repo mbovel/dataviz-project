@@ -3,6 +3,7 @@ class Model {
 		this.dataSource = dataSource;
 		this.components = new Set();
 		this.state = { options: {}, data: {} };
+		this.version = 0;
 	}
 
 	// Model communicate with components through the Observer pattern.
@@ -16,13 +17,20 @@ class Model {
 	}
 
 	setOptions(/**Object*/ optionsChange) {
+		++this.version;
+		const version = this.version;
 		const options = { ...this.state.options, ...optionsChange };
 		this.loadData(options)
-			.then(data => this.setState({ data, options }))
+			.then(data => this.setState({ data, options }, version))
 			.catch(console.error);
 	}
 
-	async setState(/**Object*/ state) {
+	setState(/**Object*/ state, /**number*/ version) {
+		if (this.version !== version) {
+			// Discard this call if another call to setOption took place in the meantime.
+			return;
+		}
+		console.log(this.state);
 		// Make state immutable
 		deepFreeze(state);
 		this.state = state;
