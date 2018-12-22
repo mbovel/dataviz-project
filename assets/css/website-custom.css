@@ -76,6 +76,14 @@ ul {
 /* TOC */
 /*******/
 
+#markdown-toc {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 1rem 1rem 1rem 0;
+	margin: 1rem 0 1rem 1.5rem;
+	float: right;
+}
+
 #markdown-toc > li > a {
 	display: none; /* Oh dear. This is a very dirty hack. It is needed here because
 	                  Kramdown table of contents start at heading level 1 whereas we
@@ -90,22 +98,12 @@ ul {
 	list-style: none;
 }
 
-#markdown-toc {
-	border: 1px solid #ccc;
-	padding: 1em;
-	display: inline-block;
-}
-
-#markdown-toc {
-	padding-left: 0;
-}
 #markdown-toc,
 #markdown-toc ol {
 	list-style: none;
 }
 
 /* From http://2ality.com/2012/01/numbering-headingshtml.html */
-
 body,
 #markdown-toc ~ h1 {
 	counter-reset: h2counter;
