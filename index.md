@@ -11,6 +11,13 @@ Important information about different news sources can be inferred from the ways
 
 [Click here for an interactive visualization of global media sources and what they report on.](visualization.html)
 
+Here are some explanations of the most important features:
+- The "sources subset" selection menu in the bottom-left allows you to select which region of data they wish to view. Currently the only available sets are USA and Switzerland but additional areas could easily be added in the future.
+- After choosing the granularity (aggregations over a day, a month, or a year) in the "Granularity" drop-down menu, the slider allows you to choose which date, month, or year that they are viewing. 
+- The sort buttons on the bottom-right allow you to sort the bar charts based on the tone or by the name of the source.
+- The bubble chart on the right shows the people that are discussed in the news articles. The size of the bubble corresponds to the number of articles that discuss each person, while the color of the border around the person corresponds to the tonality of the person. 
+- Upon selecting a person, the bar chart shows the tonality of mentions for the specific source. Hovering over the bars highlights the individual bar, while clicking on it opens the website source in a new tab.
+
 ## "Where can I get more information?"
 - To learn more about us, the authors, check out our [Team page](team.md). 
 - If you're curious about where we got our data, head over to the [Data page](data.md).
