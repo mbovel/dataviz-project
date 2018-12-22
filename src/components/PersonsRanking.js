@@ -81,37 +81,38 @@ class PersonsRanking {
 			})
 			.attr("href", d => "data/photos/" + d.data.name + ".jpg");
 
-		// Not removing enables simple images caching.
+		// Not removing exiting elements enables simple images caching.
 		// defsEls.exit().remove();
 
-		const nodesJoin = this.nodesGroup.selectAll("g.person").data(persons, d => d.data.name);
+		const nodesJoin = this.nodesGroup.selectAll(".person").data(persons, d => d.data.name);
+
+		// EXIT
 		nodesJoin
 			.exit()
 			.attr("transform", d => `translate(150,${d.y})`)
 			.remove();
+
+		// ENTER
 		const nodesEnterEls = nodesJoin
 			.enter()
-			.append("g")
-			.attr("transform", d => `translate(150,${d.y})`)
-			.attr("class", "person");
-		nodesEnterEls
 			.append("circle")
+			.attr("r", d => d.r)
+			.attr("transform", d => `translate(150,${d.y})`)
+			.attr("class", "person")
 			.style("fill", d => `url(#image:${d.data.name.replace(/\s+/g, "_")})`)
 			.style("stroke-width", this.height / 100)
-			.attr("class", "person")
 			.on("mouseover", this.showTooltip.bind(this))
 			.on("mouseout", this.hideTooltip.bind(this))
 			.on("click", d => this.model.setOptions({ selectedPerson: d.data.name }));
 
-		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
-
-		nodesEnterUpdateEls
+		// UPDATE
+		nodesEnterEls
+			.merge(nodesJoin)
 			.transition()
 			.duration(1000)
+			.attr("r", d => d.r)
 			.attr("transform", d => `translate(${d.x},${d.y})`)
-			.attr("stroke", d => this.toneScale(d.data.tone))
-			.select("circle")
-			.attr("r", d => d.r);
+			.attr("stroke", d => this.toneScale(d.data.tone));
 	}
 
 	showTooltip(d, i, nodes) {
