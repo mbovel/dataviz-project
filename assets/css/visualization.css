@@ -41,6 +41,10 @@ main {
 	margin: 0;
 }
 
+#controls > li {
+	margin: 1em;
+}
+
 #time-slider-container {
 	flex: 1;
 	display: block;
@@ -57,9 +61,9 @@ main {
 	text-align: center;
 }
 
-#controls > li {
-	margin: 1em;
-}
+/*********************************/
+/* Materialize CSS customization */
+/*********************************/
 
 .select-wrapper input.select-dropdown {
 	color: inherit;
@@ -111,10 +115,14 @@ input[type="range"] {
 	border: none;
 }
 
-input:focus {
+input[type="range"]:focus {
 	outline: none;
 }
 
 input[type="range"]:-moz-focusring {
 	outline: none;
+}
+
+.thumb {
+	display: none;
 }

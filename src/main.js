@@ -1,5 +1,5 @@
 async function init() {
-	M.AutoInit(document.body);
+	M.FormSelect.init(document.querySelectorAll("select"));
 	const dataSource = await DataSource.init();
 	const model = new Model(dataSource);
 	const components = [
