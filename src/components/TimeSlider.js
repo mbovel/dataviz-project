@@ -11,8 +11,8 @@ const d3TimeFormater = {
 };
 
 const approxLabelWidth = {
-	D: 90,
-	M: 90,
+	D: 120,
+	M: 120,
 	Y: 20
 };
 
