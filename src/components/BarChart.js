@@ -123,47 +123,12 @@ class BarChart {
 		ygrid.exit().remove();
 	}
 
-	getTonePerSource(mentions) {
-		let sourcesMap = d3.rollup(
-			mentions,
-			v => ({
-				tone: v.reduce((sum, el) => sum + parseFloat(el.tone), 0) / v.length,
-				domain: v[0].source.domain
-			}),
-			d => d.source.name
-		);
-		let tonePerSource = [];
-		for (const [k, v] of sourcesMap) {
-			v.name = k;
-			tonePerSource.push(v);
-		}
-		return tonePerSource;
-	}
+	setState({ data: { mentions } }) {
+		this.setScalers(mentions.length);
+		this.showYgrid(mentions.length);
+		const maxtone = mentions.reduce((max, d) => Math.max(max, d.tone), 0);
 
-	sortFromPrevious(data) {
-		let olddata = this.barsGroup.selectAll("g.source").data();
-		let inew = 0;
-		let imatch;
-		let tmp;
-		for (let iold = 0; iold < olddata.length; iold++) {
-			imatch = data.findIndex(d => d.name === olddata[iold].name);
-			if (imatch > -1) {
-				tmp = data[inew];
-				data[inew] = data[imatch];
-				data[imatch] = tmp;
-				inew++;
-			}
-		}
-	}
-
-	setState({ mentions }) {
-		let tonePerSource = this.getTonePerSource(mentions);
-		this.setScalers(tonePerSource.length);
-		this.showYgrid(tonePerSource.length);
-		const maxtone = tonePerSource.reduce((max, d) => Math.max(max, d.tone), 0);
-		this.sortFromPrevious(tonePerSource);
-
-		const barGroup = this.barsGroup.selectAll("g.source").data(tonePerSource, d => d.name);
+		const barGroup = this.barsGroup.selectAll("g.source").data(mentions, d => d.source.name);
 		barGroup.exit().remove();
 		const barGroupEnter = barGroup.enter();
 		const barGroupEnterG = barGroupEnter
@@ -182,7 +147,7 @@ class BarChart {
 		barGroupEnterG
 			.append("text")
 			.attr("class", "xticklabel")
-			.text(d => d.name);
+			.text(d => d.source.name);
 		this.barGroupEnterUpdate = barGroupEnterG.merge(barGroup);
 
 		this.positionBars();

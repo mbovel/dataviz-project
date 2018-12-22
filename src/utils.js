@@ -1,36 +1,46 @@
-function getUniqueValues(data, field) {
-	return [...d3.rollup(data, _ => undefined, d => d[field]).keys()];
-}
-
-function mod(a, n) {
-	return ((a % n) + n) % n;
-}
-
 function clamp(n, min, max) {
 	return Math.min(Math.max(n, min), max);
 }
 
-// See https://github.com/d3/d3-time-format
-const formatDate = d3.timeFormat("%Y-%m-%d");
-const parseDate = d3.timeFormat("%Y-%m-%d");
-const formatYear = d3.timeFormat("%Y");
-const formatMonth = d3.timeFormat("%B");
-const formatDay = d3.timeFormat("%A %-d");
-
-function hideIf(element, condition) {
-	if (condition) element.setAttribute("hidden", true);
-	else element.removeAttribute("hidden");
-}
-
-// From https://dzone.com/articles/determining-number-days-month
-// Deliberately overflowing the day parameter and checking how far the
-// resulting date overlaps into the next month is a quick way to tell
-// how many days there were in the queried month.
-function daysInMonth(year, month) {
-	return 32 - new Date(year, month, 32).getDate();
-}
-
+// Split a Date object into an array [year, month, day]
 function getDateComponents(date) {
-	// getDate return the day of the month… Bad, bad, bad naming.
 	return [date.getFullYear(), date.getMonth(), date.getDate()];
+}
+
+// Run a promise without doing anything with its result.
+function runPromise(/**Promise*/ promise) {
+	promise.catch(console.error);
+}
+
+// Select an option in a select elements by value.
+function selectOption(/**HTMLSelectElement*/ el, value) {
+	const newIndex = [...el.options].map(optionEl => optionEl.value).indexOf(value);
+	if (newIndex !== el.selectedIndex) {
+		el.selectedIndex = newIndex;
+		el.dispatchEvent(new Event("change"));
+	}
+}
+
+function whenDocumentLoaded(handler) {
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", handler);
+	} else {
+		handler();
+	}
+}
+
+// From https://github.com/substack/deep-freeze.
+function deepFreeze(/**Object*/ o) {
+	Object.freeze(o);
+	Object.getOwnPropertyNames(o).forEach(function(prop) {
+		if (
+			o.hasOwnProperty(prop) &&
+			o[prop] !== null &&
+			(typeof o[prop] === "object" || typeof o[prop] === "function") &&
+			!Object.isFrozen(o[prop])
+		) {
+			deepFreeze(o[prop]);
+		}
+	});
+	return o;
 }

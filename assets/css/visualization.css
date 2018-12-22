@@ -35,6 +35,8 @@ main {
 #time-display {
 	margin: 1.6rem 0;
 	font-size: 1.2em;
+	width: 7em;
+	text-align: center;
 }
 
 #controls {
@@ -43,10 +45,11 @@ main {
 	justify-content: center;
 	background-color: #222;
 	padding: 1em;
+	margin: 0;
 }
 
-#controls div {
-	margin-right: 2em;
+#controls > li {
+	margin: 1em;
 }
 
 .select-wrapper input.select-dropdown {
@@ -98,10 +101,6 @@ input[type="range"]::-ms-track {
 	height: 1px;
 	color: transparent;
 	width: 100%;
-}
-
-.range-field {
-	width: 30em;
 }
 
 input[type="range"] {

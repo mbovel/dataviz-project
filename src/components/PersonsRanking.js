@@ -3,6 +3,12 @@ class PersonsRanking {
 		this.model = model;
 		this.createScale();
 		this.createGraph(container);
+		this.tooltip = d3
+			.select("body")
+			.append("div")
+			.attr("class", "tooltip")
+			.style("opacity", 0)
+			.style("top", 0);
 	}
 
 	createScale() {
@@ -38,10 +44,8 @@ class PersonsRanking {
 		(this.width = parseFloat(viewBox[2])), (this.height = parseFloat(viewBox[3]));
 	}
 
-	setState({ persons, mentions, selectedPerson }) {
+	setState({ data: { persons } }) {
 		this.setScales(persons.length);
-		persons.sort((x, y) => y.tone - x.tone);
-		//persons.sort((x,y) => y.mentionsCount - x.mentionsCount);
 
 		let pack = d3
 			.pack()
@@ -117,9 +121,9 @@ class PersonsRanking {
 				return this.height / 300;
 			})
 			.attr("class", d => "person")
-			.on("mouseover", this.toggleHighlight)
-			.on("mouseout", this.toggleHighlight)
-			.on("click", d => this.model.selectPerson(d.data.name));
+			.on("mouseover", this.toggleHighlight.bind(this))
+			.on("mouseout", this.toggleHighlight.bind(this))
+			.on("click", d => this.model.setOptions({ selectedPerson: d.data.name }));
 
 		const nodesEnterUpdateEls = nodesEnterEls.merge(nodesJoin);
 
@@ -130,15 +134,15 @@ class PersonsRanking {
 		nodesEnterUpdateEls.select("circle").attr("r", d => d.r);
 	}
 
-	toggleHighlight(d) {
+	toggleHighlight(d, i, nodes) {
 		//d3.event.preventDefault();
-		let s = d3.select(this);
-		let fill = d3.hsl(s.attr("stroke"));
+		const s = d3.select(nodes[i]);
+		const fill = d3.hsl(s.attr("stroke"));
 		if (s.classed("highlighted")) {
 			fill.l -= 0.15;
 			s.classed("highlighted", false).attr("stroke", fill);
 
-			tooltip
+			this.tooltip
 				.transition()
 				.duration(500)
 				.style("opacity", 0);
@@ -146,11 +150,11 @@ class PersonsRanking {
 			fill.l += 0.15;
 			s.classed("highlighted", true).attr("stroke", fill);
 
-			tooltip
+			this.tooltip
 				.transition()
 				.duration(200)
 				.style("opacity", 0.9);
-			tooltip
+			this.tooltip
 				.html(d.data.name)
 				.style("left", d3.event.pageX + "px")
 				.style("top", d3.event.pageY - 28 + "px")

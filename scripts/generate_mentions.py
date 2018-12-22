@@ -76,7 +76,7 @@ def mentions_query(period: pandas.Timestamp, in_sources: List[str], in_persons: 
 
 @timeit
 def compute_data_for_period(period, sources_set):
-    sources_file = os.path.join(DATA_DIR, f'sources_{sources_set}.csv')
+    sources_file = os.path.join(DATA_DIR, 'sources', f'{sources_set}.csv')
 
     period_string = f"{period.strftime('%Y-%m-%d')}_{(period + 1).strftime('%Y-%m-%d')}"
     print(f"\n--- Computing mentions for period {period} ---")
