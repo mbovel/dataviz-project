@@ -32,13 +32,6 @@ main {
 	flex: 1;
 }
 
-#time-display {
-	margin: 1.6rem 0;
-	font-size: 1.2em;
-	width: 7em;
-	text-align: center;
-}
-
 #controls {
 	display: flex;
 	flex-direction: row;
@@ -46,6 +39,22 @@ main {
 	background-color: #222;
 	padding: 1em;
 	margin: 0;
+}
+
+#time-slider-container {
+	flex: 1;
+	display: block;
+}
+
+#time-slider {
+	width: 100%;
+	margin: 0;
+}
+
+.ticks {
+	width: 100%;
+	display: flex;
+	text-align: center;
 }
 
 #controls > li {
@@ -68,11 +77,6 @@ a,
 .dropdown-content li > span {
 	color: #333;
 }
-
-input[type="range"] {
-	width: 100%;
-}
-
 /* Duplication needed here because of browser-specific pseud-elements */
 input[type="range"]::-moz-range-thumb {
 	background-color: #ccc;
@@ -113,8 +117,4 @@ input:focus {
 
 input[type="range"]:-moz-focusring {
 	outline: none;
-}
-
-input[type="range"] {
-	margin: 1.5em 0;
 }

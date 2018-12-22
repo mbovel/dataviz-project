@@ -40,40 +40,31 @@
 			</main>
 			<ul id="controls">
 				<li>
-					<label>
-						Sources subset
-						<select class="grey lighten-2" id="region-select">
-							<option value="usa">USA</option>
-							<option value="swiss">Swiss</option>
-						</select>
-					</label>
+					<label for="region-select">Sources subset</label>
+					<select id="region-select">
+						<option value="usa">USA</option>
+						<option value="swiss">Swiss</option>
+					</select>
 				</li>
 				<li>
-					<label class="range-field">
-						Date
-						<input id="time-slider" type="range" min="0" max="20" value="5" step="1" />
-					</label>
+					<label for="freq-select">Granularity</label>
+					<select id="freq-select">
+						<option value="D">Day</option>
+						<option value="M">Month</option>
+						<option value="Y">Year</option>
+					</select>
 				</li>
-				<li id="time-display"></li>
-				<li>
-					<label>
-						Granularity
-						<select id="freq-select">
-							<option value="D">Day</option>
-							<option value="M">Month</option>
-							<option value="Y">Year</option>
-						</select>
-					</label>
+				<li id="time-slider-container">
+					<label for="time-slider">Date</label>
+					<input type="range" min="0" max="20" value="5" step="1" id="time-slider" />
+					<ul class="ticks"></ul>
 				</li>
 				<li>
-					<button class="waves-effect waves-light btn" id="sort-name">
-						Sorty by source names
-					</button>
-				</li>
-				<li>
-					<button class="waves-effect waves-light btn" id="sort-tone">
-						Sorty by tone
-					</button>
+					<label for="sort-by-select">Sort mentions by</label>
+					<select id="sort-by-select">
+						<option value="name">Source name</option>
+						<option value="tone">Tone</option>
+					</select>
 				</li>
 			</ul>
 		</div>
@@ -84,11 +75,8 @@
 		<script src="src/DataSource.js"></script>
 		<script src="src/Model.js"></script>
 		<script src="src/components/BarChart.js"></script>
-		<script src="src/components/FreqSelect.js"></script>
 		<script src="src/components/PersonsRanking.js"></script>
-		<script src="src/components/RegionSelect.js"></script>
-		<script src="src/components/SortButton.js"></script>
-		<script src="src/components/TimeDisplayer.js"></script>
+		<script src="src/components/AttrSelect.js"></script>
 		<script src="src/components/TimeSlider.js"></script>
 		<script src="src/main.js"></script>
 	</body>

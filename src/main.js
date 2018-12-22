@@ -4,13 +4,11 @@ async function init() {
 	const model = new Model(dataSource);
 	const components = [
 		new PersonsRanking(document.querySelector("#persons-ranking-svg"), model),
-		new TimeSlider(document.querySelector("#time-slider"), model),
-		new FreqSelect(document.querySelector("#freq-select"), model),
-		new TimeDisplayer(document.querySelector("#time-display"), model),
+		new TimeSlider(document.querySelector("#time-slider-container"), model),
+		new AttrSelect(document.querySelector("#freq-select"), model, "freq"),
 		new BarChart(document.querySelector("#bar-chart-svg"), model),
-		new RegionSelect(document.querySelector("#region-select"), model),
-		new SortButton(document.querySelector("#sort-tone"), model, "tone"),
-		new SortButton(document.querySelector("#sort-name"), model, "name")
+		new AttrSelect(document.querySelector("#region-select"), model, "region"),
+		new AttrSelect(document.querySelector("#sort-by-select"), model, "sortBy")
 	];
 
 	for (const component of components) {

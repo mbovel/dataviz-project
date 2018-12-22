@@ -1,33 +1,65 @@
-const d3Intervals = {
+const d3Interval = {
 	D: d3.timeDay,
 	M: d3.timeMonth,
 	Y: d3.timeYear
 };
 
+const d3TimeFormater = {
+	D: d3.timeFormat("%b %y"),
+	M: d3.timeFormat("%b %y"),
+	Y: d3.timeFormat("%Y")
+};
+
+const approxLabelWidth = {
+	D: 90,
+	M: 90,
+	Y: 20
+};
+
 class TimeSlider {
-	constructor(/**HTMLElement*/ sliderEl, /**Model*/ model) {
-		this.sliderEl = sliderEl;
+	constructor(/**HTMLElement*/ containerEl, /**Model*/ model) {
+		this.sliderEl = containerEl.querySelector("input[type=range]");
+		this.ticksEl = containerEl.querySelector(".ticks");
 		this.model = model;
-		this.minDate = null;
-		this.interval = null;
+		this.savedOptions = null;
 
 		this.sliderEl.addEventListener("input", this.handleInput.bind(this));
+		window.addEventListener("resize", () => this.generateTicks(this.savedOptions));
 	}
 
-	setState({ options: { freq, date, minDate, maxDate } }) {
-		this.interval = d3Intervals[freq];
-		this.minDate = minDate;
+	setState({ options }) {
+		this.savedOptions = options;
+		this.updateSlider(options);
+		this.generateTicks(options);
+	}
+
+	updateSlider({ freq, date, minDate, maxDate }) {
+		const interval = d3Interval[freq];
 		this.sliderEl.min = 0;
-		this.sliderEl.max = this.interval.count(minDate, maxDate);
+		this.sliderEl.max = interval.count(minDate, maxDate);
 		this.sliderEl.value = clamp(
-			this.interval.count(minDate, date),
+			interval.count(minDate, date),
 			this.sliderEl.min,
 			this.sliderEl.max
 		);
 	}
 
+	generateTicks({ freq, date, minDate, maxDate }) {
+		const interval = d3Interval[freq];
+		const intervalCount = interval.count(minDate, maxDate);
+		const maxTicksNumber = this.ticksEl.offsetWidth / approxLabelWidth[freq];
+		const step = Math.max(Math.floor((intervalCount + 1) / maxTicksNumber), 1);
+		const ticks = interval.range(minDate, maxDate, step);
+		const tickWidth = (step / (intervalCount + step)) * 100;
+		this.ticksEl.innerHTML = ticks
+			.map(d => `<li style="width: ${tickWidth}%;">${d3TimeFormater[freq](d)}</li>`)
+			.join("");
+		this.sliderEl.setAttribute("style", `padding: 0 ${tickWidth / 2}%;`);
+	}
+
 	handleInput() {
-		const date = this.interval.offset(this.minDate, this.sliderEl.value);
+		const { freq, minDate } = this.savedOptions;
+		const date = d3Interval[freq].offset(minDate, this.sliderEl.value);
 		this.model.setOptions({ date });
 	}
 }

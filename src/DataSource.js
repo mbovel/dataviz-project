@@ -1,7 +1,9 @@
+const parseDate = d3.timeParse("%Y-%m-%d");
+
 class DataSource {
 	constructor({ start_date, end_date }) {
-		this.minDate = new Date(start_date);
-		this.maxDate = new Date(end_date);
+		this.minDate = new Date(parseDate(start_date));
+		this.maxDate = new Date(parseDate(end_date));
 	}
 
 	static async init() {
