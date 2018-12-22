@@ -14,5 +14,10 @@ We're a team of 3 students at [Ecole Polytechnique F&eacute;d&eacute;rale de Lau
 I am studying an MSc in Data Science and I am on track to graduate in July 2020. My interests are diverse, encompassing statistics, computer science, social work, global development, and engineering, including a BS in Mechanical Engineering from [The University of Texas at Austin (USA)](https://www.utexas.edu/). My passion is merging the domains of artificial intelligence, data science, social science, and public policy to learn more about the world and help people who need it most. 
 
 ## Matthieu Bovel
+<img src="siteimages/Matthieu.jpg" alt="drawing" width="125" align="middle"/><br/>
+
 
 ## Ruslan Aydarkhanov
+
+<img src="siteimages/Ruslan.jpg" alt="drawing" width="125" align="middle"/><br/>
+I am a PhD candidate in the field of Brain-Computer Interaction. Being torn between my interests in computer science and biology, I have never made a choice. My PhD project is focused on interpreting electrical signals from human brain, which will allow direct user communication with machines in the future.
