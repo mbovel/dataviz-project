@@ -94,11 +94,9 @@ class PersonsRanking {
 				d3.select(this).attr("href", "data/photos/Empty.png");
 			})
 			.attr("href", d => "data/photos/" + d.data.name + ".jpg");
-		defsEls
-			.exit()
-			//.transition()
-			//.delay(1000)
-			.remove();
+
+		// Not removing enables simple images caching.
+		// defsEls.exit().remove();
 
 		const nodesJoin = this.nodesGroup.selectAll("g.person").data(persons, d => d.data.name);
 		nodesJoin
