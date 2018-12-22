@@ -156,8 +156,8 @@ class BarChart {
 		}
 	}
 
-	setState({ mentions }) {
-		let tonePerSource = this.getTonePerSource(mentions);
+	setState({ data }) {
+		let tonePerSource = this.getTonePerSource(data.mentions);
 		this.setScalers(tonePerSource.length);
 		this.showYgrid(tonePerSource.length);
 		const maxtone = tonePerSource.reduce((max, d) => Math.max(max, d.tone), 0);

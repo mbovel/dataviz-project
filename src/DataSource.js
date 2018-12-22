@@ -1,20 +1,21 @@
 class DataSource {
-	constructor(/**Array<Object>*/ sources, { /**Date*/ start_date, /**Date*/ end_date }) {
-		this.sources = sources;
+	constructor({ start_date, end_date }) {
 		this.minDate = new Date(start_date);
 		this.maxDate = new Date(end_date);
 	}
 
 	static async init() {
-		const sources = await d3.csv("data/sources_swiss.csv");
 		const config = await d3.json("data/config.json");
-		return new DataSource(sources, config);
+		return new DataSource(config);
 	}
 
-	async load(/**Date*/ start, /**Date*/ end, /**string*/ sources_subset) {
+	async load(/**Date*/ start, /**Date*/ end, /**string*/ region) {
+		const sources = await d3.csv(`data/sources/${region}.csv`);
+
+		const formatDate = d3.timeFormat("%Y-%m-%d");
 		const timeRange = `${formatDate(start)}_${formatDate(end)}`;
 
-		const mentionsRaw = await d3.csv(`data/mentions/${sources_subset}/${timeRange}.csv`);
+		const mentionsRaw = await d3.csv(`data/mentions/${region}/${timeRange}.csv`);
 		const mentionsBase = mentionsRaw.map(mention => ({
 			sourceIndex: parseInt(mention["source_index"]),
 			targetIndex: parseInt(mention["person_index"]),
@@ -22,7 +23,7 @@ class DataSource {
 			tone: parseFloat(mention["tone_avg"])
 		}));
 
-		const personsRaw = await d3.csv(`data/persons/${sources_subset}/${timeRange}.csv`);
+		const personsRaw = await d3.csv(`data/persons/${region}/${timeRange}.csv`);
 		const personsStats = d3.rollup(
 			mentionsBase,
 			v => ({
@@ -40,11 +41,11 @@ class DataSource {
 
 		// Augment mentions with direct references to person and source objects.
 		const mentions = mentionsBase.map(mention => ({
-			source: this.sources[mention.sourceIndex],
+			source: sources[mention.sourceIndex],
 			target: persons[mention.targetIndex],
 			...mention
 		}));
 
-		return { persons, mentions };
+		return { sources, persons, mentions };
 	}
 }

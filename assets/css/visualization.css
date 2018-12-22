@@ -45,8 +45,8 @@ main {
 	padding: 1em;
 }
 
-#controls div {
-	margin-right: 2em;
+#controls li {
+	margin: 1em;
 }
 
 .select-wrapper input.select-dropdown {

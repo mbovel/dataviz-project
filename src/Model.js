@@ -1,124 +1,78 @@
 class Model {
-	constructor(/**DataSource*/ datasource) {
-		this.datasource = datasource;
-		this.modules = new Set();
-		this.state = null;
+	constructor(/**DataSource*/ dataSource) {
+		this.dataSource = dataSource;
+		this.components = new Set();
+		this.state = { options: {}, data: {} };
 	}
 
-	async init() {
-		this.setState({
-			persons: [],
-			mentions: [],
-			date: this.datasource.minDate,
-			minDate: this.datasource.minDate,
-			maxDate: this.datasource.maxDate,
-			freq: "D",
-			selectedPerson: null,
-			region: "swiss"
-		});
-	}
-
-	/* Modules communicate with Model through the Observer pattern.
-	 * See https://en.wikipedia.org/wiki/Observer_pattern.*/
+	// Model communicate with components through the Observer pattern.
+	// See https://en.wikipedia.org/wiki/Observer_pattern
 	register(/**Object*/ module) {
-		this.modules.add(module);
+		this.components.add(module);
 	}
 
 	unregister(/**Object*/ module) {
-		this.modules.delete(module);
+		this.components.delete(module);
 	}
 
-	setState(state) {
+	setOptions(/**Object*/ optionsChange) {
+		const options = { ...this.state.options, ...optionsChange };
+		this.loadData(options)
+			.then(data => this.setState({ data, options }))
+			.catch(console.error);
+	}
+
+	async setState(/**Object*/ state) {
 		// Make state immutable
-		Object.freeze(state);
+		deepFreeze(state);
 		this.state = state;
-		for (const module of this.modules) {
+		console.log(state);
+		for (const module of this.components) {
 			module.setState(state);
 		}
 	}
 
-	async setDate(/**Date*/ date) {
-		this.setState({
-			// keep the same attributes as old state for the rest:
-			...this.state,
-			// replace persons and mentions attributes with new data:
-			...(await this._updateData({ date, ...this.state })),
-			// Update frequency
-			date
-		});
+	async loadData({ date, freq, region, selectedPerson, sortBy }) {
+		const timeRange = Model.getTimeRange(date, freq);
+		const data = await this.dataSource.load(...timeRange, region);
+		const mentionsFiltered = Model.filterMentionsByPerson(data.mentions, selectedPerson);
+		const mentionsGrouped = Model.groupMentionsBySource(mentionsFiltered);
+		const mentionsSorted = Model.sortMentionsBy(mentionsGrouped, sortBy);
+		return { ...data, mentions: mentionsSorted };
 	}
 
-	async setFreq(/**string*/ freq) {
-		this.setState({
-			// keep the same attributes as old state for the rest:
-			...this.state,
-			// replace persons and mentions attributes with new data:
-			...(await this._updateData({ ...this.state, freq })),
-			// Update frq,
-			freq
-		});
+	static filterMentionsByPerson(/**Array<Object>*/ mentions, /**string*/ person) {
+		if (!person) return mentions;
+		return mentions.filter(m => m.target.name === person);
 	}
 
-	async setRegion(/**Date*/ region) {
-		this.setState({
-			// keep the same attributes as old state for the rest:
-			...this.state,
-			// replace persons and mentions attributes with new data:
-			...(await this._updateData({ ...this.state, region })),
-			// Update region
-			region
-		});
+	static groupMentionsBySource(/**Array<Object>*/ mentions) {
+		const groups = d3.rollup(
+			mentions,
+			ms => ({ tone: ms.reduce((sum, m) => sum + m.tone, 0) / ms.length, ...ms[0] }),
+			d => d.source
+		);
+		return [...groups].map(v => v[1]);
 	}
 
-	async selectPerson(/**string*/ selectedPerson) {
-		this.setState({
-			// keep the same attributes as old state for the rest:
-			...this.state,
-			// replace persons and mentions attributes with new data:
-			...(await this._updateData({ ...this.state, selectedPerson })),
-			// Update selectedPerson
-			selectedPerson
-		});
+	static sortMentionsBy(/**Array<Object>*/ mentions, /**string*/ sortBy) {
+		const mentionsSorted = [...mentions];
+		mentionsSorted.sort((a, b) => d3.ascending(a.source[sortBy], b.source[sortBy]));
+		return mentionsSorted;
 	}
 
-	async sortMentionsBy(/**Function*/ comparator) {
-		this.setState({
-			// keep the same attributes as old state for the rest:
-			...this.state,
-			// sort mentions:
-			mentions: this.state.mentions.sort(comparator)
-		});
-	}
-
-	async _updateData({ date, freq, region, selectedPerson }) {
-		const timeRange = Model._getTimeRange(date, freq);
-		const { mentions, persons } = await this.datasource.load(...timeRange, region);
-		if (selectedPerson) {
-			const mentionsFiltered = mentions.filter(m => m.target.name === selectedPerson);
-			return { mentions: mentionsFiltered, persons };
-		}
-		return { mentions, persons };
-	}
-
-	static _getTimeRange(/**Date*/ date, /**string*/ freq) {
+	static getTimeRange(/**Date*/ date, /**string*/ freq) {
 		const [year, month, day] = getDateComponents(date);
 		switch (freq) {
 			case "Y":
 				return [new Date(year, 0, 1), new Date(year + 1, 0, 1)];
 			case "M":
-				return [
-					new Date(year, month, 1),
-					new Date(month === 12 ? year + 1 : year, (month + 1) % 12, 1)
-				];
+				// Note: JavaScript date automatically handle overflows: month 12 or day 32 will
+				// be correctly understood as the first month of next year or the first day of
+				// next month, so need to do manually take modulo or similar.
+				return [new Date(year, month, 1), new Date(year, month + 1, 1)];
 			case "D":
-				return [
-					new Date(year, month, day),
-					new Date(
-						month === 12 ? year + 1 : year,
-						day === daysInMonth(month) ? month + 1 : month,
-						day === daysInMonth(month) ? 1 : day + 1
-					)
-				];
+				return [new Date(year, month, day), new Date(year, month, day + 1)];
 		}
 		throw new Error(`Unknown frequency ${freq}`);
 	}
